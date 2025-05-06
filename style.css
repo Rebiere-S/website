@@ -1,0 +1,299 @@
+:root {
+  /*https://colorkit.co/palette/1abc9c-16a085-2ecc71-27ae60-3498db-2980b9-9b59b6-8e44ad-34495e-2c3e50-f1c40f-f39c12-e67e22-d35400-e74c3c-c0392b-ecf0f1-bdc3c7-95a5a6-7f8c8d/*/
+  --background-color: #ecf0f1;
+  --transparent-background-color: #ecf0f1cc;
+  --light-shadows: #ffffff;
+  --dark-shadows: #7f8c8d;
+
+  --white: #ffffff;
+  --light-grey: #bdc3c7;
+  --grey: #95a5a6;
+  --dark-grey: #7f8c8d;
+
+  --light-blue: #3498db;
+  --transparent-light-blue: #3498dbb3;
+  --dark-blue: #2980b9;
+  --light-red: #e74c3c;
+  --dark-red: #c0392b;
+  --light-orange: #e67e22;
+  --dark-orange: #d35400;
+
+  --tooltip-color: #000000cc;
+
+  --light-text-color: #34495e;
+  --dark-text-color: #2c3e50;
+
+
+  --landscape-section-width: 65vw;
+  --portrait-section-width: 90vw;
+
+
+  --timeline-beginning-year: 2017;
+  --timeline-beginning-month: 1;
+
+  --timeline-ending-year: 2025;   /*Mettre à jour à chaque ajout d'expérience*/
+  --timeline-ending-month: 2;   /*Mettre à jour à chaque ajout d'expérience (numéro du mois*/
+
+  --timeline-unit-width: 12px;   /* Chaque unité représente un mois [min. 10px]*/
+  --timeline-bar-height: 25px;
+
+
+  --h1-font-size: 2em;
+  --h1-font-weight: 500;
+  --h2-font-size: 1.6em;
+  --h2-font-weight: 400;
+  --h3-font-size: 1.2em;
+  --h3-font-weight: 400;
+  --other-fonts-size: 1em;
+  --other-fonts-weight: 300;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  appearance: none;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  overscroll-behavior: contain;
+}
+
+:focus {
+  outline: none;
+}
+
+h1, h2, h3, p, label, input, output, textarea, ::placeholder {
+  line-height: var(--line-height);
+  user-select: none;
+  color: var(--dark-text-color);
+  text-shadow: 1px 1px 1px var(--dark-shadows);
+}
+
+h1 {
+  font-size: var(--h1-font-size);
+  font-weight: var(--h1-font-weight);
+}
+
+h2 {
+  font-size: var(--h2-font-size);
+  font-weight: var(--h2-font-weight);
+}
+
+h3 {
+  font-size: var(--h3-font-size);
+  font-weight: var(--h3-font-weight);
+}
+
+p, label, input, textarea, ::placeholder, output {
+  font-size: var(--other-fonts-size);
+  font-weight: var(--other-fonts-weight);
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+body {
+  display: flex;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: var(--background-color);
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto Flex', sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+section.landing {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+	overflow-x: hidden;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+
+.traveling-text {
+  display: flex;
+  width: auto;
+  height: auto;
+  text-transform: uppercase;
+  font-weight: 700;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeSpeed !important;
+  white-space: pre;
+  color: var(--grey);
+  filter: drop-shadow(0px 4px 3px var(--dark-shadows));
+  position: relative;
+}
+
+.traveling-text.tall {
+  height: 16rem;
+}
+
+.traveling-text.short {
+  height: 8rem;
+}
+
+.traveling-text div span, 
+.traveling-text div:after {
+  display: inline-block;
+  white-space: nowrap;
+  position: absolute;
+}
+
+.traveling-text.tall div span, 
+.traveling-text.tall div:after {
+  font-size: 16rem;
+}
+
+.traveling-text.short div span, 
+.traveling-text.short div:after {
+  font-size: 8rem;
+}
+ 
+.traveling-text.tall div span {
+  animation: horizontal-scrolling-1-tall 15s infinite linear;
+}
+
+.traveling-text.short div span {
+  animation: horizontal-scrolling-1-short 15s infinite linear;
+}
+
+.traveling-text.tall div:after {
+  content:attr(data-text);
+  animation: horizontal-scrolling-2-tall 15s infinite linear;
+  position: relative;
+  left: 100%;
+}
+
+.traveling-text.short div:after {
+  content:attr(data-text);
+  animation: horizontal-scrolling-2-short 15s infinite linear;
+  position: relative;
+  left: 100%;
+}
+ 
+@keyframes horizontal-scrolling-1-tall {
+  0% { left: 0%; }
+  100% { left: -100%; }
+}
+
+@keyframes horizontal-scrolling-1-short {
+  0% { left: 0%; }
+  100% { left: -100%; }
+}
+ 
+@keyframes horizontal-scrolling-2-tall {
+  0% { left: calc(100% + (16 * 4px)); }
+  100% { left: 0%; }
+}
+
+@keyframes horizontal-scrolling-2-short {
+  0% { left: 100%; }
+  100% { left: 0%; }
+}
+
+.presentation-card {
+  display: flex;
+  flex-direction: row;
+  width: 60vw;
+  min-height: calc(16rem + 8rem + 2rem);
+  max-height: 50vh;
+  padding: 5% 5%;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-color);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.presentation-card:before {
+  content: "";
+  width: 10px;
+  height: 100%;
+  border-radius: 10px 0 0 10px;
+  background: linear-gradient(90deg, transparent 0%, var(--dark-shadows) 100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
+}
+
+.presentation-card:after {
+  content: "";
+  width: 10px;
+  height: 100%;
+  border-radius: 0 10px 10px 0;
+  background: linear-gradient(270deg, transparent 0%, var(--dark-shadows) 100%);
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateX(100%);
+}
+
+.presentation-card .name-container {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  height: auto;
+  margin-right: 50px;
+  padding-right: 50px;
+  text-align: right;
+  font-size: 3rem;
+  position: relative;
+}
+
+.presentation-card .name-container:after {
+  content: "";
+  width: 4px;
+  height: 90%;
+  background-color: var(--text-color);
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(50%, -50%);
+}
+
+.presentation-card p {
+  text-align: left;
+  font-size: 1.2rem;
+}
+
+@media only screen and (orientation: portrait) {
+  .presentation-card {
+    flex-direction: column;
+    width: 90vw;
+    background-color: var(--transparent-background-color);
+    backdrop-filter: blur(3px);
+  }
+  
+  .presentation-card .name-container {
+    flex-direction: row;
+    margin-right: 0;
+    padding-right: 0;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    justify-content: center;
+  }
+  
+  .presentation-card .name-container h1 {
+    white-space: pre;
+    text-align: center;
+  }
+  
+  .presentation-card .name-container:after {
+    content: "";
+    width: 90%;
+    height: 4px;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%, -50%);
+  }
+}
