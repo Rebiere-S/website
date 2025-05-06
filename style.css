@@ -254,7 +254,7 @@ section.landing {
   content: "";
   width: 4px;
   height: 90%;
-  background-color: var(--text-color);
+  background-color: var(--dark-text-color);
   position: absolute;
   top: 50%;
   right: 0;
