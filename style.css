@@ -85,10 +85,90 @@ p, label, input, textarea, ::placeholder, output {
 
 body {
   display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  overflow-y: scroll;
   width: 100vw;
   min-height: 100vh;
-  background-color: var(--background-color);
+  align-items: center;
   font-family: 'Roboto', sans-serif;
   font-family: 'Roboto Flex', sans-serif;
-  text-rendering: optimizeLegibility;
+  background-color: var(--background-color);
+  top: 0;
+  left: 0;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  width: var(--landscape-section-width);
+  height: auto;
+  position: relative;
+  @media only screen and (orientation: portrait) {
+    width: var(--portrait-section-width);
+  }
+}
+
+section h1 {
+  text-align: center;
+}
+
+section .title {
+  margin-bottom: 50px;
+}
+
+.tips-message {
+  text-align: center;
+  font-style: italic;
+  color: var(--grey) !important;
+  text-shadow: 0 0 0;
+}
+
+.horizontalScrollIndicator {
+  display: none;
+  width: 60px;
+  height: 30px;
+  border-radius: 15px;
+  background-color: var(--tooltip-color);
+  backdrop-filter: blur(3px);
+  box-shadow:  8px 8px 12px -2px var(--shadow-color);
+  z-index: 10;
+  transition: all 0.15s linear;
+}
+
+.horizontalScrollIndicator::after {
+  display: flex;
+  content: '';
+  width: 10px;
+  height: 10px;
+  background-color: var(--white);
+  backdrop-filter: blur(3px);
+  border-radius: 50%;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: horizontalScrollIndicatorAnimation 2s infinite;
+}
+
+@keyframes horizontalScrollIndicatorAnimation {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 0.75;
+  }
+  25% {
+    left: 30%;
+    opacity: 1;
+  }
+  85% {
+    left: 70%;
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 }
