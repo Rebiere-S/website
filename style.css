@@ -2,8 +2,7 @@
   /*https://colorkit.co/palette/1abc9c-16a085-2ecc71-27ae60-3498db-2980b9-9b59b6-8e44ad-34495e-2c3e50-f1c40f-f39c12-e67e22-d35400-e74c3c-c0392b-ecf0f1-bdc3c7-95a5a6-7f8c8d/*/
   --background-color: #ecf0f1;
   --transparent-background-color: #ecf0f1cc;
-  --light-shadows: #ffffff;
-  --dark-shadows: #7f8c8d;
+  --shadow-color: #7f8c8d;
 
   --white: #ffffff;
   --light-grey: #bdc3c7;
@@ -26,16 +25,6 @@
 
   --landscape-section-width: 65vw;
   --portrait-section-width: 90vw;
-
-
-  --timeline-beginning-year: 2017;
-  --timeline-beginning-month: 1;
-
-  --timeline-ending-year: 2025;   /*Mettre à jour à chaque ajout d'expérience*/
-  --timeline-ending-month: 2;   /*Mettre à jour à chaque ajout d'expérience (numéro du mois*/
-
-  --timeline-unit-width: 12px;   /* Chaque unité représente un mois [min. 10px]*/
-  --timeline-bar-height: 25px;
 
 
   --h1-font-size: 2em;
@@ -68,7 +57,7 @@ h1, h2, h3, p, label, input, output, textarea, ::placeholder {
   line-height: var(--line-height);
   user-select: none;
   color: var(--dark-text-color);
-  text-shadow: 1px 1px 1px var(--dark-shadows);
+  text-shadow: 1px 1px 1px var(--shadow-color);
 }
 
 h1 {
@@ -120,58 +109,61 @@ section.landing {
   display: flex;
   width: auto;
   height: auto;
-  text-transform: uppercase;
-  font-weight: 700;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeSpeed !important;
   white-space: pre;
-  color: var(--grey);
-  filter: drop-shadow(0px 4px 3px var(--dark-shadows));
   position: relative;
 }
 
-.traveling-text.tall {
+.landing .traveling-text {
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--grey);
+  filter: drop-shadow(0px 4px 3px var(--shadow-color));
+}
+
+.landing .traveling-text.tall {
   height: 16rem;
 }
 
-.traveling-text.short {
+.landing .traveling-text.short {
   height: 8rem;
 }
 
-.traveling-text div span, 
-.traveling-text div:after {
+.landing .traveling-text div span, 
+.landing .traveling-text div:after {
   display: inline-block;
   white-space: nowrap;
   position: absolute;
 }
 
-.traveling-text.tall div span, 
-.traveling-text.tall div:after {
+.landing .traveling-text.tall div span, 
+.landing .traveling-text.tall div:after {
   font-size: 16rem;
 }
 
-.traveling-text.short div span, 
-.traveling-text.short div:after {
+.landing .traveling-text.short div span, 
+.landing .traveling-text.short div:after {
   font-size: 8rem;
 }
  
-.traveling-text.tall div span {
+.landing .traveling-text.tall div span {
   animation: horizontal-scrolling-1-tall 15s infinite linear;
 }
 
-.traveling-text.short div span {
+.landing .traveling-text.short div span {
   animation: horizontal-scrolling-1-short 15s infinite linear;
 }
 
-.traveling-text.tall div:after {
+.landing .traveling-text.tall div:after {
   content:attr(data-text);
   animation: horizontal-scrolling-2-tall 15s infinite linear;
   position: relative;
   left: 100%;
 }
 
-.traveling-text.short div:after {
+.landing .traveling-text.short div:after {
   content:attr(data-text);
   animation: horizontal-scrolling-2-short 15s infinite linear;
   position: relative;
@@ -241,7 +233,7 @@ section.landing {
   width: 10px;
   height: 100%;
   border-radius: 10px 0 0 10px;
-  background: linear-gradient(90deg, transparent 0%, var(--dark-shadows) 100%);
+  background: linear-gradient(90deg, transparent 0%, var(--shadow-color) 100%);
   position: absolute;
   top: 0;
   left: 0;
@@ -253,7 +245,7 @@ section.landing {
   width: 10px;
   height: 100%;
   border-radius: 0 10px 10px 0;
-  background: linear-gradient(270deg, transparent 0%, var(--dark-shadows) 100%);
+  background: linear-gradient(270deg, transparent 0%, var(--shadow-color) 100%);
   position: absolute;
   top: 0;
   right: 0;
