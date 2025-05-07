@@ -1,0 +1,188 @@
+:root {
+  --timeline-ending-year: 2025;   /*Mettre à jour à chaque ajout d'expérience*/
+  --timeline-ending-month: 2;   /*Mettre à jour à chaque ajout d'expérience (numéro du mois*/
+
+  --timeline-beginning-year: 2017;
+  --timeline-beginning-month: 1;
+
+  --timeline-unit-width: 12px;   /* Chaque unité représente un mois [min. 10px]*/
+
+  --timeline-bar-height: 25px;
+}
+
+.timeline-container {
+  display: flex;
+  flex-direction: column;
+  /*overflow: visible;
+  overflow-x: scroll;*/
+  width: auto;
+  height: auto;
+  padding: 25px 0;
+  padding-left: 165px;
+  padding-right: 50px;
+  margin-bottom: 50px;
+}
+
+.timeline {
+  display: block;
+  width: calc((((var(--timeline-ending-year) - var(--timeline-beginning-year)) * 12) + (var(--timeline-ending-month) - var(--timeline-beginning-month))) * var(--timeline-unit-width));
+  height: auto;
+  position: relative;
+  /*background-color: red; /*Debug*/
+}
+
+.timeline-year-container {
+  display: flex;
+  box-sizing: border-box;
+  width: auto;
+  max-width: 100%;
+  position: absolute;
+  top: -25px;
+  left: calc((var(--year) - var(--timeline-beginning-year)) * var(--timeline-unit-width) * 12);
+  transform: translateX(-50%);
+}
+
+.timeline-year {
+  font-weight: 400;
+  color: var(--grey);
+  text-shadow: 0 0 0;
+}
+
+.timeline-separator {
+  background-color: var(--grey);
+  height: 100%;
+  width: 2px;
+  box-shadow:  1px 1px 2px 0px var(--shadow-color);
+  position: absolute;
+  top: 0;
+  left: calc((var(--year) - var(--timeline-beginning-year)) * var(--timeline-unit-width) * 12);
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.timeline-marker-label-container {
+  display: flex;
+  width: auto;
+  position: absolute;
+  bottom: -25px;
+  left: calc((((var(--year) - var(--timeline-beginning-year)) * 12) + var(--month)) * var(--timeline-unit-width));
+  transform: translateX(-50%);
+}
+
+.timeline-marker-label {
+  font-weight: 400;
+  color: var(--grey);
+  text-shadow: 0 0 0;
+}
+
+.timeline-marker {
+  height: 100%;
+  width: 0;
+  border-left: 2px dashed var(--light-grey);
+  position: absolute;
+  top: 0;
+  left: calc((((var(--year) - var(--timeline-beginning-year)) * 12) + var(--month)) * var(--timeline-unit-width));
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.timeline-item {
+  height: var(--timeline-bar-height);
+  margin: 5px 0;
+  position: relative;
+}
+
+.timeline-label {
+  box-sizing: border-box;
+  max-width: 100%;
+  padding-right: 15px;
+  white-space: nowrap;
+  text-align: end;
+  text-shadow:  1px 1px 2px var(--shadow-color);
+  position: relative;
+  left: -100%;
+}
+
+.timeline-bar-container {
+  display: flex;
+  width: calc(var(--duration) * var(--timeline-unit-width));
+  height: var(--timeline-bar-height);
+  padding: 5px;
+  position: absolute;
+  top: 0;
+  left: calc((((var(--start-year) - var(--timeline-beginning-year)) * 12) + var(--start-month)) * var(--timeline-unit-width));
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.timeline-bar-container:hover {
+  padding: 3px;
+  transition: all 0.1s ease;
+}
+
+.timeline-bar-filler {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: var(--transparent-light-blue);
+  backdrop-filter: blur(1px);
+  box-shadow: 3px 3px 3px 0 var(--dark-blue);
+  z-index: 2;
+}
+
+.timeline-tooltip {
+  min-width: 300px;
+  max-width: 80%;
+  padding: 10px 15px;
+  border-radius: 5px;
+  background-color: var(--tooltip-color);
+  backdrop-filter: blur(3px);
+  opacity: 0;
+  color: var(--white);
+  text-align: left;
+  visibility: hidden;
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  transition: all 0.2s ease 0.3s;
+  z-index: 10;
+}
+
+.timeline-tooltip::after {
+  content: "";
+  border-width: 10px;
+  border-style: solid;
+  border-color: var(--tooltip-color) transparent transparent transparent;
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.timeline-bar-container:hover .timeline-tooltip {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.1s ease 0.1s;
+}
+
+.timeline-tooltip h3 {
+  color: var(--white);
+  text-shadow: 0 0 0;
+}
+
+.timeline-tooltip p {
+  color: var(--white);
+  text-shadow: 0 0 0;
+}
+
+.career-timeline .horizontalScrollIndicator {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, -100%);
+}
+
+.career-timeline .horizontalScrollIndicator {
+  display: none;
+}
