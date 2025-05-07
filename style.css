@@ -179,23 +179,39 @@ section.landing {
 }
  
 @keyframes horizontal-scrolling-1-tall {
-  0% { left: 0%; }
-  100% { left: -100%; }
+  0% {
+    left: 0%;
+  }
+  100% {
+    left: -100%;
+  }
 }
 
 @keyframes horizontal-scrolling-1-short {
-  0% { left: 0%; }
-  100% { left: -100%; }
+  0% {
+    left: 0%;
+  }
+  100% {
+    left: -100%;
+  }
 }
  
 @keyframes horizontal-scrolling-2-tall {
-  0% { left: calc(100% + (16 * 4px)); }
-  100% { left: 0%; }
+  0% {
+    left: calc(100% + (16 * 4px));
+  }
+  100% {
+    left: 0%;
+  }
 }
 
 @keyframes horizontal-scrolling-2-short {
-  0% { left: 100%; }
-  100% { left: 0%; }
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: 0%;
+  }
 }
 
 .presentation-card {
@@ -212,6 +228,12 @@ section.landing {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  @media only screen and (orientation: portrait) {
+    flex-direction: column;
+    width: 90vw;
+    background-color: var(--transparent-background-color);
+    backdrop-filter: blur(3px);
+  }
 }
 
 .presentation-card:before {
@@ -240,14 +262,22 @@ section.landing {
 
 .presentation-card .name-container {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   width: auto;
   height: auto;
   margin-right: 50px;
   padding-right: 50px;
+  justify-content: end;
   text-align: right;
   font-size: 3rem;
   position: relative;
+  @media only screen and (orientation: portrait) {
+    margin-right: 0;
+    padding-right: 0;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    justify-content: center;
+  }
 }
 
 .presentation-card .name-container:after {
@@ -259,41 +289,30 @@ section.landing {
   top: 50%;
   right: 0;
   transform: translate(50%, -50%);
-}
-
-.presentation-card p {
-  text-align: left;
-  font-size: 1.2rem;
-}
-
-@media only screen and (orientation: portrait) {
-  .presentation-card {
-    flex-direction: column;
-    width: 90vw;
-    background-color: var(--transparent-background-color);
-    backdrop-filter: blur(3px);
-  }
-  
-  .presentation-card .name-container {
-    flex-direction: row;
-    margin-right: 0;
-    padding-right: 0;
-    margin-bottom: 25px;
-    padding-bottom: 15px;
-    justify-content: center;
-  }
-  
-  .presentation-card .name-container h1 {
-    white-space: pre;
-    text-align: center;
-  }
-  
-  .presentation-card .name-container:after {
+  @media only screen and (orientation: portrait) {
     content: "";
     width: 90%;
     height: 4px;
     left: 50%;
     top: 100%;
     transform: translate(-50%, -50%);
+  }
+}
+
+.presentation-card .name-container h1 {
+  display: flex;
+  width: auto;
+  height: auto;
+  white-space: pre;
+  position: relative;
+}
+
+.presentation-card p {
+  text-wrap: balance;
+  text-align: left;
+  font-size: 1.2rem;
+  hyphens: manual;
+  @media only screen and (orientation: portrait) {
+    text-align: center;
   }
 }
