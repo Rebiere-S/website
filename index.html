@@ -137,5 +137,28 @@
     <p>Copyright © 2025 Simon Rebière. Tous droits réservés.</p>
     <p><a href="mentions_legales.pdf" class="underlined">Mentions légales</a> | <a href="mailto:mubdem05@anonaddy.me" class="underlined">Contact</a></p>
   </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      function checkScrollIndicator() {
+        const sections = document.querySelectorAll('section');
+
+        sections.forEach(section => {
+          const scrollIndicator = section.querySelector('.horizontalScrollIndicator');
+
+          if (scrollIndicator) {
+            if (section.scrollWidth > section.clientWidth) {
+              scrollIndicator.style.display = 'flex';
+            } else {
+              scrollIndicator.style.display = 'none';
+            }
+          }
+        });
+      }
+
+      checkScrollIndicator();
+
+      window.addEventListener('resize', checkScrollIndicator);
+    });
+  </script>
 </body>
 </html>
