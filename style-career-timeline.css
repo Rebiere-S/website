@@ -13,8 +13,6 @@
 .timeline-container {
   display: flex;
   flex-direction: column;
-  /*overflow: visible;
-  overflow-x: scroll;*/
   width: auto;
   height: auto;
   padding: 25px 0;
