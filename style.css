@@ -110,11 +110,18 @@ section {
   width: var(--landscape-section-width);
   height: 100vh;
   justify-content: center;
+  -ms-overflow-style: none;  /* Masquer scrollbar sur IE and Edge */
+  scrollbar-width: none;  /* Masquer scrollbar sur Firefox */
   position: relative;
   overscroll-behavior: auto;
   @media only screen and (orientation: portrait) {
     width: var(--portrait-section-width);
   }
+}
+
+/* Masquer scrollbar sur Chrome, Safari and Opera */
+section::-webkit-scrollbar {
+  display: none;
 }
 
 section h1 {
