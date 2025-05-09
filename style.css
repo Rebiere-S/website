@@ -108,7 +108,8 @@ section {
   overflow-x: scroll;
   overflow-y: hidden;
   width: var(--landscape-section-width);
-  height: auto;
+  height: 100vh;
+  justify-content: center;
   position: relative;
   @media only screen and (orientation: portrait) {
     width: var(--portrait-section-width);
