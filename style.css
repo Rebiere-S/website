@@ -111,6 +111,7 @@ section {
   height: 100vh;
   justify-content: center;
   position: relative;
+  overscroll-behavior: auto;
   @media only screen and (orientation: portrait) {
     width: var(--portrait-section-width);
   }
