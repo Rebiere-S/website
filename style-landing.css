@@ -110,7 +110,7 @@ section.landing {
 
 .presentation-card {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
   width: 60vw;
   min-height: calc(16rem + 8rem + 2rem);
   max-height: 80vh;
@@ -123,7 +123,6 @@ section.landing {
   left: 50%;
   transform: translate(-50%, -50%);
   @media only screen and (orientation: portrait) {
-    flex-direction: column;
     width: 90vw;
     background-color: var(--transparent-background-color);
     backdrop-filter: blur(3px);
@@ -159,38 +158,25 @@ section.landing {
   flex-wrap: wrap;
   width: auto;
   height: auto;
-  margin-right: 50px;
-  padding-right: 50px;
-  justify-content: end;
-  text-align: right;
+  margin-right: 0;
+  padding-right: 0;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  justify-content: center;
+  text-align: center;
   font-size: 3rem;
   position: relative;
-  @media only screen and (orientation: portrait) {
-    margin-right: 0;
-    padding-right: 0;
-    margin-bottom: 25px;
-    padding-bottom: 15px;
-    justify-content: center;
-  }
 }
 
 .presentation-card .name-container:after {
   content: "";
-  width: 4px;
-  height: 90%;
+  width: 90%;
+  height: 4px;
   background-color: var(--dark-text-color);
   position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translate(50%, -50%);
-  @media only screen and (orientation: portrait) {
-    content: "";
-    width: 90%;
-    height: 4px;
-    left: 50%;
-    top: 100%;
-    transform: translate(-50%, -50%);
-  }
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, -50%);
 }
 
 .presentation-card .name-container h1 {
@@ -203,10 +189,7 @@ section.landing {
 
 .presentation-card p {
   text-wrap: balance;
-  text-align: left;
+  text-align: center;
   font-size: 1.2rem;
   hyphens: manual;
-  @media only screen and (orientation: portrait) {
-    text-align: center;
-  }
 }
