@@ -10,6 +10,10 @@
   --timeline-bar-height: 25px;
 }
 
+section.career-timeline {
+  overflow-x: scroll;
+}
+
 .timeline-container {
   display: flex;
   flex-direction: column;
@@ -176,12 +180,13 @@
   text-shadow: 0 0 0;
 }
 
-.career-timeline .horizontalScrollIndicator {
-  position: relative;
+.timeline-container .horizontalScrollIndicator {
+  position: absolute;
   left: 50%;
-  transform: translate(-50%, -100%);
+  top: calc(var(--h1-font-size) - 5px + 50%);
+  transform: translate(-50%, -50%);
 }
 
-.career-timeline .horizontalScrollIndicator {
-  display: none;
+.timeline-container:hover .horizontalScrollIndicator {
+  display: none !important;
 }
