@@ -43,7 +43,8 @@ section .description-container p {
   max-height: 26vw;
   aspect-ratio: 16 / 9;
   @media only screen and (orientation: portrait) {
-	width: 85%;
+	perspective: none;
+	width: calc(100% - 20px);
     max-height: 100%;
     aspect-ratio: 3 / 2;
   }
@@ -58,6 +59,10 @@ section .description-container p {
   box-shadow: 10px 10px 10px 0px var(--shadow-color);
   transform: rotateX(0deg) rotateY(-10deg) rotateZ(0deg);
   transition: all ease 0.5s;
+  @media only screen and (orientation: portrait) {
+	box-shadow: 5px 5px 5px 0px var(--shadow-color);
+	transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
 }
 
 .web-project .window:hover {
