@@ -161,6 +161,8 @@ section.landing {
   margin-right: 0;
   padding-right: 0;
   margin-bottom: 30px;
+  padding-bottom: 30px;
+  gap: 15px;
   justify-content: center;
   text-align: center;
   font-size: 3rem;
@@ -181,7 +183,7 @@ section.landing {
 
 .presentation-card .name-container h1 {
   white-space: pre;
-  position: relative;
+  line-height: 1;
 }
 
 .presentation-card p {
