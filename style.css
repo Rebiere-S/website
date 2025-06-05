@@ -124,7 +124,7 @@ section {
   scrollbar-width: none;  /* Masquer scrollbar sur Firefox */
   position: relative;
   overscroll-behavior: auto;
-  @media only screen and (orientation: portrait) {
+  @media only screen and (orientation: portrait), (max-width: 800px) {
     width: var(--portrait-section-width);
   }
 }
