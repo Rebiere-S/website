@@ -118,7 +118,7 @@ section {
   overflow-x: visible;
   overflow-y: hidden;
   width: var(--landscape-section-width);
-  height: 100vh;
+  min-height: 100vh;
   justify-content: center;
   -ms-overflow-style: none;  /* Masquer scrollbar sur IE and Edge */
   scrollbar-width: none;  /* Masquer scrollbar sur Firefox */
