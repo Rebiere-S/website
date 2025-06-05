@@ -113,7 +113,7 @@ section.landing {
   flex-wrap: wrap;
   width: 60vw;
   min-height: calc(16rem + 8rem + 2rem);
-  max-height: 80vh;
+  max-height: 80%;
   padding: 5% 5%;
   justify-content: center;
   align-items: center;
@@ -122,7 +122,7 @@ section.landing {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  @media only screen and (orientation: portrait) {
+  @media only screen and (orientation: portrait), (max-width: 800px) {
     width: 90vw;
     background-color: var(--transparent-background-color);
     backdrop-filter: blur(3px);
@@ -182,13 +182,12 @@ section.landing {
 }
 
 .presentation-card .name-container h1 {
-  white-space: pre;
   line-height: 1;
 }
 
 .presentation-card p {
   text-wrap: balance;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: var(--other-fonts-size);
   hyphens: manual;
 }
