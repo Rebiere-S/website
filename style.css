@@ -115,7 +115,8 @@ body {
 section {
   display: flex;
   flex-direction: column;
-  overflow: visible;
+  overflow-x: visible;
+  overflow-y: hidden;
   width: var(--landscape-section-width);
   height: 100vh;
   justify-content: center;
