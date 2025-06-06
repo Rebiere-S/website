@@ -167,7 +167,6 @@ section.landing {
   text-align: center;
   font-size: 3rem;
   position: relative;
-  /*background-color: blue;   /*A SUPPRIMER*/
 }
 
 .presentation-card .name-container:after {
