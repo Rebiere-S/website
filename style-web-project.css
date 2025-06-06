@@ -29,10 +29,7 @@ section .description-container h1 {
 }
 
 section .description-container p {
-  white-space: normal;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  hyphens: manual;
+  hyphens: auto;
   color: var(--light-text-color);
 }
 
