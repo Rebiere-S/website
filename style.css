@@ -14,6 +14,8 @@
   --dark-blue: #2980b9;
   --light-red: #e74c3c;
   --dark-red: #c0392b;
+  --light-purple: #9b59b6;
+  --dark-purple: #8e44ad;
   --light-orange: #e67e22;
   --dark-orange: #d35400;
 
@@ -120,8 +122,8 @@ section {
   width: var(--landscape-section-width);
   min-height: 100vh;
   justify-content: center;
-  -ms-overflow-style: none;  /* Masquer scrollbar sur IE and Edge */
-  scrollbar-width: none;  /* Masquer scrollbar sur Firefox */
+  -ms-overflow-style: none;  /*Masquer scrollbar sur IE and Edge*/
+  scrollbar-width: none;  /*Masquer scrollbar sur Firefox*/
   position: relative;
   overscroll-behavior: auto;
   @media only screen and (orientation: portrait), (max-width: 800px) {
@@ -129,7 +131,7 @@ section {
   }
 }
 
-/* Masquer scrollbar sur Chrome, Safari and Opera */
+/*Masquer scrollbar sur Chrome, Safari and Opera*/
 section::-webkit-scrollbar {
   display: none;
 }
@@ -141,6 +143,10 @@ section::-webkit-scrollbar {
   padding: 0 15px;
   border-radius: calc((5px + var(--other-fonts-size) + 5px) / 2);
   position: absolute;
+}
+
+.project-tag.personal {
+  background-color: var(--light-purple);
 }
 
 .project-tag.professional {
