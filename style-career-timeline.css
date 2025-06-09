@@ -74,7 +74,7 @@ section.career-timeline {
 .timeline-marker-label {
   font-weight: 400;
   color: var(--grey);
-  text-shadow: 0 0 0;
+  text-shadow: none;
 }
 
 .timeline-marker {
@@ -177,13 +177,13 @@ section.career-timeline {
 
 .timeline-tooltip p {
   color: var(--white);
-  text-shadow: 0 0 0;
+  text-shadow: none;
 }
 
 .timeline-container .horizontalScrollIndicator {
   position: absolute;
   left: 50%;
-  top: calc(var(--h1-font-size) - 5px + 50%);
+  top: calc(var(--h1-font-size) - 5px + 50% - 30px);
   transform: translate(-50%, -50%);
 }
 
