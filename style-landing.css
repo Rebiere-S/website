@@ -11,8 +11,8 @@ section.landing {
   display: flex;
   width: auto;
   height: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;   /*Anticrénelage de la police sur Webkit*/
+  -moz-osx-font-smoothing: grayscale;   /*Anticrénelage de la police sur macOS*/
   text-rendering: optimizeSpeed !important;
   white-space: pre;
   position: relative;
