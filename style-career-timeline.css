@@ -2,7 +2,7 @@
   --timeline-ending-year: 2025;   /*Mettre à jour à chaque ajout d'expérience*/
   --timeline-ending-month: 2;   /*Mettre à jour à chaque ajout d'expérience (numéro du mois*/
 
-  --timeline-beginning-year: 2017;
+  --timeline-beginning-year: 2014;
   --timeline-beginning-month: 1;
 
   --timeline-unit-width: 12px;   /* Chaque unité représente un mois [min. 10px]*/
@@ -12,6 +12,7 @@
 
 section.career-timeline {
   overflow-x: scroll;
+  padding: 50px 0;
 }
 
 .timeline-container {
@@ -22,7 +23,6 @@ section.career-timeline {
   padding: 25px 0;
   padding-left: 165px;
   padding-right: 50px;
-  margin-bottom: 50px;
 }
 
 .timeline {
@@ -30,7 +30,6 @@ section.career-timeline {
   width: calc((((var(--timeline-ending-year) - var(--timeline-beginning-year)) * 12) + (var(--timeline-ending-month) - var(--timeline-beginning-month))) * var(--timeline-unit-width));
   height: auto;
   position: relative;
-  /*background-color: red; /*Debug*/
 }
 
 .timeline-year-container {
@@ -135,7 +134,7 @@ section.career-timeline {
 
 .timeline-tooltip {
   min-width: 300px;
-  max-width: 80%;
+  max-width: 80vw;
   padding: 10px 15px;
   border-radius: 5px;
   background-color: var(--tooltip-color);
