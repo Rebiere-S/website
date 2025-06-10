@@ -88,6 +88,7 @@ section .description-container p {
   top: -25px;
   right: 30px;
   transform: translateY(-50%);
+  user-select: none;
   cursor: default;
 }
 
