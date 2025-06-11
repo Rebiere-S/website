@@ -182,7 +182,7 @@ section.career-timeline {
 .timeline-container .horizontalScrollIndicator {
   position: absolute;
   left: 50%;
-  top: calc(var(--h1-font-size) - 5px + 50% - 30px);
+  top: calc((var(--h1-font-size) * var(--text-line-height)) + 50%);
   transform: translate(-50%, -50%);
 }
 
