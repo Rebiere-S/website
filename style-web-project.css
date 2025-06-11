@@ -24,9 +24,12 @@ section .description-container {
 }
 
 section .description-container h2 {
-  margin-top: calc(5px + var(--other-fonts-size) + 5px);
-  margin-bottom: 15px;
+  margin-top: calc(var(--other-fonts-size) * var(--text-line-height));
+  margin-bottom: 30px;
   text-align: center;
+  @media only screen and (orientation: portrait), (max-width: 800px) {
+	margin-bottom: 15px;
+  }
 }
 
 section .description-container p {
