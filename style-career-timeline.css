@@ -1,6 +1,4 @@
 :root {
-  --timeline-total-entries: 6;   /*Mettre à jour à chaque ajout d'expérience*/
-
   --timeline-ending-year: 2025;   /*Mettre à jour à chaque ajout d'expérience*/
   --timeline-ending-month: 2;   /*Mettre à jour à chaque ajout d'expérience (numéro du mois*/
 
@@ -13,31 +11,8 @@
 }
 
 section.career-timeline {
-  overflow-x: hidden;
+  overflow-x: scroll;
   padding: 50px 0;
-}
-
-section.career-timeline .horizontalScrollContainer {
-  padding-top: calc(var(--h1-font-size) + 50px);
-  padding-bottom: 30px;
-}
-
-section.career-timeline .horizontalScrollContainerShadow.left {
-  height: 250px;   /*Ajouter hauteur dynamique en utilisant "--timeline-total-entries"*/
-  top: calc(50% + ((var(--h1-font-size) + 50px) / 2));
-}
-
-section.career-timeline .horizontalScrollContainerShadow.right {
-  height: 250px;   /*Ajouter hauteur dynamique en utilisant "--timeline-total-entries"*/
-  top: calc(50% + ((var(--h1-font-size) + 50px) / 2));
-}
-
-section.career-timeline .title {
-  text-align: center;
-  position: relative;
-  margin: 0;
-  left: 50%;
-  transform: translate(-50%, 100%);
 }
 
 .timeline-container {
@@ -46,8 +21,8 @@ section.career-timeline .title {
   width: auto;
   height: auto;
   padding: 25px 0;
-  padding-left: 180px;
-  padding-right: 25px;
+  padding-left: 165px;
+  padding-right: 50px;
 }
 
 .timeline {
