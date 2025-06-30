@@ -1,4 +1,6 @@
 :root {
+  --timeline-total-entries: 6;   /*Mettre à jour à chaque ajout d'expérience*/
+
   --timeline-ending-year: 2025;   /*Mettre à jour à chaque ajout d'expérience*/
   --timeline-ending-month: 2;   /*Mettre à jour à chaque ajout d'expérience (numéro du mois*/
 
@@ -11,8 +13,31 @@
 }
 
 section.career-timeline {
-  overflow-x: scroll;
-  padding: 50px 0;
+  overflow-x: hidden;
+  padding: 140px 0;
+}
+
+section.career-timeline .horizontalScrollContainer {
+  padding-top: calc((var(--h1-font-size) * var(--title-line-height)) + 140px);
+  padding-bottom: 30px;
+}
+
+section.career-timeline .horizontalScrollContainerShadow.left {
+  height: 250px;   /*Ajouter hauteur dynamique en utilisant "--timeline-total-entries"*/
+  top: calc(50% + (((var(--h1-font-size) * var(--title-line-height)) + 140px) / 2));
+}
+
+section.career-timeline .horizontalScrollContainerShadow.right {
+  height: 250px;   /*Ajouter hauteur dynamique en utilisant "--timeline-total-entries"*/
+  top: calc(50% + (((var(--h1-font-size) * var(--title-line-height)) + 140px) / 2));
+}
+
+section.career-timeline .title {
+  text-align: center;
+  position: relative;
+  margin: 0;
+  left: 50%;
+  transform: translate(-50%, calc(100% + 90px));
 }
 
 .timeline-container {
@@ -21,8 +46,8 @@ section.career-timeline {
   width: auto;
   height: auto;
   padding: 25px 0;
-  padding-left: 165px;
-  padding-right: 50px;
+  padding-left: 180px;
+  padding-right: 25px;
 }
 
 .timeline {
@@ -132,57 +157,36 @@ section.career-timeline {
   z-index: 2;
 }
 
-.timeline-tooltip {
+.tooltip.timeline {
   min-width: 300px;
-  max-width: 80vw;
-  padding: 10px 15px;
-  border-radius: 5px;
-  background-color: var(--tooltip-color);
-  backdrop-filter: blur(3px);
   opacity: 0;
-  color: var(--white);
   text-align: left;
   visibility: hidden;
   position: absolute;
   top: -10px;
   left: 50%;
   transform: translate(-50%, -100%);
-  transition: all 0.2s ease 0.3s;
-  pointer-events: none;
-  z-index: 10;
 }
 
-.timeline-tooltip::after {
-  content: "";
-  border-width: 10px;
-  border-style: solid;
-  border-color: var(--tooltip-color) transparent transparent transparent;
-  position: absolute;
-  bottom: -20px;
+.tooltip.timeline::after {
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid var(--tooltip-color);
+  bottom: -10px;
   left: 50%;
   transform: translateX(-50%);
 }
 
-.timeline-bar-container:hover .timeline-tooltip {
+.timeline-bar-container:hover .tooltip.timeline {
   opacity: 1;
   visibility: visible;
   transition: all 0.1s ease 0.1s;
 }
 
-.timeline-tooltip h3 {
-  color: var(--white);
-  text-shadow: 0 0 0;
-}
-
-.timeline-tooltip p {
-  color: var(--white);
-  text-shadow: none;
-}
-
 .timeline-container .horizontalScrollIndicator {
   position: absolute;
   left: 50%;
-  top: calc((var(--h1-font-size) * var(--text-line-height)) + 50%);
+  top: calc(50% + (((var(--h1-font-size) * var(--title-line-height)) + 140px) / 2));
   transform: translate(-50%, -50%);
 }
 
