@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="style-landing.css">
   <link rel="stylesheet" href="style-career-timeline.css">
   <link rel="stylesheet" href="style-web-project.css">
+  <link rel="stylesheet" href="style-cad-project.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,200;8..144,300;8..144,400;8..144,500&family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet">
@@ -227,6 +228,39 @@
       </div>
     </div>
   </section>
+  <section class="cad-project">
+    <div class="description-container">
+      <div class="project-tag professional">
+        <p>Professionnel</p>
+      </div>
+      <h2>Nourisse aspirateur industriel imprimable en 3D</h2>
+	  <!-- AJOUTER HYPHENS -->
+      <p>Pour des besoins de modularité d'un aspirateur industriel, j'ai conçu cette nourisse permettant de connecter plusieurs tuyaux sur une même entrée. Le but était de pouvoir produire celle-ci en interne grâce à la fabrication additive, pour pouvoir répondre rapidement aux besoins de l'atelier de production.</p>
+	  <!-- --------------- -->
+    </div>
+    <div class="viewer-container">
+      <div class="viewer">
+		<model-viewer src="https://simon-rebiere.fr/assets/models/nourrisse_aspirateur_industriel.glb" camera-controls tone-mapping="neutral" poster="https://simon-rebiere.fr/assets/posters/nourrisse_aspirateur_industriel.webp" shadow-intensity="1" exposure="1" shadow-softness="1" camera-orbit="1473deg 70deg 1m" field-of-view="26.19deg" auto-rotate>
+          <button class="hotspot" slot="hotspot-1" data-position="0.11244330387119092m 0.20461345727430186m 0.005849587639763535m" data-normal="-0.00012445510381585014m -0.9999767651843907m 0.0068156879542131555m" data-visibility-attribute="visible">
+            <div class="hotspot-annotation">Seuls surplombs nécessitant des supports d'impression</div>
+          </button>
+	      <button class="hotspot" slot="hotspot-3" data-position="-0.09574854366225187m 1.2826528251373051e-8m 0.09546471524307634m" data-normal="0m 0.9999999999999911m -1.3435883843274954e-7m" data-visibility-attribute="visible">
+            <div class="hotspot-annotation">Lit/plateau d'impression</div>
+          </button>
+	      <button class="hotspot" slot="hotspot-12" data-position="0.08854206851566143m 0.12354410812038027m 0.002489434380088402m" data-normal="-0.00010693618884025444m -0.00000466163080285562m 0.9999999942714604m" data-visibility-attribute="visible">
+            <div class="hotspot-annotation">Passant permettant d'accrocher la nourrisse</div>
+          </button>
+	      <button class="hotspot" slot="hotspot-13" data-position="0.10998319788608278m 0.21100593714818006m -0.006392509393096827m" data-normal="-0.018744880678947775m 0.006818196707753217m -0.999801051030647m" data-visibility-attribute="visible">
+            <div class="hotspot-annotation">Logement d'écrou pour montage et démontage sans outil</div>
+          </button>
+	      <button class="hotspot" slot="hotspot-15" data-position="0.024165660005148575m 0.23366299695547027m 0.04986333766018746m" data-normal="-0.47022345600327503m -0.48937321387387m 0.7344411201499381m" data-visibility-attribute="visible">
+            <div class="hotspot-annotation">Collier de serrage intégré "print in place"</div>
+          </button>
+          <div class="progress-bar hide" slot="progress-bar"></div>
+        </model-viewer>
+      </div>
+    </div>
+  </section>
   <footer>
     <p>Copyright © 2025 Simon Rebière. Tous droits réservés.</p>
     <p><a href="mentions_legales.pdf" class="underlined">Mentions légales</a> | <a href="mailto:mubdem05@anonaddy.me" class="underlined">Contact</a></p>
@@ -254,5 +288,6 @@
       window.addEventListener('resize', checkScrollIndicator);
     });
   </script>
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
 </body>
 </html>
