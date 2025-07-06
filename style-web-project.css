@@ -12,7 +12,7 @@ section.web-project {
   }
 }
 
-section .description-container {
+.web-project .description-container {
   display: flex;
   flex-direction: column;
   width: 40%;
@@ -23,7 +23,7 @@ section .description-container {
   }
 }
 
-section .description-container h2 {
+.web-project .description-container h2 {
   margin-top: calc(var(--other-fonts-size) * var(--text-line-height));
   margin-bottom: 30px;
   text-align: center;
@@ -32,7 +32,7 @@ section .description-container h2 {
   }
 }
 
-section .description-container p {
+.web-project .description-container p {
   hyphens: manual;
   color: var(--light-text-color);
 }
