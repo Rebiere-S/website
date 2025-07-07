@@ -1,5 +1,4 @@
 :root {
-  /*https://colorkit.co/palette/1abc9c-16a085-2ecc71-27ae60-3498db-2980b9-9b59b6-8e44ad-34495e-2c3e50-f1c40f-f39c12-e67e22-d35400-e74c3c-c0392b-ecf0f1-bdc3c7-95a5a6-7f8c8d/*/
   --background-color: #ecf0f1;
   --transparent-background-color: #ecf0f1cc;
   --shadow-color: #7f8c8d;
@@ -14,8 +13,6 @@
   --dark-blue: #2980b9;
   --light-red: #e74c3c;
   --dark-red: #c0392b;
-  --light-purple: #9b59b6;
-  --dark-purple: #8e44ad;
   --light-orange: #e67e22;
   --dark-orange: #d35400;
 
@@ -179,11 +176,11 @@ section .horizontalScrollContainerShadow.right {
 }
 
 .project-tag.personal {
-  background-color: var(--light-purple);
+  background-color: var(--light-orange);
 }
 
 .project-tag.professional {
-  background-color: var(--light-orange);
+  background-color: var(--dark-blue);
 }
 
 section .title {
