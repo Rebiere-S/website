@@ -36,10 +36,10 @@
   </section>
   <section class="career-timeline">
     <h1 class="title">Chronologie de ma carrière</h1>
-	<div class="horizontalScrollContainerShadow left"></div>
-	<div class="horizontalScrollContainerShadow right"></div>
-	<div class="horizontalScrollContainer">
-    <div class="timeline-container">
+	<div class="horizontalScrollContainerShadow left" id="careerTimelineShadowLeft"></div>
+	<div class="horizontalScrollContainerShadow right" id="careerTimelineShadowRight"></div>
+	<div class="horizontalScrollContainer" id="careerTimelineScrollContainer">
+    <div class="timeline-container" id="careerTimelineContainer">
       <div class="timeline">
         <!-- Début du bloc à copier-coller pour ajouter une nouvelle expérience professionnelle -->
         <div class="timeline-year-container" style="--year: 2025;">
@@ -266,6 +266,7 @@
     <p><a href="mentions_legales.pdf" class="underlined">Mentions légales</a> | <a href="mailto:mubdem05@anonaddy.me" class="underlined">Contact</a></p>
   </footer>
   <script>
+    //LOGIQUE D'AFFICHAGE DE L'INDICATEUR DE DÉFILEMENT HORIZONTAL
     document.addEventListener('DOMContentLoaded', function() {
       function checkScrollIndicator() {
         const sections = document.querySelectorAll('section');
@@ -287,6 +288,47 @@
 
       window.addEventListener('resize', checkScrollIndicator);
     });
+	
+	
+	
+	//LOGIQUE D'AFFICHAGE DES OMBRES DE DÉFILEMENT HORIZONTAL DE LA FRISE CHRONOLOGIQUE
+    const careerTimelineScrollContainer = document.getElementById('careerTimelineScrollContainer'),
+          careerTimelineShadowLeft = document.getElementById('careerTimelineShadowLeft'),
+          careerTimelineShadowRight = document.getElementById('careerTimelineShadowRight');
+	
+	//Initialisation si le Javascript n'est pas désactivé
+	careerTimelineShadowLeft.style.visibility = 'hidden';
+    
+	const careerTimelineContainer = document.getElementById('careerTimelineContainer'),
+          careerTimelineContainerPaddingLeft = parseInt(window.getComputedStyle(careerTimelineContainer).paddingLeft, 10);
+		  careerTimelineContainerPaddingRight = parseInt(window.getComputedStyle(careerTimelineContainer).paddingRight, 10);
+
+      careerTimelineContainer.style.paddingLeft = (careerTimelineContainerPaddingLeft - 15) + 'px';
+	  careerTimelineContainer.style.paddingRight = (careerTimelineContainerPaddingRight - 15) + 'px';
+	
+	//Logique d'appel de la fonction d'affichage des ombres
+	careerTimelineScrollContainer.onscroll = function () {
+      careerTimelineShadows();
+    };
+
+    careerTimelineScrollContainer.onresize = function () {
+      careerTimelineShadows();
+    };
+
+	//Fonction d'affichage des ombres
+    function careerTimelineShadows() {
+      if (careerTimelineScrollContainer.scrollLeft === 0) {
+		careerTimelineShadowLeft.style.visibility = 'hidden';
+	  } else {
+		careerTimelineShadowLeft.style.visibility = 'visible';
+	  }
+
+	  if (careerTimelineScrollContainer.scrollLeft + careerTimelineScrollContainer.clientWidth >= careerTimelineScrollContainer.scrollWidth) {
+		careerTimelineShadowRight.style.visibility = 'hidden';
+	  } else {
+		careerTimelineShadowRight.style.visibility = 'visible';
+	  }
+    };
   </script>
   <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
 </body>
