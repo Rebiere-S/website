@@ -163,21 +163,18 @@ section.web-project {
 }
 
 .web-project .tooltip.visit-webproject::after {
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-top: 10px solid var(--tooltip-color);
-  bottom: -10px;
+  border-top: var(--tooltip-arrow-size) solid var(--tooltip-color);
+  bottom: 0;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, 100%);
   @media only screen and (orientation: portrait), (max-width: 800px) {
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    border-left: 10px solid var(--tooltip-color);
+    border-top: var(--tooltip-arrow-size) solid transparent;
+    border-bottom: var(--tooltip-arrow-size) solid transparent;
+    border-left: var(--tooltip-arrow-size) solid var(--tooltip-color);
 	top: 50%;
-    right: -10px;
-	bottom: unset;
+    right: 0;
     left: unset;
-    transform: translate(50%, -50%);
+    transform: translate(100%, -50%);
   }
 }
 
