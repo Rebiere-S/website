@@ -141,7 +141,8 @@ section.career-timeline .title {
   cursor: pointer;
 }
 
-.timeline-bar-container:hover {
+.timeline-bar-container:hover,
+.timeline-bar-container:focus {
   padding: 3px;
   transition: all 0.1s ease;
 }
@@ -158,6 +159,31 @@ section.career-timeline .title {
 }
 
 .tooltip.timeline {
+  width: 150px;
+  opacity: 1;
+  visibility: visible;
+  position: absolute;
+  top: -10px;
+  left: 15px;
+  transform: translate(-50%, -100%);
+  z-index: 9;
+}
+
+.tooltip.timeline::after {
+  border-top: var(--tooltip-arrow-size) solid var(--tooltip-color);
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 100%);
+}
+
+.timeline-bar-container:hover .tooltip.timeline,
+.timeline-bar-container:focus .tooltip.timeline {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.1s ease 0.1s;
+}
+
+.info-bubble.timeline {
   min-width: 300px;
   opacity: 0;
   text-align: left;
@@ -168,14 +194,15 @@ section.career-timeline .title {
   transform: translate(-50%, -100%);
 }
 
-.tooltip.timeline::after {
+.info-bubble.timeline::after {
   border-top: var(--tooltip-arrow-size) solid var(--tooltip-color);
   bottom: 0;
   left: 50%;
   transform: translate(-50%, 100%);
 }
 
-.timeline-bar-container:hover .tooltip.timeline {
+.timeline-bar-container:hover .info-bubble.timeline,
+.timeline-bar-container:focus .info-bubble.timeline {
   opacity: 1;
   visibility: visible;
   transition: all 0.1s ease 0.1s;
