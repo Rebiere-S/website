@@ -169,12 +169,10 @@ section.career-timeline .title {
 }
 
 .tooltip.timeline::after {
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-top: 10px solid var(--tooltip-color);
-  bottom: -10px;
+  border-top: var(--tooltip-arrow-size) solid var(--tooltip-color);
+  bottom: 0;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, 100%);
 }
 
 .timeline-bar-container:hover .tooltip.timeline {
