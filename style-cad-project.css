@@ -39,9 +39,11 @@ section.cad-project {
 
 .cad-project .viewer-container {
   width: 55%;
-  aspect-ratio: 1 / 1;
+  max-height: 80vh;
+  aspect-ratio: 5 / 4;
   @media only screen and (orientation: portrait), (max-width: 800px) {
 	width: 100%;
+	aspect-ratio: 3 / 2;
   }
 }
 
@@ -96,20 +98,19 @@ model-viewer {
 
 .hotspot-annotation {
   display: block;
-  min-width: 120px;
-  max-width: 80%;
-  min-height: calc(5px + 20px + 5px);
+  width: 150px;
   padding: 10px 15px;
   gap: 5px;
   border-radius: 5px;
   font-size: var(--h3-font-size);
   font-weight: var(--h3-font-weight);
   background: var(--tooltip-color);
-  backdrop-filter: blur(3px);
+  /*backdrop-filter: blur(3px);*/
+  box-shadow:  8px 8px 12px -2px var(--shadow-color);
   color: var(--white);
   position: absolute;
   top: 50%;
-  left: calc(100% + 15px);
+  left: calc(5px + var(--tooltip-arrow-size) + 100%);
   pointer-events: none;
 }
 
@@ -117,11 +118,11 @@ model-viewer {
   content: "";
   width: 0;
   height: 0;
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-  border-right: 10px solid var(--tooltip-color);
+  border-top: var(--tooltip-arrow-size) solid transparent;
+  border-bottom: var(--tooltip-arrow-size) solid transparent;
+  border-right: var(--tooltip-arrow-size) solid var(--tooltip-color);
   position: absolute;
   top: 50%;
-  left: -10px;
-  transform: translateY(-50%);
+  left: 0;
+  transform: translate(-100%, -50%);
 }
