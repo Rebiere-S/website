@@ -106,7 +106,7 @@ model-viewer {
   font-weight: var(--h3-font-weight);
   background: var(--tooltip-color);
   /*backdrop-filter: blur(3px);*/
-  box-shadow:  8px 8px 12px -2px var(--shadow-color);
+  /*box-shadow:  8px 8px 12px -2px var(--shadow-color);*/
   color: var(--white);
   position: absolute;
   top: 50%;
