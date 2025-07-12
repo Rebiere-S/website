@@ -26,6 +26,7 @@ section.cad-project {
 .cad-project .description-container h2 {
   margin-top: calc(var(--other-fonts-size) * var(--text-line-height));
   margin-bottom: 30px;
+  text-wrap: balance;
   text-align: center;
   @media only screen and (orientation: portrait), (max-width: 800px) {
 	margin-bottom: 15px;
@@ -33,7 +34,7 @@ section.cad-project {
 }
 
 .cad-project .description-container p {
-  hyphens: manual;
+  /*hyphens: manual;*/
   color: var(--light-text-color);
 }
 
