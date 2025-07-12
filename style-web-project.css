@@ -146,7 +146,7 @@ section.web-project {
 }
 
 .web-project .tooltip.visit-webproject {
-  min-width: 120px;
+  width: 120px;
   opacity: 1;
   visibility: visible;
   top: -10px;
