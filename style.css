@@ -194,8 +194,6 @@ section .title {
 .tooltip,
 .info-bubble {
   display: block;
-  min-width: 150px;
-  max-width: 80%;
   height: auto;
   padding: 10px 15px;
   gap: 5px;
