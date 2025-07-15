@@ -34,7 +34,6 @@ section.web-project {
 }
 
 .web-project .description-container p {
-  /*hyphens: manual;*/
   color: var(--light-text-color);
 }
 
