@@ -73,6 +73,7 @@ section.pictured-project {
   height: 100%;
   overflow-x: hidden;
   overflow-y: scroll;
+  z-index: 0;
 }
 
 .pictured-project .window .scroll-container img {
@@ -94,6 +95,7 @@ section.pictured-project {
   transform: translateY(-100%);
   user-select: none;
   cursor: default;
+  z-index: 1;
 }
 
 .pictured-project .control a {
