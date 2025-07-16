@@ -235,6 +235,42 @@ section .title {
   text-shadow: none;
 }
 
+.tooltip.visit-link {
+  width: 120px;
+  opacity: 1;
+  visibility: visible;
+  top: -10px;
+  transform: translateY(-100%);
+  transition: all 0.1s linear;
+  @media only screen and (orientation: portrait), (max-width: 800px) {
+	top: 50%;
+    left: -10px;
+	transform: translate(-100%, -50%);
+  }
+}
+
+.control:hover .tooltip.visit-link {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.1s linear;
+}
+
+.tooltip.visit-link::after {
+  border-top: var(--tooltip-arrow-size) solid var(--tooltip-color);
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 100%);
+  @media only screen and (orientation: portrait), (max-width: 800px) {
+    border-top: var(--tooltip-arrow-size) solid transparent;
+    border-bottom: var(--tooltip-arrow-size) solid transparent;
+    border-left: var(--tooltip-arrow-size) solid var(--tooltip-color);
+	top: 50%;
+    right: 0;
+    left: unset;
+    transform: translate(100%, -50%);
+  }
+}
+
 .verticalScrollIndicator {
   width: 30px;
   height: 60px;
