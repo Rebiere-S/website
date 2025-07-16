@@ -4,16 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Simon Rebière</title>
-  <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/Rebiere-S/website/refs/heads/main/favicon.ico">
+  <link rel="icon" type="image/x-icon" href="https://simon-rebiere.fr/favicon.ico">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="style-landing.css">
   <link rel="stylesheet" href="style-career-timeline.css">
+  <link rel="stylesheet" href="style-pictured-project.css">
   <link rel="stylesheet" href="style-web-project.css">
   <link rel="stylesheet" href="style-cad-project.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,200;8..144,300;8..144,400;8..144,500&family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://raw.githubusercontent.com" crossorigin="anonymous">
+  <link rel="preconnect" href="https://simon-rebiere.fr" crossorigin="anonymous">
 </head>
 <body>
   <header>
@@ -162,19 +163,24 @@
     </div>
 	</div>
   </section>
-  <section class="web-project">
+  <section class="pictured-project">
     <div class="description-container">
       <div class="project-tag personal">
         <p>Personnel</p>
       </div>
       <h2>Blog personnel</h2>
-	  <p>Vous l'aurez peut-être deviné, le code, l'esthétique et l'ergonomie de ce blog, sont le fruit de mon travail de A à Z. Aucun outil de création de site web n'a été utilisé car je voulais qu'il corresponde exactement à la vision que j'en avais. C'est aussi une façon pour moi de démontrer de quoi je suis capable et vous allez comprendre par la suite que je n'en suis pas à mon coup d'essai concernant les technologies et le développement d'outils web en local.</p>
+	  <p>Vous l'aurez peut-être deviné, le code, l'esthétique et l'ergonomie de ce blog, sont les fruits de mon travail de A à Z. Aucun outil de création de site web n'a été utilisé car je voulais qu'il corresponde exactement à la vision que j'en avais. C'est aussi une façon pour moi de démontrer de quoi je suis capable et vous allez comprendre par la suite que je n'en suis pas à mon coup d'essai concernant les technologies et le développement d'outils web en local.</p>
     </div>
     <div class="window-container">
       <div class="window">
-		<span class="control">❐</span>
+		<span class="control">
+		  <a href="https://github.com/Rebiere-S/website" enterkeyhint="go">❐</a>
+		  <div class="tooltip visit-link">
+            <p>Cliquez pour consulter</p>
+          </div>
+		</span>
 		<div class="scroll-container">
-          <iframe title="Cette même page web" src="https://simon-rebiere.fr/" loading="lazy"></iframe>
+          <img src="https://simon-rebiere.fr/assets/covers/depot-github-blog.webp" fetchpriority="low" loading="lazy" alt="Image du dépot de code de ce blog"></img>
           <div class="verticalScrollIndicator"></div>
         </div>
       </div>
@@ -192,12 +198,12 @@
       <div class="window">
 		<span class="control">
 		  <a href="https://rebiere-s.github.io/calculation-dimension-stl-export/" enterkeyhint="go">❐</a>
-		  <div class="tooltip visit-webproject">
-            <p>Cliquez pour consulter</p>
+		  <div class="tooltip visit-link">
+            <p>Cliquez pour visiter</p>
           </div>
 		</span>
 		<div class="scroll-container">
-          <iframe title="Page web de l'outil" src="https://rebiere-s.github.io/calculation-dimension-stl-export/" loading="lazy"></iframe>
+          <iframe title="Page web de l'outil pédagogique à l'apprentissage de l'export de fichiers DAO au format stéréolithographie (STL)" src="https://rebiere-s.github.io/calculation-dimension-stl-export/" loading="lazy"></iframe>
           <div class="verticalScrollIndicator"></div>
         </div>
       </div>
@@ -215,7 +221,7 @@
       <div class="window">
 		<span class="control"><a href="https://rebiere-s.github.io/simulation-DLP-3D-printing/" enterkeyhint="go">❐</a></span>
 		<div class="scroll-container">
-          <iframe title="Page web de l'outil" src="https://rebiere-s.github.io/simulation-DLP-3D-printing/" loading="lazy"></iframe>
+          <iframe title="Page web de l'outil de simulation en ligne d'impression 3D de technologie DLP" src="https://rebiere-s.github.io/simulation-DLP-3D-printing/" loading="lazy"></iframe>
           <div class="verticalScrollIndicator"></div>
         </div>
       </div>
@@ -231,7 +237,7 @@
     </div>
     <div class="viewer-container">
       <div class="viewer">
-		<model-viewer poster="https://simon-rebiere.fr/assets/posters/nourrisse_aspirateur_industriel.webp" loading="lazy" src="https://simon-rebiere.fr/assets/models/nourrisse_aspirateur_industriel.glb" alt="Nourisse aspirateur industriel imprimable en 3D" camera-orbit="1473deg 70deg 1m" field-of-view="25deg" camera-controls auto-rotate tone-mapping="neutral" shadow-intensity="1" exposure="1" shadow-softness="1">
+		<model-viewer poster="https://simon-rebiere.fr/assets/posters/nourrisse_aspirateur_industriel.webp" loading="lazy" src="https://simon-rebiere.fr/assets/models/nourrisse_aspirateur_industriel.glb" alt="Modèle 3D de la nourisse pour aspirateur industriel imprimable en 3D" camera-orbit="1473deg 70deg 1m" field-of-view="25deg" camera-controls auto-rotate tone-mapping="neutral" shadow-intensity="1" exposure="1" shadow-softness="1">
           <button class="hotspot" slot="hotspot-1" data-position="0.11244330387119092m 0.20461345727430186m 0.005849587639763535m" data-normal="-0.00012445510381585014m -0.9999767651843907m 0.0068156879542131555m" data-visibility-attribute="visible">
             <div class="hotspot-annotation">
 			  <p>Seuls surplombs nécessitant des supports d'impression</p>
@@ -272,7 +278,7 @@
     </div>
     <div class="viewer-container">
       <div class="viewer">
-		<model-viewer poster="https://simon-rebiere.fr/assets/posters/poignee_cle_allen_en_t.webp" loading="lazy" src="https://simon-rebiere.fr/assets/models/poignee_cle_allen_en_t.glb" alt="Poignée pour clé Allen en T multi-tailles" camera-orbit="125deg 55deg 0.2m" field-of-view="30deg" camera-controls auto-rotate tone-mapping="neutral" shadow-intensity="2" exposure="1" shadow-softness="0.5">
+		<model-viewer poster="https://simon-rebiere.fr/assets/posters/poignee_cle_allen_en_t.webp" loading="lazy" src="https://simon-rebiere.fr/assets/models/poignee_cle_allen_en_t.glb" alt="Modèle 3D de la poignée pour clé Allen en T multi-tailles" camera-orbit="125deg 55deg 0.2m" field-of-view="30deg" camera-controls auto-rotate tone-mapping="neutral" shadow-intensity="2" exposure="1" shadow-softness="0.5">
           <button class="hotspot" slot="hotspot-1" data-position="0.007499999832361937m 0.007933271670724534m -0.017047103865251646m" data-normal="1m 0m 0m" data-visibility-attribute="visible">
             <div class="hotspot-annotation">
 			  <p>Indication de tailles</p>
@@ -292,6 +298,29 @@
 		  </button>
           <div class="progress-bar hide" slot="progress-bar"></div>
         </model-viewer>
+      </div>
+    </div>
+  </section>
+  <section class="pictured-project">
+    <div class="description-container">
+      <div class="project-tag professional">
+        <p>Professionnel</p>
+      </div>
+      <h2>Innovation dans la prévention du desserage des vis par tassement des plastiques</h2>
+	  <p>Après avoir travaillé sur des assemblages vissés incluant des plastiques et de constater un desserrage systématique majoritairement dû au tassement du matériau, je me suis penché sur la question et j'ai opté pour une pré-tension par rondelle ressort (dites Belleville) couplée d'une rondelle plate pour augmenter la surface de contact et donc ainsi maitriser la pression excercée à la surface du matériau. Il m'a donc fallu concevoir une méthode de calcul basée sur la condition de non matage du matériau plastique, et ce en calculant la contrainte max. de Von Mises, en admettant qu'il s'agisse d'un matériau isotrope. Ainsi, à mesure que le plastique "se tasse", la rondelle ressort permet de garder une tension de traction sur la vis.</p>
+    </div>
+    <div class="window-container">
+      <div class="window">
+		<span class="control">
+		  <a href="https://rebiere-s.github.io/excel-viewer/?src=https://simon-rebiere.fr/assets/spreadsheets/prevention-desserage-vis-sur-plastique.xlsx" enterkeyhint="go">❐</a>
+		  <div class="tooltip visit-link">
+            <p>Cliquez pour consulter</p>
+          </div>
+		</span>
+		<div class="scroll-container">
+          <img src="https://simon-rebiere.fr/assets/covers/prevention-desserrage-vis-sur-plastiques.webp" fetchpriority="low" loading="lazy" alt="Image de la feuille de calcul permettant de dimensionner un système de prévention du desserage des vis sur des plastiques"></img>
+          <div class="verticalScrollIndicator"></div>
+        </div>
       </div>
     </div>
   </section>
