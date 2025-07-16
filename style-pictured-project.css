@@ -1,0 +1,154 @@
+section.pictured-project {
+  display: flex;
+  flex-direction: row;
+  overflow: visible;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  @media only screen and (orientation: portrait), (max-width: 800px) {
+	gap: 15px;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.pictured-project .description-container {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  height: auto;
+  padding: 15px 0;
+  @media only screen and (orientation: portrait), (max-width: 800px) {
+	width: 100%;
+  }
+}
+
+.pictured-project .description-container h2 {
+  margin-top: calc(var(--other-fonts-size) * var(--text-line-height));
+  margin-bottom: 30px;
+  text-wrap: balance;
+  text-align: center;
+  @media only screen and (orientation: portrait), (max-width: 800px) {
+	margin-bottom: 15px;
+  }
+}
+
+.pictured-project .description-container p {
+  color: var(--light-text-color);
+}
+
+.pictured-project .window-container {
+  perspective: 100vw;
+  width: 60%;
+  min-height: calc(10px + 80px + 40px);
+  aspect-ratio: 16 / 9;
+  @media only screen and (orientation: portrait), (max-width: 800px) {
+	perspective: none;
+	width: 100%;
+  }
+}
+
+.pictured-project .window {
+  width: 100%;
+  height: 100%;
+  border: solid 10px var(--light-grey);
+  border-top-width: 40px;
+  border-radius: 5px;
+  box-shadow: 10px 10px 10px 0px var(--shadow-color);
+  transform: rotateX(0deg) rotateY(-10deg) rotateZ(0deg);
+  transition: all ease 0.5s;
+  @media only screen and (orientation: portrait), (max-width: 800px) {
+	box-shadow: 5px 5px 5px 0px var(--shadow-color);
+	transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+}
+
+.pictured-project .window:hover {
+  transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  transition: all ease 0.25s;
+}
+
+.pictured-project .window .scroll-container {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.pictured-project .window .scroll-container img {
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.pictured-project .control {
+  display: flex;
+  height: 40px;
+  width: 30px;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 30px;
+  transform: translateY(-100%);
+  user-select: none;
+  cursor: default;
+}
+
+.pictured-project .control a {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  color: var(--dark-text-color);
+}
+
+.pictured-project .control a:hover,
+.pictured-project .control a:focus {
+  background-color: var(--grey);
+  font-weight: bold;
+  text-shadow: 0px 0px 1px var(--light-text-color);
+}
+
+.pictured-project .control::before {
+  display: flex;
+  content: "‒";
+  height: 40px;
+  width: 30px;
+  justify-content: center;
+  align-items: center;
+  color: var(--dark-text-color);
+  position: absolute;
+  top: 0;
+  left: -15px;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.pictured-project .control::after {
+  display: flex;
+  content: "☓";
+  height: 40px;
+  width: 30px;
+  justify-content: center;
+  align-items: center;
+  color: var(--dark-text-color);
+  position: absolute;
+  top: 0;
+  right: -15px;
+  transform: translateX(50%);
+  pointer-events: none;
+}
+
+.pictured-project .verticalScrollIndicator {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.pictured-project .window:hover .verticalScrollIndicator {
+  display: none;
+}
