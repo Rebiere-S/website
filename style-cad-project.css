@@ -71,7 +71,7 @@ model-viewer {
   backdrop-filter: blur(1px);
   position: relative;
   cursor: grab;
-  transition: opacity 0.3s;
+  transition: all 0.15s;
 }
 
 .hotspot:not([data-visible]) {
@@ -81,19 +81,20 @@ model-viewer {
   backdrop-filter: blur(1px);
   border: 2px solid var(--white);
   pointer-events: none;
-  transition: opacity 0.3s;
+  transition: all 0.15s;
 }
 
 .hotspot > * {
   opacity: 1;
   transform: translateY(-50%);
+  transition: all 0.15s 0.30s;
 }
 
 .hotspot:not([data-visible]) > * {
   opacity: 0;
   transform: translateY(calc(-50% + 2px));
   pointer-events: none;
-  transition: transform 0.3s, opacity 0.3s;
+  transition: all 0.15s;
 }
 
 .hotspot-annotation {
