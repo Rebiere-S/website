@@ -30,11 +30,15 @@ section.pictured-project {
   text-align: center;
   @media only screen and (orientation: portrait), (max-width: 800px) {
 	margin-bottom: 15px;
+	hyphens: auto;
   }
 }
 
 .pictured-project .description-container p {
   color: var(--light-text-color);
+  @media only screen and (orientation: portrait), (max-width: 800px) {
+	hyphens: auto;
+  }
 }
 
 .pictured-project .window-container {
