@@ -17,9 +17,6 @@
   <link rel="preconnect" href="https://simon-rebiere.fr" crossorigin="anonymous">
 </head>
 <body>
-  <header>
-	<!-- HEADER ??? -->
-  </header>
   <section class="landing">
     <div class="traveling-text tall">
       <div data-text="Science Ingénierie Recherche"><span>Science Ingénierie Recherche</span></div>
@@ -198,30 +195,9 @@
       <div class="window">
 		<span class="control">
 		  <a href="https://rebiere-s.github.io/calculation-dimension-stl-export/" enterkeyhint="go">❐</a>
-		  <div class="tooltip visit-link">
-            <p>Cliquez pour visiter</p>
-          </div>
 		</span>
 		<div class="scroll-container">
           <iframe title="Page web de l'outil pédagogique à l'apprentissage de l'export de fichiers DAO au format stéréolithographie (STL)" src="https://rebiere-s.github.io/calculation-dimension-stl-export/" loading="lazy"></iframe>
-          <div class="verticalScrollIndicator"></div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="web-project">
-    <div class="description-container">
-      <div class="project-tag professional">
-        <p>Professionnel</p>
-      </div>
-      <h2>Simulateur de temps d'impression 3D de technologie DLP</h2>
-	  <p>Après qu'un collègue ai demandé s'il existait un moyen rapide d'estimer le temps d'impression 3D de technologie DLP (résine photosensible aux UV), et ce, sans accès à un logiciel de tranchage, je me suis interrogé sur ce qui définit le temps d'impression pour une pièce donnée sur une telle machine. J'ai donc conçu cet outil, d'une précision approchant les 100%, sur mon temps libre, pour répondre à ce besoin qui devenait récurrent.</p>
-    </div>
-    <div class="window-container">
-      <div class="window">
-		<span class="control"><a href="https://rebiere-s.github.io/simulation-DLP-3D-printing/" enterkeyhint="go">❐</a></span>
-		<div class="scroll-container">
-          <iframe title="Page web de l'outil de simulation en ligne d'impression 3D de technologie DLP" src="https://rebiere-s.github.io/simulation-DLP-3D-printing/" loading="lazy"></iframe>
           <div class="verticalScrollIndicator"></div>
         </div>
       </div>
@@ -268,6 +244,63 @@
       </div>
     </div>
   </section>
+  <section class="pictured-project">
+    <div class="description-container">
+      <div class="project-tag professional">
+        <p>Professionnel</p>
+      </div>
+      <h2>Innovation dans la prévention du desserage des vis par tassement des plastiques</h2>
+	  <p>Après avoir travaillé sur des assemblages vissés incluant des plastiques et constaté un desserrage systématique principalement dû au tassement du matériau, je me suis penché sur la question. J'ai opté pour une pré-tension par rondelle ressort, dite Belleville, couplée à une rondelle plate pour augmenter la surface de contact et ainsi maîtriser la pression exercée sur la surface du matériau. Il m'a donc fallu concevoir une méthode de calcul basée sur la condition de non-matage du matériau plastique, en calculant la contrainte maximale de Von Mises, en supposant qu'il s'agisse d'un matériau isotrope. Ainsi, à mesure que le plastique se tasse, la rondelle ressort permet de maintenir une tension de traction sur la vis.</p>
+    </div>
+    <div class="window-container">
+      <div class="window">
+		<span class="control">
+		  <a href="https://rebiere-s.github.io/excel-viewer/?src=https://simon-rebiere.fr/assets/spreadsheets/prevention-desserage-vis-sur-plastique.xlsx" enterkeyhint="go">❐</a>
+		  <div class="tooltip visit-link">
+            <p>Cliquez pour visionner</p>
+          </div>
+		</span>
+		<div class="scroll-container">
+          <img src="https://simon-rebiere.fr/assets/covers/prevention-desserrage-vis-sur-plastiques.webp" fetchpriority="low" loading="lazy" alt="Image de la feuille de calcul permettant de dimensionner un système de prévention du desserage des vis sur des plastiques" draggable="false"></img>
+          <div class="verticalScrollIndicator"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="cad-project">
+    <div class="description-container">
+      <div class="project-tag professional">
+        <p>Professionnel</p>
+      </div>
+      <h2>Support de capteur de vérin cylindrique universel de Ø6 à 20mm</h2>
+	  <p>Après avoir constaté une erreur lors de la réception de supports pour capteurs de vérins destinés à l'assemblage d'une machine, j'ai pris l'initiative de concevoir un support 'universel'. Ce support permet d'accueillir diverses références de capteurs pour rainures en T et peut être réalisé grâce à la fabrication additive sur n'importe quelle imprimante 3D FDM/FFF. Résultat : une seule référence en stock pour des vérins cylindriques allant de Ø6 à 20 mm, un coût unitaire estimé à 0,03 € au lieu de 0,80 € pour un article du commerce, et enfin, une disponibilité quasi immédiate.</p>
+    </div>
+    <div class="viewer-container">
+      <div class="viewer">
+		<model-viewer poster="https://simon-rebiere.fr/assets/posters/support_capteur_verin_cylindrique.webp" loading="lazy" src="https://simon-rebiere.fr/assets/models/support_capteur_verin_cylindrique.glb" alt="Modèle 3D du support de capteur de vérin cylindrique universel de Ø6 à 20mm, monté sur un vérin avec un capteur et son collier de serrage à crémaillère" camera-orbit="-20deg 50deg 0.27m" field-of-view="30deg" camera-controls auto-rotate tone-mapping="neutral" shadow-intensity="0.75" exposure="1" shadow-softness="0.7">
+          <div class="progress-bar hide" slot="progress-bar"></div>
+        </model-viewer>
+      </div>
+    </div>
+  </section>
+  <section class="web-project">
+    <div class="description-container">
+      <div class="project-tag professional">
+        <p>Professionnel</p>
+      </div>
+      <h2>Simulateur de temps d'impression 3D de technologie DLP</h2>
+	  <p>Après qu'un collègue ai demandé s'il existait un moyen rapide d'estimer le temps d'impression 3D de technologie DLP (résine photosensible aux UV), et ce, sans accès à un logiciel de tranchage, je me suis interrogé sur ce qui définit le temps d'impression pour une pièce donnée sur une telle machine. J'ai donc conçu cet outil, d'une précision approchant les 100%, sur mon temps libre, pour répondre à ce besoin qui devenait récurrent.</p>
+    </div>
+    <div class="window-container">
+      <div class="window">
+		<span class="control"><a href="https://rebiere-s.github.io/simulation-DLP-3D-printing/" enterkeyhint="go">❐</a></span>
+		<div class="scroll-container">
+          <iframe title="Page web de l'outil de simulation en ligne d'impression 3D de technologie DLP" src="https://rebiere-s.github.io/simulation-DLP-3D-printing/" loading="lazy"></iframe>
+          <div class="verticalScrollIndicator"></div>
+        </div>
+      </div>
+    </div>
+  </section>
   <section class="cad-project">
     <div class="description-container">
       <div class="project-tag personal">
@@ -281,7 +314,7 @@
 		<model-viewer poster="https://simon-rebiere.fr/assets/posters/poignee_cle_allen_en_t.webp" loading="lazy" src="https://simon-rebiere.fr/assets/models/poignee_cle_allen_en_t.glb" alt="Modèle 3D de la poignée pour clé Allen en T multi-tailles" camera-orbit="125deg 55deg 0.2m" field-of-view="30deg" camera-controls auto-rotate tone-mapping="neutral" shadow-intensity="2" exposure="1" shadow-softness="0.5">
           <button class="hotspot" slot="hotspot-1" data-position="0.007499999832361937m 0.007933271670724534m -0.017047103865251646m" data-normal="1m 0m 0m" data-visibility-attribute="visible">
             <div class="hotspot-annotation">
-			  <p>Indication de tailles</p>
+			  <p>Indications de tailles</p>
 			</div>
 		  </button><button class="hotspot" slot="hotspot-2" data-position="0.0015433756634592871m 0.0016696520496463502m -0.003996641392392183m" data-normal="-1m 0m 0m" data-visibility-attribute="visible">
 			<div class="hotspot-annotation">
@@ -298,29 +331,6 @@
 		  </button>
           <div class="progress-bar hide" slot="progress-bar"></div>
         </model-viewer>
-      </div>
-    </div>
-  </section>
-  <section class="pictured-project">
-    <div class="description-container">
-      <div class="project-tag professional">
-        <p>Professionnel</p>
-      </div>
-      <h2>Innovation dans la prévention du desserage des vis par tassement des plastiques</h2>
-	  <p>Après avoir travaillé sur des assemblages vissés incluant des plastiques et constaté un desserrage systématique principalement dû au tassement du matériau, je me suis penché sur la question. J'ai opté pour une pré-tension par rondelle ressort, dite Belleville, couplée à une rondelle plate pour augmenter la surface de contact et ainsi maîtriser la pression exercée sur la surface du matériau. Il m'a donc fallu concevoir une méthode de calcul basée sur la condition de non-matage du matériau plastique, en calculant la contrainte maximale de Von Mises, en supposant qu'il s'agisse d'un matériau isotrope. Ainsi, à mesure que le plastique se tasse, la rondelle ressort permet de maintenir une tension de traction sur la vis.</p>
-    </div>
-    <div class="window-container">
-      <div class="window">
-		<span class="control">
-		  <a href="https://rebiere-s.github.io/excel-viewer/?src=https://simon-rebiere.fr/assets/spreadsheets/prevention-desserage-vis-sur-plastique.xlsx" enterkeyhint="go">❐</a>
-		  <div class="tooltip visit-link">
-            <p>Cliquez pour consulter</p>
-          </div>
-		</span>
-		<div class="scroll-container">
-          <img src="https://simon-rebiere.fr/assets/covers/prevention-desserrage-vis-sur-plastiques.webp" fetchpriority="low" loading="lazy" alt="Image de la feuille de calcul permettant de dimensionner un système de prévention du desserage des vis sur des plastiques" draggable="false"></img>
-          <div class="verticalScrollIndicator"></div>
-        </div>
       </div>
     </div>
   </section>
