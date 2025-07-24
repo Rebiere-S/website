@@ -130,7 +130,7 @@ section {
   padding-bottom: 50px;
   justify-content: center;
   position: relative;
-  overscroll-behavior: auto;
+  overscroll-behavior-x: auto;
   @media only screen and (orientation: portrait), (max-width: 800px) {
     width: var(--portrait-section-width);
   }
