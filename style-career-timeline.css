@@ -184,7 +184,9 @@ section.career-timeline .title {
 }
 
 .info-bubble.timeline {
-  width: 400px;
+  width: unset;
+  min-width: 350px;
+  max-width: calc(--landscape-section-width * 0.8);
   opacity: 0;
   text-align: left;
   visibility: hidden;
@@ -192,6 +194,9 @@ section.career-timeline .title {
   top: -10px;
   left: 50%;
   transform: translate(-50%, -100%);
+  @media only screen and (orientation: portrait), (max-width: 800px) {
+    max-width: calc(--portrait-section-width * 0.8);
+  }
 }
 
 .info-bubble.timeline::after {
