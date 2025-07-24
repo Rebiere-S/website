@@ -54,7 +54,7 @@
   border: none;
   outline: none;
   box-sizing: border-box;
-  overscroll-behavior: contain;
+  overscroll-behavior: auto;
 }
 
 :focus {
@@ -130,7 +130,6 @@ section {
   padding-bottom: 50px;
   justify-content: center;
   position: relative;
-  overscroll-behavior-x: auto;
   @media only screen and (orientation: portrait), (max-width: 800px) {
     width: var(--portrait-section-width);
   }
