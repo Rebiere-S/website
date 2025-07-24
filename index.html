@@ -162,52 +162,43 @@
   </section>
   <script>
 	//LOGIQUE D'AFFICHAGE DES OMBRES DE DÉFILEMENT HORIZONTAL DE LA FRISE CHRONOLOGIQUE
-	document.addEventListener('DOMContentLoaded', function () {
-		const careerTimelineScrollContainer = document.getElementById('careerTimelineScrollContainer'),
-			  careerTimelineShadowLeft = document.getElementById('careerTimelineShadowLeft'),
-			  careerTimelineShadowRight = document.getElementById('careerTimelineShadowRight');
+	const careerTimelineScrollContainer = document.getElementById('careerTimelineScrollContainer'),
+		  careerTimelineShadowLeft = document.getElementById('careerTimelineShadowLeft'),
+		  careerTimelineShadowRight = document.getElementById('careerTimelineShadowRight');
+	
+	//Initialisation si le Javascript n'est pas désactivé
+	careerTimelineShadowLeft.style.visibility = 'hidden';
+    
+	const careerTimelineContainer = document.getElementById('careerTimelineContainer'),
+		  careerTimelineContainerPaddingLeft = parseInt(window.getComputedStyle(careerTimelineContainer).paddingLeft, 10),
+		  careerTimelineContainerPaddingRight = parseInt(window.getComputedStyle(careerTimelineContainer).paddingRight, 10);
 
-		//Initialisation si le Javascript n'est pas désactivé
-		careerTimelineShadowLeft.style.visibility = 'hidden';
-
-		const careerTimelineContainer = document.getElementById('careerTimelineContainer');
-
-		if (careerTimelineContainer) {
-			const computedStyle = window.getComputedStyle(careerTimelineContainer),
-				  careerTimelineContainerPaddingLeft = parseInt(computedStyle.paddingLeft, 10),
-				  careerTimelineContainerPaddingRight = parseInt(computedStyle.paddingRight, 10);
-
-			careerTimelineContainer.style.paddingLeft = (careerTimelineContainerPaddingLeft - 15) + 'px';
-			careerTimelineContainer.style.paddingRight = (careerTimelineContainerPaddingRight - 15) + 'px';
-		}
-
-		//Logique d'appel de la fonction d'affichage des ombres
-		careerTimelineScrollContainer.addEventListener('scroll', function () {
-			careerTimelineShadows();
-		});
-
-		window.addEventListener('resize', function () {
-			careerTimelineShadows();
-		});
-
-		//Fonction d'affichage des ombres
-		function careerTimelineShadows() {
-			if (careerTimelineScrollContainer.scrollLeft === 0) {
-			careerTimelineShadowLeft.style.visibility = 'hidden';
-			} else {
-				careerTimelineShadowLeft.style.visibility = 'visible';
-			}
-
-			if (careerTimelineScrollContainer.scrollLeft + careerTimelineScrollContainer.clientWidth >= careerTimelineScrollContainer.scrollWidth) {
-				careerTimelineShadowRight.style.visibility = 'hidden';
-			} else {
-				careerTimelineShadowRight.style.visibility = 'visible';
-			}
-		}
-
-		// Appel initial pour positionner les ombres au chargement
+	careerTimelineContainer.style.paddingLeft = (careerTimelineContainerPaddingLeft - 15) + 'px';
+	careerTimelineContainer.style.paddingRight = (careerTimelineContainerPaddingRight - 15) + 'px';
+	
+	//Logique d'appel de la fonction d'affichage des ombres
+	careerTimelineScrollContainer.addEventListener('scroll', function () {
 		careerTimelineShadows();
 	});
+
+	window.addEventListener('resize', function () {
+		careerTimelineShadows();
+	});
+
+	//Fonction d'affichage des ombres
+	function careerTimelineShadows() {
+		if (careerTimelineScrollContainer.scrollLeft === 0) {
+			careerTimelineShadowLeft.style.visibility = 'hidden';
+		} else {
+			careerTimelineShadowLeft.style.visibility = 'visible';
+		}
+
+		if (careerTimelineScrollContainer.scrollLeft + careerTimelineScrollContainer.clientWidth >= careerTimelineScrollContainer.scrollWidth) {
+		careerTimelineShadowRight.style.visibility = 'hidden';
+		} else {
+		careerTimelineShadowRight.style.visibility = 'visible';
+		}
+	};
   </script>
   <section class="pictured-project">
     <div class="description-container">
