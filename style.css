@@ -236,7 +236,7 @@ section .title {
 }
 
 .tooltip.visit-link {
-  width: 120px;
+  width: 150px;
   opacity: 1;
   visibility: visible;
   top: -10px;
