@@ -379,29 +379,30 @@
     <p><a href="mentions_legales.pdf" class="underlined">Mentions légales</a> | <a href="mailto:mubdem05@anonaddy.me" class="underlined">Contact</a></p>
   </footer>
   <script>
-		function isTouchDevice() {
-			return ('ontouchstart' in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0);
-		}
+	//LOGIQUE DE MODIFICATION DES TERMES D'INTERACTIONS AVEC L'INTERFACE
+	function isTouchDevice() {
+		return ('ontouchstart' in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0);
+	}
 
-		document.addEventListener("DOMContentLoaded", function () {
-			const isDeviceTactile = isTouchDevice();
+	document.addEventListener("DOMContentLoaded", function () {
+		const isDeviceTactile = isTouchDevice();
 
-			document.querySelectorAll("span.interaction-text").forEach(span => {
-        		if (span.classList.contains("hover-click")) {
-					if (isDeviceTactile) {
-            			span.textContent = "Touchez";
-          			} else {
-            			span.textContent = "Survolez/cliquez";
-          			}
-        		} else if (span.classList.contains("click")) {
-					if (isDeviceTactile) {
-            			span.textContent = "Touchez";
-          			} else {
-            			span.textContent = "Cliquez";
-          			}
-        		}
-			});
+		document.querySelectorAll("span.interaction-text").forEach(span => {
+        	if (span.classList.contains("hover-click")) {
+				if (isDeviceTactile) {
+            		span.textContent = "Touchez";
+          		} else {
+            		span.textContent = "Survolez/cliquez";
+          		}
+        	} else if (span.classList.contains("click")) {
+				if (isDeviceTactile) {
+            		span.textContent = "Touchez";
+          		} else {
+            		span.textContent = "Cliquez";
+          		}
+        	}
 		});
+	});
   </script>
   <script>
     //LOGIQUE D'AFFICHAGE DE L'INDICATEUR DE DÉFILEMENT HORIZONTAL
