@@ -97,7 +97,7 @@
             </div>
 			<!-- Début du bloc indication survol timeline-bar -->
 			<div class="tooltip timeline">
-              <p>Survolez ou cliquez/touchez pour plus d'infos</p>
+              <p><span class="interaction-text hover-click">Survolez ou cliquez/touchez</span> pour plus d'infos</p>
             </div>
 			<!-- Fin du bloc indication survol timeline-bar -->
           </div>
@@ -213,7 +213,7 @@
 		<span class="control">
 		  <a href="https://github.com/Rebiere-S/website" enterkeyhint="go">❐</a>
 		  <div class="tooltip visit-link">
-            <p>Cliquez/touchez pour consulter</p>
+            <p><span class="interaction-text click">Survolez ou cliquez/touchez</span> pour consulter</p>
           </div>
 		</span>
 		<div class="scroll-container">
@@ -297,7 +297,7 @@
 		<span class="control">
 		  <a href="https://rebiere-s.github.io/excel-viewer/?src=https://simon-rebiere.fr/assets/spreadsheets/prevention-desserage-vis-sur-plastique.xlsx" enterkeyhint="go">❐</a>
 		  <div class="tooltip visit-link">
-            <p>Cliquez/touchez pour visionner</p>
+            <p><span class="interaction-text click">Survolez ou cliquez/touchez</span> pour visionner</p>
           </div>
 		</span>
 		<div class="scroll-container">
@@ -378,6 +378,31 @@
     <p>Copyright © 2025 Simon Rebière. Tous droits réservés.</p>
     <p><a href="mentions_legales.pdf" class="underlined">Mentions légales</a> | <a href="mailto:mubdem05@anonaddy.me" class="underlined">Contact</a></p>
   </footer>
+  <script>
+		function isTouchDevice() {
+			return ('ontouchstart' in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0);
+		}
+
+		document.addEventListener("DOMContentLoaded", function () {
+			const isDeviceTactile = isTouchDevice();
+
+			document.querySelectorAll("span.interaction-text").forEach(span => {
+        		if (span.classList.contains("hover-click")) {
+					if (isDeviceTactile) {
+            			span.textContent = "Touchez";
+          			} else {
+            			span.textContent = "Survolez/cliquez";
+          			}
+        		} else if (span.classList.contains("click")) {
+					if (isDeviceTactile) {
+            			span.textContent = "Touchez";
+          			} else {
+            			span.textContent = "Cliquez";
+          			}
+        		}
+			});
+		});
+  </script>
   <script>
     //LOGIQUE D'AFFICHAGE DE L'INDICATEUR DE DÉFILEMENT HORIZONTAL
     document.addEventListener('DOMContentLoaded', function() {
