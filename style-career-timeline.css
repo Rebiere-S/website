@@ -35,9 +35,9 @@ section.career-timeline .horizontalScrollContainerShadow.right {
 section.career-timeline .title {
   text-align: center;
   position: relative;
-  margin: 0;
+  margin-bottom: 50px;
   left: 50%;
-  transform: translate(-50%, calc(100% + 90px));
+  transform: translate(-50%, calc(100% + 90px));   /*FORMULE A VERIFIER*/
 }
 
 .timeline-container {
