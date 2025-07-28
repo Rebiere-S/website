@@ -37,7 +37,7 @@ section.career-timeline .title {
   position: relative;
   margin-bottom: 50px;
   left: 50%;
-  transform: translate(-50%, calc(100% + 90px));   /*FORMULE A VERIFIER*/
+  transform: translate(-50%, calc(100% + (140px / 2)));
 }
 
 .timeline-container {
@@ -218,7 +218,7 @@ section.career-timeline .title {
 .timeline-container .horizontalScrollIndicator {
   position: absolute;
   left: 50%;
-  top: calc(50% + (((var(--h1-font-size) * var(--title-line-height)) + 140px) / 2));
+  top: calc(50% + (((var(--h1-font-size) * var(--title-line-height)) + 140px) / 2) + 30px);
   transform: translate(-50%, -50%);
 }
 
