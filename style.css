@@ -200,7 +200,7 @@ section .horizontalScrollContainerShadow.right {
   padding: 0 15px;
   align-items: center;
   border-radius: calc((5px + var(--other-fonts-size) + 5px) / 2);
-  box-shadow: 2px 2px 1px -1px var(--shadow-color);
+  box-shadow: 1px 2px 1px 0px var(--shadow-color);
   position: absolute;
 }
 
