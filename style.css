@@ -127,7 +127,6 @@ section {
   overflow-y: hidden;
   width: var(--landscape-section-width);
   min-height: 100vh;
-  /*padding-bottom: 10vh;*/
   justify-content: center;
   position: relative;
   @media only screen and (orientation: portrait), (max-width: 800px) {
