@@ -163,6 +163,7 @@ section .horizontalScrollContainerShadow.right {
 
 .sections-separator {
   display: flex;
+  flex-direction: column;
   width: var(--landscape-section-width);
   height: auto;
   margin: 50px 0;
@@ -186,6 +187,10 @@ section .horizontalScrollContainerShadow.right {
 .sections-separator .line.inter-projects {
   width: 50%;
   background-color: var(--light-text-color);
+}
+
+#projects-title {
+  margin-top: 80px;
 }
 
 .project-tag {
