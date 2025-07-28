@@ -24,12 +24,12 @@ section.career-timeline .horizontalScrollContainer {
 
 section.career-timeline .horizontalScrollContainerShadow.left {
   height: 250px;   /*Ajouter hauteur dynamique en utilisant "--timeline-total-entries"*/
-  top: calc(50% + (((var(--h1-font-size) * var(--title-line-height)) + 140px) / 2));
+  top: calc(50% + (((var(--h1-font-size) * var(--title-line-height)) + 140px) / 2) + 30px);
 }
 
 section.career-timeline .horizontalScrollContainerShadow.right {
   height: 250px;   /*Ajouter hauteur dynamique en utilisant "--timeline-total-entries"*/
-  top: calc(50% + (((var(--h1-font-size) * var(--title-line-height)) + 140px) / 2));
+  top: calc(50% + (((var(--h1-font-size) * var(--title-line-height)) + 140px) / 2) + 30px);
 }
 
 section.career-timeline .title {
