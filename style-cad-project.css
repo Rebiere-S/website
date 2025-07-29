@@ -56,6 +56,21 @@ section.cad-project {
   height: 100%;
   border-radius: 15px;
   overflow: hidden;
+  --fade-size: 10px;
+  mask-image: linear-gradient(to top,    transparent, black var(--fade-size)),
+              linear-gradient(to bottom, transparent, black var(--fade-size)),
+              linear-gradient(to left,   transparent, black var(--fade-size)),
+              linear-gradient(to right,  transparent, black var(--fade-size));
+  mask-composite: intersect;
+  -webkit-mask-image: linear-gradient(to top,    transparent, black var(--fade-size)),
+                      linear-gradient(to bottom, transparent, black var(--fade-size)),
+                      linear-gradient(to left,   transparent, black var(--fade-size)),
+                      linear-gradient(to right,  transparent, black var(--fade-size));
+  -webkit-mask-composite: destination-in;
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  mask-size: 100% 100%;
+  -webkit-mask-size: 100% 100%;
 }
 
 .cad-project .viewer model-viewer {
@@ -65,24 +80,19 @@ section.cad-project {
 }
 
 .cad-project .hotspot {
-  box-sizing: border-box;
   width: 15px;
   height: 15px;
   padding: 8px;
   border: 0;
   border-radius: 50%;
   background-color: var(--transparent-light-blue);
-  backdrop-filter: blur(1px);
   position: relative;
   cursor: grab;
   transition: all 0.15s;
 }
 
 .cad-project .hotspot:not([data-visible]) {
-  height: 15px;
-  width: 15px;
   background-color: var(--transparent-light-blue);
-  backdrop-filter: blur(1px);
   border: 2px solid var(--white);
   pointer-events: none;
   transition: all 0.15s;
@@ -108,8 +118,10 @@ section.cad-project {
   gap: 5px;
   border-radius: 5px;
   background-color: var(--tooltip-color);
-  /*backdrop-filter: blur(3px);*/
-  box-shadow:  8px 8px 12px -2px var(--shadow-color);
+  /*backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);*/
+  box-shadow: 8px -8px 12px -2px var(--shadow-color),
+              8px 8px 12px -2px var(--shadow-color);
   position: absolute;
   top: 50%;
   left: calc(5px + var(--tooltip-arrow-size) + 100%);
