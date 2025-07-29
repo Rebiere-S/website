@@ -131,6 +131,8 @@ section {
   position: relative;
   @media only screen and (orientation: portrait), (max-width: 800px) {
     width: var(--portrait-section-width);
+	min-height: unset;
+	height: auto;
   }
 }
 
