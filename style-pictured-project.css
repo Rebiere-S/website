@@ -6,7 +6,6 @@ section.pictured-project {
   justify-content: center;
   align-items: center;
   @media only screen and (orientation: portrait), (max-width: 800px) {
-	gap: 15px;
     flex-direction: column;
     justify-content: center;
   }
@@ -20,6 +19,7 @@ section.pictured-project {
   padding: 15px 0;
   @media only screen and (orientation: portrait), (max-width: 800px) {
 	width: 100%;
+	padding: 0;
   }
 }
 
@@ -135,11 +135,13 @@ section.pictured-project {
 
 .pictured-project .control::after {
   display: flex;
-  content: "☓";
+  content: "╳";
   height: 40px;
   width: 30px;
   justify-content: center;
   align-items: center;
+  font-size: 0.7em;
+  font-weight: bold;
   color: var(--dark-text-color);
   position: absolute;
   top: 0;
