@@ -192,7 +192,7 @@ section .horizontalScrollContainerShadow.right {
 }
 
 #projects-title {
-  margin-top: 80px;
+  margin-top: 100px;
 }
 
 .project-tag {
@@ -399,6 +399,7 @@ footer {
   width: 100%;
   height: auto;
   padding: 30px calc((100vw - 80vw) / 2);
+  margin-top: 50px;
   justify-content: center;
   align-items: center;
   line-height: 2em;
