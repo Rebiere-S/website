@@ -396,6 +396,144 @@
       </div>
     </div>
   </section>
+  <div class="sections-separator">
+    <div class="line inter-projects"></div>
+  </div>
+  <section class="cad-project">
+    <div class="description-container">
+      <div class="project-tag personal">
+        <p><small>Personnel</small></p>
+      </div>
+      <h2>Couronne de mise à l'heure repliable pour montre LIP R27</h2>
+	  <p>Le mouvement de montre LIP R27 fut le premier prototype de mouvement de montre électrique à pile, et la montre du même nom fut la seconde dotée de cette prouesse. En tant que passionné d'horlogerie, j'ai mis la main sur un modèle neuf, mais auquel il manquait des pièces très rares, voir introuvables. L'une d'elles, l'emblématique couronne de mise à l'heure repliable, située à l'arrière du boîtier de montre. Grâce à des mesures à d'autres collectionneurs et quelques photos, j'ai pu la redessiner en tenant compte de sa manufacturabilité pour une production de petite série. Enfin j'ai réalisé un devis en fabrication additive par frittage laser de poudre métallique avec reprise par usinage et polissage. J'ai finalement mandaté un bijoutier pour de la fonderie dopée à l'impression 3D, avec retouches et polissage.</p>
+    </div>
+    <div class="viewer-container" style="--viewer-ratio: 4 / 3;">
+      <div class="viewer">
+		<model-viewer id="couronne-repliable-montre-lip-R27" poster="https://simon-rebiere.fr/assets/posters/couronne_repliable_montre_lip_R27.webp" loading="lazy" src="https://simon-rebiere.fr/assets/models/couronne_repliable_montre_lip_R27.glb" alt="Modèle 3D de la couronne repliable pour montre Lip R27" camera-target="0m -0.002m 0m" camera-orbit="215deg 50deg 0.02018m" field-of-view="30deg" camera-controls shadow-intensity="2" shadow-softness="1">
+          <button slot="hotspot-dot+X-Y+Z" class="dot" data-position="1 -1 1" data-normal="1 0 0"></button>
+          <button slot="hotspot-dim+X-Y" class="dimension" data-position="1 -1 0" data-normal="1 0 0"></button>
+          <button slot="hotspot-dot+X-Y-Z" class="dot" data-position="1 -1 -1" data-normal="1 0 0"></button>
+          <button slot="hotspot-dim+X-Z" class="dimension" data-position="1 0 -1" data-normal="1 0 0"></button>
+          <button slot="hotspot-dot+X+Y-Z" class="dot" data-position="1 1 -1" data-normal="0 1 0"></button>
+          <button slot="hotspot-dim+Y-Z" class="dimension" data-position="0 -1 -1" data-normal="0 1 0"></button>
+          <button slot="hotspot-dot-X+Y-Z" class="dot" data-position="-1 1 -1" data-normal="0 1 0"></button>
+          <button slot="hotspot-dim-X-Z" class="dimension" data-position="-1 0 -1" data-normal="-1 0 0"></button>
+          <button slot="hotspot-dot-X-Y-Z" class="dot" data-position="-1 -1 -1" data-normal="-1 0 0"></button>
+          <button slot="hotspot-dim-X-Y" class="dimension" data-position="-1 -1 0" data-normal="-1 0 0"></button>
+          <button slot="hotspot-dot-X-Y+Z" class="dot" data-position="-1 -1 1" data-normal="-1 0 0"></button>
+		  <svg class="dimensionLineContainer">
+            <line class="dimensionLine"></line>
+            <line class="dimensionLine"></line>
+            <line class="dimensionLine"></line>
+            <line class="dimensionLine"></line>
+            <line class="dimensionLine"></line>
+          </svg>
+		  <div class="progress-bar hide" slot="progress-bar"></div>
+        </model-viewer>
+      </div>
+    </div>
+  </section>
+  <script type="module">
+	//LOGIQUE D'AFFICHAGE DES DIMENSIONS DU MODELE 3D
+	const modelViewer = document.querySelector('#couronne-repliable-montre-lip-R27');
+	
+	modelViewer.addEventListener('load', () => {
+      const center = modelViewer.getBoundingBoxCenter(),
+            size = modelViewer.getDimensions(),
+            x2 = size.x / 2,
+            y2 = size.y / 2,
+            z2 = size.z / 2;
+
+      modelViewer.updateHotspot({
+        name: 'hotspot-dot+X-Y+Z',
+        position: `${center.x + x2} ${center.y - y2} ${center.z + z2}`
+      });
+
+      modelViewer.updateHotspot({
+        name: 'hotspot-dim+X-Y',
+        position: `${center.x + x2 * 1.05} ${center.y - y2 * 1.05} ${center.z}`
+      });
+      modelViewer.querySelector('button[slot="hotspot-dim+X-Y"]').textContent = `${(size.z * 1000).toFixed(2)} mm`;
+
+      modelViewer.updateHotspot({
+        name: 'hotspot-dot+X-Y-Z',
+        position: `${center.x + x2} ${center.y - y2} ${center.z - z2}`
+      });
+
+      modelViewer.updateHotspot({
+        name: 'hotspot-dim+X-Z',
+        position: `${center.x + x2 * 1.05} ${center.y} ${center.z - z2 * 1.05}`
+      });
+      modelViewer.querySelector('button[slot="hotspot-dim+X-Z"]').textContent = `${(size.y * 1000).toFixed(2)} mm`;
+
+      modelViewer.updateHotspot({
+        name: 'hotspot-dot+X+Y-Z',
+        position: `${center.x + x2} ${center.y + y2} ${center.z - z2}`
+      });
+
+      modelViewer.updateHotspot({
+        name: 'hotspot-dim+Y-Z',
+        position: `${center.x} ${center.y + y2 * 1.05} ${center.z - z2 * 1.05}`
+      });
+      modelViewer.querySelector('button[slot="hotspot-dim+Y-Z"]').textContent = `${(size.x * 1000).toFixed(2)} mm`;
+
+      modelViewer.updateHotspot({
+        name: 'hotspot-dot-X+Y-Z',
+        position: `${center.x - x2} ${center.y + y2} ${center.z - z2}`
+      });
+
+      modelViewer.updateHotspot({
+        name: 'hotspot-dim-X-Z',
+        position: `${center.x - x2 * 1.05} ${center.y} ${center.z - z2 * 1.05}`
+      });
+      modelViewer.querySelector('button[slot="hotspot-dim-X-Z"]').textContent = `${(size.y * 1000).toFixed(2)} mm`;
+
+      modelViewer.updateHotspot({
+        name: 'hotspot-dot-X-Y-Z',
+        position: `${center.x - x2} ${center.y - y2} ${center.z - z2}`
+      });
+
+      modelViewer.updateHotspot({
+        name: 'hotspot-dim-X-Y',
+        position: `${center.x - x2 * 1.05} ${center.y - y2 * 1.05} ${center.z}`
+      });
+      modelViewer.querySelector('button[slot="hotspot-dim-X-Y"]').textContent = `${(size.z * 1000).toFixed(2)} mm`;
+
+      modelViewer.updateHotspot({
+        name: 'hotspot-dot-X-Y+Z',
+        position: `${center.x - x2} ${center.y - y2} ${center.z + z2}`
+      });
+
+      renderSVG();
+
+      modelViewer.addEventListener('camera-change', renderSVG);
+    });
+
+    function drawLine(svgLine, dotHotspot1, dotHotspot2, dimensionHotspot) {
+      if (dotHotspot1 && dotHotspot2) {
+        svgLine.setAttribute('x1', dotHotspot1.canvasPosition.x);
+        svgLine.setAttribute('y1', dotHotspot1.canvasPosition.y);
+        svgLine.setAttribute('x2', dotHotspot2.canvasPosition.x);
+        svgLine.setAttribute('y2', dotHotspot2.canvasPosition.y);
+
+        if (dimensionHotspot && !dimensionHotspot.facingCamera) {
+          svgLine.classList.add('hide');
+        } else {
+          svgLine.classList.remove('hide');
+        }
+      }
+    }
+
+    const dimLines = modelViewer.querySelectorAll('line');
+
+    const renderSVG = () => {
+      drawLine(dimLines[0], modelViewer.queryHotspot('hotspot-dot+X-Y+Z'), modelViewer.queryHotspot('hotspot-dot+X-Y-Z'), modelViewer.queryHotspot('hotspot-dim+X-Y'));
+      drawLine(dimLines[1], modelViewer.queryHotspot('hotspot-dot+X-Y-Z'), modelViewer.queryHotspot('hotspot-dot+X+Y-Z'), modelViewer.queryHotspot('hotspot-dim+X-Z'));
+      drawLine(dimLines[2], modelViewer.queryHotspot('hotspot-dot+X+Y-Z'), modelViewer.queryHotspot('hotspot-dot-X+Y-Z'), modelViewer.queryHotspot('hotspot-dim+Y-Z'));
+      drawLine(dimLines[3], modelViewer.queryHotspot('hotspot-dot-X+Y-Z'), modelViewer.queryHotspot('hotspot-dot-X-Y-Z'), modelViewer.queryHotspot('hotspot-dim-X-Z'));
+      drawLine(dimLines[4], modelViewer.queryHotspot('hotspot-dot-X-Y-Z'), modelViewer.queryHotspot('hotspot-dot-X-Y+Z'), modelViewer.queryHotspot('hotspot-dim-X-Y'));
+    };
+  </script>
   <footer>
     <p>Copyright © 2025 Simon Rebière. Tous droits réservés.</p>
     <p><a href="mentions_legales.pdf" class="underlined">Mentions légales</a> | <a href="mailto:mubdem05@anonaddy.me" class="underlined">Contact</a></p>
