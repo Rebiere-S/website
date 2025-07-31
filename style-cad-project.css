@@ -120,8 +120,8 @@ section.cad-project {
   background-color: var(--tooltip-color);
   /*backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);*/
-  box-shadow: 8px -8px 12px -2px var(--shadow-color),
-              8px 8px 12px -2px var(--shadow-color);
+  box-shadow:  8px -8px 12px -2px var(--shadow-color),
+              -8px 8px 12px -2px var(--shadow-color);
   position: absolute;
   top: 50%;
   left: calc(5px + var(--tooltip-arrow-size) + 100%);
