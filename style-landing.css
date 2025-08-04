@@ -173,8 +173,8 @@ section.landing {
 .presentation-card .name-container:after {
   content: "";
   width: 90%;
-  height: 2px;
-  background-color: var(--dark-text-color);
+  height: 1px;
+  background-color: var(--light-text-color);
   position: absolute;
   left: 50%;
   top: 100%;
