@@ -14,30 +14,28 @@
 
 section.career-timeline {
   overflow-x: hidden;
-  padding: 140px 0;
 }
 
 section.career-timeline .horizontalScrollContainer {
-  padding-top: calc((var(--h1-font-size) * var(--title-line-height)) + 140px);
+  padding-top: 9em;
   padding-bottom: 30px;
 }
 
 section.career-timeline .horizontalScrollContainerShadow.left {
   height: 250px;   /*Ajouter hauteur dynamique en utilisant "--timeline-total-entries"*/
-  top: calc(50% + (((var(--h1-font-size) * var(--title-line-height)) + 140px) / 2) + 30px);
+  top: calc(50% + (((9em + (var(--h1-font-size) * var(--title-line-height))) / 2)) - (30px /2));
 }
 
 section.career-timeline .horizontalScrollContainerShadow.right {
   height: 250px;   /*Ajouter hauteur dynamique en utilisant "--timeline-total-entries"*/
-  top: calc(50% + (((var(--h1-font-size) * var(--title-line-height)) + 140px) / 2) + 30px);
+  top: calc(50% + (((9em + (var(--h1-font-size) * var(--title-line-height))) / 2)) - (30px /2));
 }
 
 section.career-timeline .title {
   text-align: center;
   position: relative;
-  margin-bottom: 50px;
   left: 50%;
-  transform: translate(-50%, calc(100% + (140px / 2)));
+  transform: translate(-50%, 100%);
 }
 
 .timeline-container {
@@ -186,7 +184,7 @@ section.career-timeline .title {
 
 .info-bubble.timeline {
   width: max-content;
-  max-width: calc(--landscape-section-width - 40px);
+  max-width: calc(--landscape-section-width - 10px - 10px - 20px);
   opacity: 0;
   text-align: left;
   visibility: hidden;
@@ -217,7 +215,7 @@ section.career-timeline .title {
 .timeline-container .horizontalScrollIndicator {
   position: absolute;
   left: 50%;
-  top: calc(50% + (((var(--h1-font-size) * var(--title-line-height)) + 140px) / 2) + 30px);
+  top: calc(50% + (((9em + (var(--h1-font-size) * var(--title-line-height))) / 2)) - (30px /2));
   transform: translate(-50%, -50%);
 }
 
