@@ -143,24 +143,24 @@ section .horizontalScrollContainer {
   height: 100%;
 }
 
-section .horizontalScrollContainerShadow.left {
-  content: "";
-  width: 10px;
-  border-radius: 0 10px 10px 0;
-  background: linear-gradient(270deg, transparent 0%, var(--shadow-color) 100%);
-  position: absolute;
-  left: 0;
-  transform: translateY(-50%);
-}
-
+section .horizontalScrollContainerShadow.left,
 section .horizontalScrollContainerShadow.right {
   content: "";
   width: 10px;
+  position: absolute;
+  transform: translateY(-50%);
+}
+
+section .horizontalScrollContainerShadow.left {
+  border-radius: 0 10px 10px 0;
+  background: linear-gradient(270deg, transparent 0%, var(--shadow-color) 100%);
+  left: 0;
+}
+
+section .horizontalScrollContainerShadow.right {
   border-radius: 10px 0 0 10px;
   background: linear-gradient(90deg, transparent 0%, var(--shadow-color) 100%);
-  position: absolute;
   right: 0;
-  transform: translateY(-50%);
 }
 
 .sections-separator {
@@ -178,16 +178,17 @@ section .horizontalScrollContainerShadow.right {
 
 .sections-separator .line {
   display: flex;
-  height: 2px;
 }
 
 .sections-separator .line.inter-sections {
   width: 90%;
+  height: 2px;
   background-color: var(--dark-text-color);
 }
 
 .sections-separator .line.inter-projects {
   width: 50%;
+  height: 1px;
   background-color: var(--light-text-color);
 }
 
