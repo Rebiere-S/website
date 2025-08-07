@@ -151,6 +151,7 @@ header {
 #navigation-bar {
   display: flex;
   flex-direction: row;
+  overflow: hidden;
   padding: 15px;
   gap: 15px;
   border-radius: 5px;
@@ -160,10 +161,22 @@ header {
   position: fixed;
   top: 30px;
   right: 30px;
+  transition: all 0.15s linear;
   @media only screen and (orientation: portrait), (max-width: 800px) {
     flex-direction: column;
+	padding: 10px;
+	height: calc(10px + 30px + 10px);
+	align-items: center;
 	top: 15px;
 	right: 15px;
+  }
+}
+
+#navigation-bar:hover,
+#navigation-bar:focus {
+  @media only screen and (orientation: portrait), (max-width: 800px) {
+    padding: 15px;
+	height: calc(15px + 30px + 15px + 1px + 15px + (4 * 30px) + ((4 - 1) * 10px) + 15px);
   }
 }
 
@@ -179,6 +192,25 @@ header {
   }
 }
 
+#navigation-bar .menu-separator {
+  display: none;
+  @media only screen and (orientation: portrait), (max-width: 800px) {
+	display: flex;
+	width: 90%;
+    height: 1px;
+    background-color: var(--light-text-color);
+	position: relative;
+	
+  }
+}
+
+#navigation-bar:hover .menu-separator,
+#navigation-bar:focus .menu-separator {
+  @media only screen and (orientation: portrait), (max-width: 800px) {
+	display: flex;
+  }
+}
+
 #navigation-bar .items {
   display: flex;
   flex-direction: row;
@@ -187,7 +219,16 @@ header {
   gap: 30px;
   @media only screen and (orientation: portrait), (max-width: 800px) {
     flex-direction: column;
+	opacity: 0;
 	gap: 10px;
+  }
+}
+
+#navigation-bar:hover .items,
+#navigation-bar:focus .items {
+  @media only screen and (orientation: portrait), (max-width: 800px) {
+	opacity: 1;
+	transition: all 0.15s linear 0.15s;
   }
 }
 
