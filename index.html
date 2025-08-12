@@ -222,26 +222,26 @@
 	
 	//Logique d'appel de la fonction d'affichage des ombres
 	careerTimelineScrollContainer.addEventListener('scroll', function () {
-		careerTimelineShadows();
+      careerTimelineShadows();
 	});
 
 	window.addEventListener('resize', function () {
-		careerTimelineShadows();
+      careerTimelineShadows();
 	});
 
 	//Fonction d'affichage des ombres
 	function careerTimelineShadows() {
-		if (careerTimelineScrollContainer.scrollLeft === 0) {
-			careerTimelineShadowLeft.style.visibility = 'hidden';
-		} else {
-			careerTimelineShadowLeft.style.visibility = 'visible';
-		}
+      if (careerTimelineScrollContainer.scrollLeft === 0) {
+        careerTimelineShadowLeft.style.visibility = 'hidden';
+      } else {
+        careerTimelineShadowLeft.style.visibility = 'visible';
+      }
 
-		if (careerTimelineScrollContainer.scrollLeft + careerTimelineScrollContainer.clientWidth >= careerTimelineScrollContainer.scrollWidth) {
-		careerTimelineShadowRight.style.visibility = 'hidden';
-		} else {
-		careerTimelineShadowRight.style.visibility = 'visible';
-		}
+      if (careerTimelineScrollContainer.scrollLeft + careerTimelineScrollContainer.clientWidth >= careerTimelineScrollContainer.scrollWidth) {
+        careerTimelineShadowRight.style.visibility = 'hidden';
+      } else {
+        careerTimelineShadowRight.style.visibility = 'visible';
+      }
 	};
   </script>
   <div class="sections-separator" id="projects">
@@ -364,29 +364,6 @@
       </div>
     </div>
   </section>
-  <!-- <div class="sections-separator">
-    <div class="line inter-projects"></div>
-  </div>
-  <section class="web-project">
-    <div class="description-container">
-      <div class="project-tag professional">
-        <p><small>Professionnel</small></p>
-      </div>
-      <h2>Calculateur non algorithmique du temps et coût de l'impression 3D FDM/FFF</h2>
-	  <p>En tant que concepteur mécanique, j'ai souvent été amené à comparer les prix de pièces issues de procédés de fabrication différents pour optimiser les coûts. Les délais de réalisation des devis ralentissant le processus, je me suis penché sur le cas de l'impression 3D FDM/FFF et la théorisation d'une méthode de calcul permettant d'obtenir un devis instantané, et ce, avec les données à ma portée en tant que dessinateur des pièces, et sans utiliser d'algorithmes ou de logiciels de tranchage. Aujourd'hui, le calculateur a une précision de 97% concernant le temps d'impression, et de plus de 99% pour le calcul du volume matière ainsi que le prix pièce. J'envisage à l'avenir d'explorer la comparaison du ratio isopérimétrique de la pièce avec celui d'une autre atteignant les limites de la technologie FDM/FFF, pour tenter notamment d'améliorer la précision.</p>
-    </div>
-    <div class="window-container">
-      <div class="window">
-		<span class="control">
-		  <a href="https://sheet.zohopublic.eu/sheet/published/34mxxf6b7ec4d7440496a92a052f7602cca18?sheetid=0&range=A1" enterkeyhint="go">❐</a>
-		</span>
-		<div class="scroll-container">
-          <iframe style="--computer-viewer-zoom: 0.6; --mobile-viewer-zoom: 0.5;" title="Image de la feuille de calcul permettant d'estimer le temps et le coût d'une impression 3D FDM/FFF" src="https://sheet.zohopublic.eu/sheet/published/34mxxf6b7ec4d7440496a92a052f7602cca18?sheetid=0&range=A1" loading="lazy"></iframe>
-          <div class="verticalScrollIndicator"></div>
-        </div>
-      </div>
-    </div>
-  </section> -->
   <div class="sections-separator">
     <div class="line inter-projects"></div>
   </div>
@@ -653,8 +630,8 @@
         	}
 		});
 	});
-  </script>
-  <script>
+	
+	
     //LOGIQUE D'AFFICHAGE DE L'INDICATEUR DE DÉFILEMENT HORIZONTAL
     document.addEventListener('DOMContentLoaded', function() {
       function checkScrollIndicator() {
