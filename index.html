@@ -657,14 +657,15 @@
 	
     //LOGIQUE D'AFFICHAGE DE L'INDICATEUR DE DÉFILEMENT HORIZONTAL
     document.addEventListener('DOMContentLoaded', function() {
-      function checkScrollIndicator() {
-        const sections = document.querySelectorAll('section');
+      function checkScrollIndicators() {
+        const scrollContainers = document.querySelectorAll('.horizontalScrollContainer');
 
-        sections.forEach(section => {
-          const scrollIndicator = section.querySelector('.horizontalScrollIndicator');
+        scrollContainers.forEach(container => {
+          const scrollIndicator = container.querySelector('.horizontalScrollIndicator'),
+                content = container.querySelector('.timeline-container');
 
-          if (scrollIndicator) {
-            if (section.scrollWidth > section.clientWidth) {
+          if (scrollIndicator && content) {
+            if (content.scrollWidth > container.clientWidth) {
               scrollIndicator.style.display = 'flex';
             } else {
               scrollIndicator.style.display = 'none';
@@ -673,9 +674,9 @@
         });
       }
 
-      checkScrollIndicator();
+      checkScrollIndicators();
 
-      window.addEventListener('resize', checkScrollIndicator);
+      window.addEventListener('resize', checkScrollIndicators);
     });
   </script>
   <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
