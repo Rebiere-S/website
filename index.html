@@ -28,30 +28,30 @@
 <body>
   <header>
     <div id="navigation-bar">
-	  <img class="menu-icon" src="https://simon-rebiere.fr/assets/icons/hamburger-menu.svg" alt="Bouton menu"/>
+	  <img class="menu-icon" src="https://simon-rebiere.fr/assets/icons/hamburger-menu.svg" draggable="false"/>
 	  <div class="menu-separator"></div>
 	  <div class="items">
 	    <div class="item">
 		  <a class="button" href="#home">
-	        <img src="https://simon-rebiere.fr/assets/icons/home.svg" alt="Bouton accueil"/>
+	        <img src="https://simon-rebiere.fr/assets/icons/home.svg" draggable="false"/>
 		    <h3>Acceuil</h3>
 		  </a>
 	    </div>
 	    <div class="item">
 		  <a class="button" href="#career">
-	        <img src="https://simon-rebiere.fr/assets/icons/biography.svg" alt="Bouton carrière"/>
+	        <img src="https://simon-rebiere.fr/assets/icons/biography.svg" draggable="false"/>
 		    <h3>Carrière</h3>
 		  </a>
 	    </div>
 	    <div class="item">
 		  <a class="button" href="#projects">
-	        <img src="https://simon-rebiere.fr/assets/icons/projects.svg" alt="Bouton projets"/>
+	        <img src="https://simon-rebiere.fr/assets/icons/projects.svg" draggable="false"/>
 		    <h3>Projets</h3>
 		  </a>
 	    </div>
 	    <div class="item">
 		  <a class="button" href="mailto:mubdem05@anonaddy.me">
-	        <img src="https://simon-rebiere.fr/assets/icons/contact.svg" alt="Bouton contact"/>
+	        <img src="https://simon-rebiere.fr/assets/icons/contact.svg" draggable="false"/>
 		    <h3>Contact</h3>
 		  </a>
 	    </div>
@@ -265,7 +265,7 @@
           </div>
 		</span>
 		<div class="scroll-container">
-          <img src="https://simon-rebiere.fr/assets/covers/depot-github-blog.webp" fetchpriority="low" loading="lazy" alt="Image du dépot de code de ce blog" draggable="false"></img>
+          <img src="https://simon-rebiere.fr/assets/covers/depot-github-blog.webp" alt="Image du dépot de code de ce blog" draggable="false"></img>
           <div class="verticalScrollIndicator"></div>
         </div>
       </div>
@@ -288,7 +288,7 @@
 		  <a href="https://rebiere-s.github.io/calculation-dimension-stl-export/" enterkeyhint="go">❐</a>
 		</span>
 		<div class="scroll-container">
-          <iframe style="--computer-viewer-zoom: 0.8; --mobile-viewer-zoom: 0.65;" title="Page web de l'outil pédagogique à l'apprentissage de l'export de fichiers DAO au format stéréolithographie (STL)" src="https://rebiere-s.github.io/calculation-dimension-stl-export/" loading="lazy"></iframe>
+          <iframe style="--computer-viewer-zoom: 0.8; --mobile-viewer-zoom: 0.65;" title="Page web de l'outil pédagogique à l'apprentissage de l'export de fichiers DAO au format stéréolithographie (STL)" src="https://rebiere-s.github.io/calculation-dimension-stl-export/"></iframe>
           <div class="verticalScrollIndicator"></div>
         </div>
       </div>
@@ -307,7 +307,7 @@
     </div>
     <div class="viewer-container" style="--viewer-ratio: 4 / 3;">
       <div class="viewer">
-		<model-viewer poster="https://simon-rebiere.fr/assets/posters/nourrice_aspirateur_industriel.webp" loading="lazy" src="https://simon-rebiere.fr/assets/models/nourrice_aspirateur_industriel.glb" alt="Modèle 3D de la nourisse pour aspirateur industriel imprimable en 3D" camera-target="0m 0.1m 0m" camera-orbit="25deg 65deg 0.9119m" field-of-view="30deg" camera-controls auto-rotate tone-mapping="neutral" shadow-intensity="1" exposure="1" shadow-softness="1">
+		<model-viewer poster="https://simon-rebiere.fr/assets/posters/nourrice_aspirateur_industriel.webp" src="https://simon-rebiere.fr/assets/models/nourrice_aspirateur_industriel.glb" alt="Modèle 3D de la nourisse pour aspirateur industriel imprimable en 3D" camera-target="0m 0.1m 0m" camera-orbit="25deg 65deg 0.9119m" field-of-view="30deg" camera-controls auto-rotate tone-mapping="neutral" shadow-intensity="1" exposure="1" shadow-softness="1">
           <button class="hotspot" slot="hotspot-1" data-position="0.11244330387119092m 0.20461345727430186m 0.005849587639763535m" data-normal="-0.00012445510381585014m -0.9999767651843907m 0.0068156879542131555m" data-visibility-attribute="visible">
             <div class="hotspot-annotation">
 			  <p>Seuls surplombs nécessitant des supports d'impression</p>
@@ -358,12 +358,35 @@
           </div>
 		</span>
 		<div class="scroll-container">
-          <img src="https://simon-rebiere.fr/assets/covers/calculateur-cout-et-temps-impression-3D-FDM.webp" fetchpriority="low" loading="lazy" alt="Image de la feuille de calcul permettant d'estimer le temps et le coût d'une impression 3D FDM/FFF" draggable="false"></img>
+          <img src="https://simon-rebiere.fr/assets/covers/calculateur-cout-et-temps-impression-3D-FDM.webp" alt="Image de la feuille de calcul permettant d'estimer le temps et le coût d'une impression 3D FDM/FFF" draggable="false"></img>
           <div class="verticalScrollIndicator"></div>
         </div>
       </div>
     </div>
   </section>
+  <!-- <div class="sections-separator">
+    <div class="line inter-projects"></div>
+  </div>
+  <section class="web-project">
+    <div class="description-container">
+      <div class="project-tag professional">
+        <p><small>Professionnel</small></p>
+      </div>
+      <h2>Calculateur non algorithmique du temps et coût de l'impression 3D FDM/FFF</h2>
+	  <p>En tant que concepteur mécanique, j'ai souvent été amené à comparer les prix de pièces issues de procédés de fabrication différents pour optimiser les coûts. Les délais de réalisation des devis ralentissant le processus, je me suis penché sur le cas de l'impression 3D FDM/FFF et la théorisation d'une méthode de calcul permettant d'obtenir un devis instantané, et ce, avec les données à ma portée en tant que dessinateur des pièces, et sans utiliser d'algorithmes ou de logiciels de tranchage. Aujourd'hui, le calculateur a une précision de 97% concernant le temps d'impression, et de plus de 99% pour le calcul du volume matière ainsi que le prix pièce. J'envisage à l'avenir d'explorer la comparaison du ratio isopérimétrique de la pièce avec celui d'une autre atteignant les limites de la technologie FDM/FFF, pour tenter notamment d'améliorer la précision.</p>
+    </div>
+    <div class="window-container">
+      <div class="window">
+		<span class="control">
+		  <a href="https://sheet.zohopublic.eu/sheet/published/34mxxf6b7ec4d7440496a92a052f7602cca18?sheetid=0&range=A1" enterkeyhint="go">❐</a>
+		</span>
+		<div class="scroll-container">
+          <iframe style="--computer-viewer-zoom: 0.6; --mobile-viewer-zoom: 0.5;" title="Image de la feuille de calcul permettant d'estimer le temps et le coût d'une impression 3D FDM/FFF" src="https://sheet.zohopublic.eu/sheet/published/34mxxf6b7ec4d7440496a92a052f7602cca18?sheetid=0&range=A1"></iframe>
+          <div class="verticalScrollIndicator"></div>
+        </div>
+      </div>
+    </div>
+  </section> -->
   <div class="sections-separator">
     <div class="line inter-projects"></div>
   </div>
@@ -381,7 +404,7 @@
 		  <a href="https://rebiere-s.github.io/excel-viewer/?src=https://simon-rebiere.fr/assets/spreadsheets/prevention-desserage-vis-sur-plastique.xlsx" enterkeyhint="go">❐</a>
 		</span>
 		<div class="scroll-container">
-          <img src="https://simon-rebiere.fr/assets/covers/prevention-desserrage-vis-sur-plastiques.webp" fetchpriority="low" loading="lazy" alt="Image de la feuille de calcul permettant de dimensionner un système de prévention du desserage des vis sur des plastiques" draggable="false"></img>
+          <img src="https://simon-rebiere.fr/assets/covers/prevention-desserrage-vis-sur-plastiques.webp" alt="Image de la feuille de calcul permettant de dimensionner un système de prévention du desserage des vis sur des plastiques" draggable="false"></img>
           <div class="verticalScrollIndicator"></div>
         </div>
       </div>
@@ -400,7 +423,7 @@
     </div>
     <div class="viewer-container" style="--viewer-ratio: 2 / 1;">
       <div class="viewer">
-		<model-viewer poster="https://simon-rebiere.fr/assets/posters/support_capteur_verin_cylindrique.webp" loading="lazy" src="https://simon-rebiere.fr/assets/models/support_capteur_verin_cylindrique.glb" alt="Modèle 3D du support de capteur de vérin cylindrique universel de Ø6 à 20mm, monté sur un vérin avec un capteur et son collier de serrage à crémaillère" camera-orbit="-20deg 50deg 0.27m" field-of-view="30deg" camera-controls auto-rotate tone-mapping="neutral" shadow-intensity="0.75" exposure="1" shadow-softness="0.7">
+		<model-viewer poster="https://simon-rebiere.fr/assets/posters/support_capteur_verin_cylindrique.webp" src="https://simon-rebiere.fr/assets/models/support_capteur_verin_cylindrique.glb" alt="Modèle 3D du support de capteur de vérin cylindrique universel de Ø6 à 20mm, monté sur un vérin avec un capteur et son collier de serrage à crémaillère" camera-orbit="-20deg 50deg 0.27m" field-of-view="30deg" camera-controls auto-rotate tone-mapping="neutral" shadow-intensity="0.75" exposure="1" shadow-softness="0.7">
           <div class="progress-bar hide" slot="progress-bar"></div>
         </model-viewer>
       </div>
@@ -419,7 +442,7 @@
     </div>
     <div class="viewer-container" style="--viewer-ratio: 4 / 3;">
       <div class="viewer">
-		<model-viewer id="couronne-repliable-montre-lip-R27" poster="https://simon-rebiere.fr/assets/posters/couronne_repliable_montre_lip_R27.webp" loading="lazy" src="https://simon-rebiere.fr/assets/models/couronne_repliable_montre_lip_R27.glb" alt="Modèle 3D de la couronne repliable pour montre Lip R27" camera-target="0m -0.002m 0m" camera-orbit="215deg 50deg 0.02018m" field-of-view="30deg" camera-controls shadow-intensity="2" shadow-softness="1">
+		<model-viewer id="couronne-repliable-montre-lip-R27" poster="https://simon-rebiere.fr/assets/posters/couronne_repliable_montre_lip_R27.webp" src="https://simon-rebiere.fr/assets/models/couronne_repliable_montre_lip_R27.glb" alt="Modèle 3D de la couronne repliable pour montre Lip R27" camera-target="0m -0.002m 0m" camera-orbit="215deg 50deg 0.02018m" field-of-view="30deg" camera-controls shadow-intensity="2" shadow-softness="1">
           <button slot="hotspot-dot+X-Y+Z" class="dot" data-position="1 -1 1" data-normal="1 0 0"></button>
           <button slot="hotspot-dim+X-Y" class="dimension" data-position="1 -1 0" data-normal="1 0 0"></button>
           <button slot="hotspot-dot+X-Y-Z" class="dot" data-position="1 -1 -1" data-normal="1 0 0"></button>
@@ -559,7 +582,7 @@
       <div class="window">
 		<span class="control"><a href="https://rebiere-s.github.io/simulation-DLP-3D-printing/" enterkeyhint="go">❐</a></span>
 		<div class="scroll-container">
-          <iframe style="--computer-viewer-zoom: 0.8; --mobile-viewer-zoom: 0.65;" title="Page web de l'outil de simulation en ligne d'impression 3D de technologie DLP" src="https://rebiere-s.github.io/simulation-DLP-3D-printing/" loading="lazy"></iframe>
+          <iframe style="--computer-viewer-zoom: 0.8; --mobile-viewer-zoom: 0.65;" title="Page web de l'outil de simulation en ligne d'impression 3D de technologie DLP" src="https://rebiere-s.github.io/simulation-DLP-3D-printing/"></iframe>
           <div class="verticalScrollIndicator"></div>
         </div>
       </div>
@@ -578,7 +601,7 @@
     </div>
     <div class="viewer-container" style="--viewer-ratio: 3 / 2;">
       <div class="viewer">
-		<model-viewer poster="https://simon-rebiere.fr/assets/posters/poignee_cle_allen_en_t.webp" loading="lazy" src="https://simon-rebiere.fr/assets/models/poignee_cle_allen_en_t.glb" alt="Modèle 3D de la poignée pour clé Allen en T multi-tailles" camera-orbit="125deg 55deg 0.2m" field-of-view="30deg" camera-controls auto-rotate tone-mapping="neutral" shadow-intensity="2" exposure="1" shadow-softness="0.5">
+		<model-viewer poster="https://simon-rebiere.fr/assets/posters/poignee_cle_allen_en_t.webp" src="https://simon-rebiere.fr/assets/models/poignee_cle_allen_en_t.glb" alt="Modèle 3D de la poignée pour clé Allen en T multi-tailles" camera-orbit="125deg 55deg 0.2m" field-of-view="30deg" camera-controls auto-rotate tone-mapping="neutral" shadow-intensity="2" exposure="1" shadow-softness="0.5">
           <button class="hotspot" slot="hotspot-1" data-position="0.007499999832361937m 0.007933271670724534m -0.017047103865251646m" data-normal="1m 0m 0m" data-visibility-attribute="visible">
             <div class="hotspot-annotation">
 			  <p>Indications de tailles</p>
