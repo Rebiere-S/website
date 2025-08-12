@@ -130,23 +130,12 @@ body {
 
 header {
   display: flex;
-  visibility: hidden;
-  opacity: 0;
-  width: 100%;
-  height: 100%;
-  animation: 1s headerShowingAnimation 0.5s forwards;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
   z-index: 1000;
-}
-
-@keyframes headerShowingAnimation {
-  0% {
-    visibility: visible;
-	opacity: 0;
-  }
-  100% {
-    visibility: visible;
-	opacity: 1;
-  }
 }
 
 #navigation-bar {
@@ -159,10 +148,12 @@ header {
   background-color: var(--transparent-background-color);
   backdrop-filter: blur(3px);
   box-shadow:  8px 8px 12px -2px var(--shadow-color);
-  position: fixed;
+  position: absolute;
   top: 3vh;
   right: 3vh;
+  transform: translateY(calc(-100% - 3vh - (8px + 12px)));
   transition: all 0.15s linear;
+  animation: 1s headerShowingAnimation 0.5s forwards;
   @media only screen and (orientation: portrait), (max-width: 800px) {
     flex-direction: column;
 	padding: 10px;
@@ -170,6 +161,13 @@ header {
 	align-items: center;
 	top: 3vw;
     right: 3vw;
+	transform: translateY(calc(-100% - 3vw - (8px + 12px)));
+  }
+}
+
+@keyframes headerShowingAnimation {
+  100% {
+    transform: translateY(0%);
   }
 }
 
