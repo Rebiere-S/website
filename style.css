@@ -131,12 +131,13 @@ body {
 header {
   display: flex;
   width: 100vw;
-  height: 100vh;
+  height: auto;
   position: fixed;
   top: 0;
   left: 0;
   pointer-events: none;
   z-index: 1000;
+  background-color: red;
 }
 
 #navigation-bar {
@@ -340,8 +341,7 @@ section .horizontalScrollContainerShadow.right {
 
 
 #projects-title {
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin: 50px 0;
   @media only screen and (orientation: portrait), (max-width: 800px) {
     margin-bottom: 80px;
   }
