@@ -158,5 +158,5 @@ section.pictured-project {
 }
 
 .pictured-project .window:hover .verticalScrollIndicator {
-  display: none;
+  opacity: 0;
 }
