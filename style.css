@@ -343,6 +343,7 @@ section .horizontalScrollContainerShadow.right {
 
 #projects-title {
   margin: 50px 0;
+  white-space: nowrap;
   @media only screen and (orientation: portrait), (max-width: 800px) {
     margin-bottom: 80px;
   }
