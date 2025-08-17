@@ -436,7 +436,7 @@ section .horizontalScrollContainerShadow.right {
 .control:focus .tooltip.visit-link {
   opacity: 0;
   visibility: hidden;
-  transition: all 0.1s linear;
+  transition: all 0.15s linear;
 }
 
 .tooltip.visit-link::after {
@@ -509,7 +509,7 @@ section .horizontalScrollContainerShadow.right {
   border-radius: 15px;
   background-color: var(--tooltip-color);
   backdrop-filter: blur(3px);
-  z-index: 10;
+  z-index: 100;
   transition: all 0.15s linear;
 }
 
