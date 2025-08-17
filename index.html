@@ -89,8 +89,10 @@
           </div>
           <div class="timeline-separator" style="--year: 2025;"></div>
           <div class="timeline-item">
-            <p class="timeline-label">AVOcarbon</p>
-            <div class="timeline-bar-container" style="--start-year: 2019; --start-month: 10; --duration: 63;" tabindex="6">   <!-- duration: NOMBRE DE MOIS; tabindex: NUMERO DE L'ENTREE -->
+            <a href="#avocarbon">   <!-- Faire correspondre href="#" avec id du timeline-bar-container -->
+			  <p class="timeline-label">AVOcarbon</p>
+			</a>
+            <div class="timeline-bar-container" id="avocarbon" style="--start-year: 2019; --start-month: 10; --duration: 63;" tabindex="6">   <!-- Faire correspondre id avec href="#" du timeline-label --> <!-- duration: NOMBRE DE MOIS; tabindex: NUMERO DE L'ENTREE -->
               <div class="timeline-bar-filler"></div>
               <div class="info-bubble timeline">
                 <h3>AVOcarbon France :</h3>
@@ -109,8 +111,10 @@
           </div>
           <div class="timeline-separator" style="--year: 2020;"></div>
           <div class="timeline-item">
-            <p class="timeline-label">Metalinox</p>
-            <div class="timeline-bar-container" style="--start-year: 2019; --start-month: 8; --duration: 1;" tabindex="5">
+		    <a href="#metalinox">
+              <p class="timeline-label">Metalinox</p>
+			</a>
+            <div class="timeline-bar-container" id="metalinox" style="--start-year: 2019; --start-month: 8; --duration: 1;" tabindex="5">
               <div class="timeline-bar-filler"></div>
               <div class="info-bubble timeline">
                 <h3>Metalinox :</h3>
@@ -131,8 +135,10 @@
           </div>
           <div class="timeline-separator" style="--year: 2019;"></div>
           <div class="timeline-item">
-            <p class="timeline-label">BTS (école)</p>
-            <div class="timeline-bar-container" style="--start-year: 2017; --start-month: 9; --duration: 22;" tabindex="4">
+		    <a href="#bts">
+              <p class="timeline-label">BTS (école)</p>
+			</a>
+            <div class="timeline-bar-container" id="bts" style="--start-year: 2017; --start-month: 9; --duration: 22;" tabindex="4">
               <div class="timeline-bar-filler"></div>
               <div class="info-bubble timeline">
                 <h3>Brevet de Technicien Supérieur :</h3>
@@ -147,8 +153,10 @@
             </div>
           </div>
           <div class="timeline-item">
-            <p class="timeline-label">CRITT Sport & Loisirs</p>
-              <div class="timeline-bar-container" style="--start-year: 2018; --start-month: 4; --duration: 1.5;" tabindex="3">
+		    <a href="#critt">
+              <p class="timeline-label">CRITT Sport & Loisirs</p>
+			</a>
+            <div class="timeline-bar-container" id="critt" style="--start-year: 2018; --start-month: 4; --duration: 1.5;" tabindex="3">
               <div class="timeline-bar-filler"></div>
               <div class="info-bubble timeline">
                 <h3>CRITT Sport & Loisirs :</h3>
@@ -170,8 +178,10 @@
           </div>
           <div class="timeline-separator" style="--year: 2015;"></div>
 		  <div class="timeline-item">
-            <p class="timeline-label">Bac. pro. (école)</p>
-            <div class="timeline-bar-container" style="--start-year: 2014; --start-month: 9; --duration: 34;" tabindex="2">
+		    <a href="#bac">
+              <p class="timeline-label">Bac. pro. (école)</p>
+			</a>
+            <div class="timeline-bar-container" id="bac" style="--start-year: 2014; --start-month: 9; --duration: 34;" tabindex="2">
               <div class="timeline-bar-filler"></div>
               <div class="info-bubble timeline">
                 <h3>Baccalauréat Professionnel :</h3>
@@ -181,8 +191,10 @@
             </div>
           </div>
 		  <div class="timeline-item">
-            <p class="timeline-label">BEP (école)</p>
-            <div class="timeline-bar-container" style="--start-year: 2014; --start-month: 9; --duration: 22;" tabindex="1">
+		    <a href="#bep">
+              <p class="timeline-label">BEP (école)</p>
+			</a>
+            <div class="timeline-bar-container" id="bep" style="--start-year: 2014; --start-month: 9; --duration: 22;" tabindex="1">
               <div class="timeline-bar-filler"></div>
               <div class="info-bubble timeline">
                 <h3>Brevet d'Études Professionnelles :</h3>
@@ -682,8 +694,13 @@
 
 	//LOGIQUE DE DEFILEMENT HORIZONTAL DANS LES CONTENEURS LE PERMETTANTS
 	document.querySelectorAll('.horizontalScrollContainer').forEach(container => {
+      let isScrolling = false;
+
       container.addEventListener('wheel', function(e) {
         e.preventDefault();
+
+        if (isScrolling) return;
+        isScrolling = true;
 
         this.scrollLeft += e.deltaY;
 
@@ -693,6 +710,10 @@
         if ((isAtStart && e.deltaY < 0) || (isAtEnd && e.deltaY > 0)) {
           window.scrollBy(0, e.deltaY);
         }
+
+        setTimeout(() => {
+          isScrolling = false;
+        }, 150);
       }, { passive: false });
     });
   </script>
