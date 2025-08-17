@@ -223,5 +223,5 @@ section.career-timeline .title {
 }
 
 .timeline-container:hover .horizontalScrollIndicator {
-  display: none !important;
+  opacity: 0;
 }
