@@ -131,7 +131,7 @@ body {
 
 header {
   display: flex;
-  width: 100vw;
+  width: 100%;
   height: auto;
   position: fixed;
   top: 0;
@@ -279,7 +279,7 @@ section {
   position: relative;
   @media only screen and (orientation: portrait), (max-width: 800px) {
     width: var(--portrait-section-width);
-	min-height: unset;
+	min-height: auto;
 	height: auto;
   }
 }
