@@ -1,12 +1,13 @@
 section.web-project {
-  display: flex;
-  flex-direction: row;
+  display: grid;
   overflow: visible;
+  grid-template-columns: 1fr 60%;
   gap: 30px;
   justify-content: center;
   align-items: center;
   @media only screen and (orientation: portrait), (max-width: 800px) {
-    flex-direction: column;
+    display: flex;
+	flex-direction: column;
     justify-content: center;
   }
 }
@@ -14,7 +15,6 @@ section.web-project {
 .web-project .description-container {
   display: flex;
   flex-direction: column;
-  width: 40%;
   height: auto;
   padding: 15px 0;
   @media only screen and (orientation: portrait), (max-width: 800px) {
@@ -43,7 +43,6 @@ section.web-project {
 
 .web-project .window-container {
   perspective: 100vw;
-  width: 60%;
   min-height: calc(10px + 80px + 40px);
   aspect-ratio: 16 / 9;
   @media only screen and (orientation: portrait), (max-width: 800px) {
