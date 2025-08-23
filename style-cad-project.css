@@ -1,12 +1,13 @@
 section.cad-project {
-  display: flex;
-  flex-direction: row;
+  display: grid;
   overflow: visible;
+  grid-template-columns: 1fr 50%;
   gap: 30px;
   justify-content: center;
   align-items: center;
   @media only screen and (orientation: portrait), (max-width: 800px) {
-    flex-direction: column;
+    display: flex;
+	flex-direction: column;
     justify-content: center;
   }
 }
@@ -14,7 +15,6 @@ section.cad-project {
 .cad-project .description-container {
   display: flex;
   flex-direction: column;
-  width: 45%;
   height: auto;
   padding: 15px 0;
   @media only screen and (orientation: portrait), (max-width: 800px) {
@@ -42,12 +42,12 @@ section.cad-project {
 }
 
 .cad-project .viewer-container {
-  width: 55%;
   max-height: 80vh;
   aspect-ratio: 4 / 3;
   @media only screen and (orientation: portrait), (max-width: 800px) {
 	width: 100%;
 	aspect-ratio: var(--viewer-ratio);
+	padding: 0 var(--touch-devices-button-height);
   }
 }
 
