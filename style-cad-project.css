@@ -99,6 +99,11 @@ section.cad-project {
   z-index: 0;
 }
 
+.cad-project .viewer model-viewer .noJS-alternate-poster {
+  height: 100%;
+  
+}
+
 .cad-project .hotspot {
   width: 15px;
   height: 15px;
