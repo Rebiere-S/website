@@ -113,6 +113,11 @@ p, label, input, textarea, ::placeholder, output {
 }
 
 
+a {
+  cursor: url(https://raw.githubusercontent.com/Rebiere-S/website/refs/heads/main/assets/cursors/pointer.png) 6 0, pointer;
+}
+
+
 body {
   display: flex;
   flex-direction: column;
@@ -126,6 +131,7 @@ body {
   background-color: var(--background-color);
   top: 0;
   left: 0;
+  cursor: url(https://raw.githubusercontent.com/Rebiere-S/website/refs/heads/main/assets/cursors/default.png), default;
 }
 
 
@@ -138,7 +144,6 @@ header {
   left: 0;
   pointer-events: none;
   z-index: 1000;
-  background-color: red;
 }
 
 #navigation-bar {
@@ -183,9 +188,10 @@ header {
   }
 }
 
-#navigation-bar img {
+#navigation-bar svg {
   width: var(--desktop-button-height);
   height: var(--desktop-button-height);
+  color: var(--dark-text-color);
   @media only screen and (orientation: portrait), (max-width: 800px) {
     width: var(--touch-devices-button-height);
     height: var(--touch-devices-button-height);
