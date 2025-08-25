@@ -101,7 +101,11 @@ section.cad-project {
 
 .cad-project .viewer model-viewer .noJS-alternate-poster {
   height: 100%;
-  
+  position: relative;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;   /*A SURPPIMER ???*/
 }
 
 .cad-project .hotspot {
