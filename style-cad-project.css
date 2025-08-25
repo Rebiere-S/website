@@ -1,3 +1,7 @@
+:root {
+  --viewer-fade-size: 10px;
+}
+
 section.cad-project {
   display: grid;
   overflow: visible;
@@ -54,21 +58,13 @@ section.cad-project {
   width: 100%;
   height: 100%;
   border-radius: 15px;
-  --fade-size: 10px;
-  mask-image: linear-gradient(to top,    transparent, black var(--fade-size)),
-              linear-gradient(to bottom, transparent, black var(--fade-size)),
-              linear-gradient(to left,   transparent, black var(--fade-size)),
-              linear-gradient(to right,  transparent, black var(--fade-size));
+  mask-image: linear-gradient(to top,    transparent, black var(--viewer-fade-size)),
+              linear-gradient(to bottom, transparent, black var(--viewer-fade-size)),
+              linear-gradient(to left,   transparent, black var(--viewer-fade-size)),
+              linear-gradient(to right,  transparent, black var(--viewer-fade-size));
   mask-composite: intersect;
-  -webkit-mask-image: linear-gradient(to top,    transparent, black var(--fade-size)),
-                      linear-gradient(to bottom, transparent, black var(--fade-size)),
-                      linear-gradient(to left,   transparent, black var(--fade-size)),
-                      linear-gradient(to right,  transparent, black var(--fade-size));
-  -webkit-mask-composite: destination-in;
   mask-repeat: no-repeat;
-  -webkit-mask-repeat: no-repeat;
   mask-size: 100% 100%;
-  -webkit-mask-size: 100% 100%;
   position: relative;
 }
 
