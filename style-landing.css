@@ -1,4 +1,6 @@
 :root {
+  --landscape-name-size: 6em;
+  --portrait-name-size: 4.5em;
   --traveling-text-line-height: 1.25;
   --landscape-traveling-text-tall-size: 16rem;
   --landscape-traveling-text-tall-units: 16;   /*Doit être égal au nombre de rem de la ligne précédente*/
@@ -212,10 +214,10 @@ section.landing {
 }
 
 .presentation-card .name-container h1 {
-  font-size: 6em;
+  font-size: var(--landscape-name-size);
   line-height: 1;
   @media only screen and (orientation: portrait), (max-width: 800px) {
-    font-size: 5em;
+    font-size: var(--portrait-name-size);
   }
 }
 
