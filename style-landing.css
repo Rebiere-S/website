@@ -4,12 +4,12 @@
   --traveling-text-line-height: 1.25;
   --landscape-traveling-text-tall-size: 16rem;
   --landscape-traveling-text-tall-units: 16;   /*Doit être égal au nombre de rem de la ligne précédente*/
-  --portrait-traveling-text-tall-size: 12rem;
-  --portrait-traveling-text-tall-units: 12;   /*Doit être égal au nombre de rem de la ligne précédente*/
+  --portrait-traveling-text-tall-size: 18rem;
+  --portrait-traveling-text-tall-units: 18;   /*Doit être égal au nombre de rem de la ligne précédente*/
   --landscape-traveling-text-short-size: 8rem;
   --landscape-traveling-text-short-units: 8;   /*Doit être égal au nombre de rem de la ligne précédente*/
-  --portrait-traveling-text-short-size: 6rem;
-  --portrait-traveling-text-short-units: 6;   /*Doit être égal au nombre de rem de la ligne précédente*/
+  --portrait-traveling-text-short-size: 9rem;
+  --portrait-traveling-text-short-units: 9;   /*Doit être égal au nombre de rem de la ligne précédente*/
 }
 
 section.landing {
