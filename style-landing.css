@@ -1,3 +1,15 @@
+:root {
+  --traveling-text-line-height: 1.25;
+  --landscape-traveling-text-tall-size: 16rem;
+  --landscape-traveling-text-tall-units: 16;   /*Doit être égal au nombre de rem de la ligne précédente*/
+  --portrait-traveling-text-tall-size: 12rem;
+  --portrait-traveling-text-tall-units: 12;   /*Doit être égal au nombre de rem de la ligne précédente*/
+  --landscape-traveling-text-short-size: 8rem;
+  --landscape-traveling-text-short-units: 8;   /*Doit être égal au nombre de rem de la ligne précédente*/
+  --portrait-traveling-text-short-size: 6rem;
+  --portrait-traveling-text-short-units: 6;   /*Doit être égal au nombre de rem de la ligne précédente*/
+}
+
 section.landing {
   width: 100%;
   height: 100vh;
@@ -20,18 +32,24 @@ section.landing {
 
 .landing .traveling-text {
   text-transform: uppercase;
-  line-height: 1.25;
+  line-height: var(--traveling-text-line-height);
   font-weight: 700;
   color: var(--grey);
   filter: drop-shadow(0px 4px 3px var(--shadow-color));
 }
 
 .landing .traveling-text.tall {
-  height: 16rem;
+  height: var(--landscape-traveling-text-tall-size);
+  @media only screen and (orientation: portrait), (max-width: 800px) {
+    height: var(--portrait-traveling-text-tall-size);
+  }
 }
 
 .landing .traveling-text.short {
-  height: 8rem;
+  height: var(--landscape-traveling-text-short-size);
+  @media only screen and (orientation: portrait), (max-width: 800px) {
+    height: var(--portrait-traveling-text-short-size);
+  }
 }
 
 .landing .traveling-text div span, 
@@ -43,12 +61,18 @@ section.landing {
 
 .landing .traveling-text.tall div span, 
 .landing .traveling-text.tall div:after {
-  font-size: 16rem;
+  font-size: var(--landscape-traveling-text-tall-size);
+  @media only screen and (orientation: portrait), (max-width: 800px) {
+    font-size: var(--portrait-traveling-text-tall-size);
+  }
 }
 
 .landing .traveling-text.short div span, 
 .landing .traveling-text.short div:after {
-  font-size: 8rem;
+  font-size: var(--landscape-traveling-text-short-size);
+  @media only screen and (orientation: portrait), (max-width: 800px) {
+    font-size: var(--portrait-traveling-text-short-size);
+  }
 }
  
 .landing .traveling-text.tall div span {
@@ -60,14 +84,14 @@ section.landing {
 }
 
 .landing .traveling-text.tall div:after {
-  content:attr(data-text);
+  content: attr(data-text);
   animation: horizontal-scrolling-2-tall 15s infinite linear;
   position: relative;
   left: 100%;
 }
 
 .landing .traveling-text.short div:after {
-  content:attr(data-text);
+  content: attr(data-text);
   animation: horizontal-scrolling-2-short 15s infinite linear;
   position: relative;
   left: 100%;
@@ -93,7 +117,10 @@ section.landing {
  
 @keyframes horizontal-scrolling-2-tall {
   0% {
-    left: calc(100% + (16 * 4px));
+    left: calc(100% + (var(--landscape-traveling-text-tall-units) * 4px));
+	@media only screen and (orientation: portrait), (max-width: 800px) {
+      left: calc(100% + (var(--portrait-traveling-text-tall-units) * 4px));
+    }
   }
   100% {
     left: 0%;
@@ -102,7 +129,10 @@ section.landing {
 
 @keyframes horizontal-scrolling-2-short {
   0% {
-    left: 100%;
+    left: calc(100% + (var(--landscape-traveling-text-short-units) * 4px));
+	@media only screen and (orientation: portrait), (max-width: 800px) {
+      left: calc(100% + (var(--portrait-traveling-text-short-units) * 4px));
+    }
   }
   100% {
     left: 0%;
@@ -113,7 +143,7 @@ section.landing {
   display: flex;
   flex-wrap: wrap;
   width: var(--landscape-section-width);
-  min-height: calc(16rem + 8rem + 2rem);
+  min-height: calc(var(--landscape-traveling-text-tall-size) + var(--landscape-traveling-text-short-size) + 2rem);
   max-height: 80%;
   padding: 5%;
   justify-content: center;
@@ -125,6 +155,7 @@ section.landing {
   transform: translate(-50%, -50%);
   @media only screen and (orientation: portrait), (max-width: 800px) {
     width: var(--portrait-section-width);
+	min-height: calc(var(--portrait-traveling-text-tall-size) + var(--portrait-traveling-text-short-size) + 1.85rem);
     background-color: var(--transparent-background-color);
     backdrop-filter: blur(3px);
   }
@@ -166,7 +197,6 @@ section.landing {
   gap: 15px;
   justify-content: center;
   text-align: center;
-  font-size: 3rem;
   position: relative;
 }
 
@@ -182,7 +212,11 @@ section.landing {
 }
 
 .presentation-card .name-container h1 {
+  font-size: 6em;
   line-height: 1;
+  @media only screen and (orientation: portrait), (max-width: 800px) {
+    font-size: 5em;
+  }
 }
 
 .presentation-card p {
