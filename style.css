@@ -167,7 +167,6 @@ header {
     flex-direction: column;
 	padding: 10px;
 	height: calc(10px + var(--touch-devices-button-height) + 10px);
-	align-items: center;
 	top: 3vw;
     right: 3vw;
 	transform: translateY(calc(-100% - 3vw - (8px + 12px)));
@@ -176,7 +175,7 @@ header {
 
 @keyframes headerShowingAnimation {
   100% {
-    transform: translateY(0%);
+    transform: translateY(0);
   }
 }
 
@@ -202,13 +201,27 @@ header {
   display: none;
   @media only screen and (orientation: portrait), (max-width: 800px) {
     display: unset;
+	position: absolute;
+	top: 50%;
+	right: 50%;
+	transform: translate(50%, -50%);
+  }
+}
+
+#navigation-bar:hover .menu-icon,
+#navigation-bar:focus .menu-icon {
+  @media only screen and (orientation: portrait), (max-width: 800px) {
+    position: relative;
+	top: unset;
+	right: unset;
+	transform: translate(0, 0);
   }
 }
 
 #navigation-bar .menu-separator {
   display: none;
   @media only screen and (orientation: portrait), (max-width: 800px) {
-	display: flex;
+	display: unset;
 	width: 90%;
     height: 1px;
     background-color: var(--light-text-color);
