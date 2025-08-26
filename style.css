@@ -55,6 +55,23 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
   overscroll-behavior: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--dark-grey) var(--background-color);
+}
+
+/*Barre de défilement sous Chromium et Safari*/
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--background-color);
+}
+
+::-webkit-scrollbar-thumb {
+  border: none;
+  border-radius: 5px;
+  background-color: var(--dark-grey) ;
 }
 
 :focus {
