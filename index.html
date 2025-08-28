@@ -28,6 +28,7 @@
 <body>
   <header>
     <div id="navigation-bar">
+	  <input id="navigation-bar-toggle" type="checkbox"></input>
 	  <svg class="menu-icon" draggable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu-icon lucide-menu"><path d="M4 12h16"/><path d="M4 18h16"/><path d="M4 6h16"/></svg>
 	  <div class="menu-separator"></div>
 	  <div class="items">
@@ -713,6 +714,24 @@
       checkScrollIndicators();
 
       window.addEventListener('resize', checkScrollIndicators);
+    });
+	
+	
+	//LOGIQUE DE FERMETURE DE LA BARRE DE NAVIGATION EN MODE PORTRAIT LORSQUE L'ON CLIQUE SUR UN DES RACCOURCIS OU QUE L'ON FAIT DEFILER LA PAGE
+    const navigationBarCheckbox = document.getElementById('navigation-bar-toggle');
+	
+	//Logique de fermeture lorsque l'on clique sur un raccourcis
+	const navigationBarItems = document.querySelectorAll('#navigation-bar .item');
+
+    navigationBarItems.forEach(item => {
+      item.addEventListener('click', function() {
+        navigationBarCheckbox.checked = false;
+      });
+    });
+	
+	//Logique de fermeture lorsque l'on fait défiler la page
+	window.addEventListener('scroll', function() {
+	  navigationBarCheckbox.checked = false;
     });
 
 
