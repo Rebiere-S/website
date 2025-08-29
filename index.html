@@ -736,28 +736,23 @@
 
 
 	//LOGIQUE DE DEFILEMENT HORIZONTAL DANS LES CONTENEURS LE PERMETTANTS
-	document.querySelectorAll('.horizontalScrollContainer').forEach(container => {
-      let isScrolling = false;
+	document.querySelectorAll('.horizontalScrollContainer').forEach((el) => {
+      let sumDelta = 0,
+          startLeft = 0,
+          targetLeft = 0;
 
-      container.addEventListener('wheel', function(e) {
+      el.addEventListener('wheel', (e) => {
+        if (el.scrollLeft === targetLeft) sumDelta = 0;
+        if (sumDelta === 0) startLeft = el.scrollLeft;
+
+        sumDelta -= e.deltaY;
+        const maxScrollLeft = el.scrollWidth - el.clientWidth;
+        const left = Math.min(maxScrollLeft, Math.max(0, startLeft - sumDelta));
+        targetLeft = left;
+
+        el.scrollTo({ left, behavior: "smooth" });
         e.preventDefault();
-
-        if (isScrolling) return;
-        isScrolling = true;
-
-        this.scrollLeft += e.deltaY;
-
-        const isAtStart = this.scrollLeft === 0;
-        const isAtEnd = this.scrollLeft + this.clientWidth >= this.scrollWidth - 1;
-
-        if ((isAtStart && e.deltaY < 0) || (isAtEnd && e.deltaY > 0)) {
-          window.scrollBy(0, e.deltaY);
-        }
-
-        setTimeout(() => {
-          isScrolling = false;
-        }, 150);
-      }, { passive: false });
+      });
     });
   </script>
   <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
