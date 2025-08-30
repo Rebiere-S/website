@@ -113,6 +113,10 @@ section.career-timeline .title {
   position: relative;
 }
 
+section.career-timeline a {
+  background-color: red;   /*A SUPPRIMER - DEBUG*/
+}
+
 .timeline-label {
   box-sizing: border-box;
   width: auto;
@@ -139,7 +143,7 @@ section.career-timeline .title {
   top: 0;
   left: calc((((var(--start-year) - var(--timeline-beginning-year)) * 12) + var(--start-month)) * var(--timeline-unit-width));
   transition: all 0.2s ease;
-  cursor: pointer;
+  cursor: url(https://raw.githubusercontent.com/Rebiere-S/website/refs/heads/main/assets/cursors/pointer.png) 6 0, pointer;
 }
 
 .timeline-bar-container:hover,
@@ -215,13 +219,13 @@ section.career-timeline .title {
   transition: all 0.15s 0.30s;
 }
 
-.timeline-container .horizontalScrollIndicator {
+.timeline-container .scrollIndicator {
   position: absolute;
   left: 50%;
   top: calc(50% + (((9.5em + (var(--h1-font-size) * var(--title-line-height))) / 2)) - (30px /2));
   transform: translate(-50%, -50%);
 }
 
-.timeline-container:hover .horizontalScrollIndicator {
+.timeline-container:hover .scrollIndicator {
   opacity: 0;
 }
