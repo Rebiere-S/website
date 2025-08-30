@@ -213,12 +213,12 @@
           </div>
           <div class="timeline-separator" style="--year: 2014;"></div>
         </div>
-	  <div class="horizontalScrollIndicator"></div>
+	    <div class="scrollIndicator horizontal"></div>
       </div>
 	</div>
   </section>
   <script>
-	//LOGIQUE D'AFFICHAGE DES OMBRES DE DÉFILEMENT HORIZONTAL DE LA FRISE CHRONOLOGIQUE
+	//LOGIQUE D’AFFICHAGE DES OMBRES DE DÉFILEMENT HORIZONTAL DE LA FRISE CHRONOLOGIQUE
 	const careerTimelineScrollContainer = document.getElementById('careerTimelineScrollContainer'),
 		  careerTimelineShadowLeft = document.getElementById('careerTimelineShadowLeft'),
 		  careerTimelineShadowRight = document.getElementById('careerTimelineShadowRight');
@@ -279,7 +279,7 @@
 		</span>
 		<div class="scroll-container">
           <img src="https://simon-rebiere.fr/assets/covers/depot-github-portfolio.webp" alt="Image du dépot de code de ce portfolio" draggable="false"></img>
-          <div class="verticalScrollIndicator"></div>
+          <div class="scrollIndicator vertical"></div>
         </div>
       </div>
     </div>
@@ -302,7 +302,7 @@
 		</span>
 		<div class="scroll-container">
           <iframe style="--computer-viewer-zoom: 0.8; --mobile-viewer-zoom: 0.65;" title="Page web de l'outil pédagogique à l'apprentissage de l'export de fichiers DAO au format stéréolithographie (STL)" src="https://rebiere-s.github.io/calculation-dimension-stl-export/"></iframe>
-          <div class="verticalScrollIndicator"></div>
+          <div class="scrollIndicator vertical"></div>
         </div>
       </div>
     </div>
@@ -378,7 +378,7 @@
 		</span>
 		<div class="scroll-container">
           <img src="https://simon-rebiere.fr/assets/covers/calculateur-cout-et-temps-impression-3D-FDM.webp" alt="Image de la feuille de calcul permettant d'estimer le temps et le coût d'une impression 3D FDM/FFF" draggable="false"></img>
-          <div class="verticalScrollIndicator"></div>
+          <div class="scrollIndicator vertical"></div>
         </div>
       </div>
     </div>
@@ -401,7 +401,7 @@
 		</span>
 		<div class="scroll-container">
           <iframe style="--computer-viewer-zoom: 0.6; --mobile-viewer-zoom: 0.5;" title="Image de la feuille de calcul permettant d'estimer le temps et le coût d'une impression 3D FDM/FFF" src="https://sheet.zohopublic.eu/sheet/published/34mxxf6b7ec4d7440496a92a052f7602cca18?sheetid=0&range=A1"></iframe>
-          <div class="verticalScrollIndicator"></div>
+          <div class="scrollIndicator vertical"></div>
         </div>
       </div>
     </div>
@@ -424,7 +424,7 @@
 		</span>
 		<div class="scroll-container">
           <img src="https://simon-rebiere.fr/assets/covers/prevention-desserrage-vis-sur-plastiques.webp" alt="Image de la feuille de calcul permettant de dimensionner un système de prévention du desserage des vis sur des plastiques" draggable="false"></img>
-          <div class="verticalScrollIndicator"></div>
+          <div class="scrollIndicator vertical"></div>
         </div>
       </div>
     </div>
@@ -498,7 +498,7 @@
     </div>
   </section>
   <script type="module">
-	//LOGIQUE D'AFFICHAGE DES DIMENSIONS DU MODELE 3D
+	//LOGIQUE D’AFFICHAGE DES DIMENSIONS DU MODÈLE 3D
 	const modelViewer = document.querySelector('#couronne-repliable-montre-lip-R27');
 	
 	modelViewer.addEventListener('load', () => {
@@ -614,7 +614,7 @@
 		<span class="control"><a href="https://rebiere-s.github.io/simulation-DLP-3D-printing/" enterkeyhint="go">❐</a></span>
 		<div class="scroll-container">
           <iframe style="--computer-viewer-zoom: 0.8; --mobile-viewer-zoom: 0.65;" title="Page web de l'outil de simulation en ligne d'impression 3D de technologie DLP" src="https://rebiere-s.github.io/simulation-DLP-3D-printing/"></iframe>
-          <div class="verticalScrollIndicator"></div>
+          <div class="scrollIndicator vertical"></div>
         </div>
       </div>
     </div>
@@ -666,7 +666,7 @@
     <p><a href="mentions_legales.pdf" class="underlined">Mentions légales</a> | <a href="mailto:mubdem05@anonaddy.me" class="underlined">Contact</a></p>
   </footer>
   <script>
-	//LOGIQUE DE MODIFICATION DES TERMES D'INTERACTIONS AVEC L'INTERFACE
+	//LOGIQUE DE MODIFICATION DES TERMES D’INTERACTION AVEC L’INTERFACE
 	function isTouchDevice() {
 		return ('ontouchstart' in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0);
 	}
@@ -692,7 +692,7 @@
 	});
 
 
-    //LOGIQUE D'AFFICHAGE DE L'INDICATEUR DE DÉFILEMENT HORIZONTAL
+    //LOGIQUE D’AFFICHAGE DE L’INDICATEUR DE DÉFILEMENT HORIZONTAL
     document.addEventListener('DOMContentLoaded', function() {
       function checkScrollIndicators() {
         const scrollContainers = document.querySelectorAll('.horizontalScrollContainer');
@@ -717,7 +717,7 @@
     });
 	
 	
-	//LOGIQUE DE FERMETURE DE LA BARRE DE NAVIGATION EN MODE PORTRAIT LORSQUE L'ON CLIQUE SUR UN DES RACCOURCIS OU QUE L'ON FAIT DEFILER LA PAGE
+	//LOGIQUE DE FERMETURE DE LA BARRE DE NAVIGATION EN MODE PORTRAIT LORSQU’ON CLIQUE SUR L’UN DES RACCOURCIS OU QU’ON FAIT DÉFILER LA PAGE
     const navigationBarCheckbox = document.getElementById('navigation-bar-toggle');
 	
 	//Logique de fermeture lorsque l'on clique sur un raccourcis
@@ -735,7 +735,7 @@
     });
 
 
-	//LOGIQUE DE DEFILEMENT HORIZONTAL DANS LES CONTENEURS LE PERMETTANTS
+	//LOGIQUE DE DÉFILEMENT HORIZONTAL DANS LES CONTENEURS LE PERMETTANT
 	document.querySelectorAll('.horizontalScrollContainer').forEach((el) => {
       let sumDelta = 0,
           startLeft = 0,
@@ -752,6 +752,27 @@
 
         el.scrollTo({ left, behavior: "smooth" });
         e.preventDefault();
+      });
+    });
+	
+	
+	//LOGIQUE DE MASQUAGE DES INDICATEURS DE DÉFILEMENT LORSQU’ON INTERAGIT AVEC LE CONTENEUR PARENT
+	document.querySelectorAll('.scrollIndicator').forEach(indicator => {
+      const parent = indicator.parentElement;
+
+      const interactionEvents = [
+        'mouseenter',
+        'click',
+        'keydown',
+        'touchstart',
+        'focusin',
+        'scroll'
+      ];
+
+      interactionEvents.forEach(eventType => {
+        parent.addEventListener(eventType, () => {
+          indicator.classList.add('hide');
+        });
       });
     });
   </script>
