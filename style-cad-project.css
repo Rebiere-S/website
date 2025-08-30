@@ -1,5 +1,8 @@
 :root {
   --viewer-fade-size: 10px;
+
+  --min-hotspot-opacity: 0.1;
+  --max-hotspot-opacity: 1;
 }
 
 section.cad-project {
@@ -206,30 +209,30 @@ section.cad-project {
 }
 
 .cad-project .dimension {
-  width: max-content !important;
+  width: max-content;
   height: max-content;
-  --min-hotspot-opacity: 0;
   line-height: 1.2;
   font-size: var(--h3-font-size);
   font-weight: var(--h3-font-weight);
+  --min-hotspot-opacity: 0;
   color: var(--white);
   text-shadow: none;
   transform: translate3d(-50%, -50%, 0);
 }
 
-.dimensionLineContainer {
+.cad-project .dimensionLineContainer {
   display: block;
   width: 100%;
   height: 100%;
   pointer-events: none;
 }
 
-.dimensionLine {
+.cad-project .dimensionLine {
   stroke: var(--transparent-light-blue);
   stroke-width: 2;
   stroke-dasharray: 2;
 }
 
-.hide {
+.cad-project .hide {
   opacity: 0;
 }
