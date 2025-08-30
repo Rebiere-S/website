@@ -150,13 +150,13 @@ section.web-project {
   pointer-events: none;
 }
 
-.web-project .verticalScrollIndicator {
+.web-project .scrollIndicator {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-.web-project .window:hover .verticalScrollIndicator {
+.web-project .window:hover .scrollIndicator {
   opacity: 0;
 }
