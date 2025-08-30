@@ -149,13 +149,13 @@ section.pictured-project {
   pointer-events: none;
 }
 
-.pictured-project .verticalScrollIndicator {
+.pictured-project .scrollIndicator {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-.pictured-project .window:hover .verticalScrollIndicator {
+.pictured-project .window:hover .scrollIndicator {
   opacity: 0;
 }
