@@ -505,9 +505,7 @@ section .horizontalScrollContainerShadow.right {
 }
 
 
-.verticalScrollIndicator {
-  width: 30px;
-  height: 60px;
+.scrollIndicator {
   border-radius: 15px;
   background-color: var(--tooltip-color);
   backdrop-filter: blur(3px);
@@ -515,19 +513,40 @@ section .horizontalScrollContainerShadow.right {
   transition: all 0.15s linear;
 }
 
-.verticalScrollIndicator::after {
+.scrollIndicator.hide {
+  opacity: 0;
+}
+
+.scrollIndicator.vertical {
+  width: 30px;
+  height: 60px;
+}
+
+.scrollIndicator.horizontal {
+  width: 60px;
+  height: 30px;
+}
+
+.scrollIndicator::after {
   display: flex;
   content: '';
   width: 10px;
   height: 10px;
   background-color: var(--white);
-  backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);   /*A GARDER ???*/
   border-radius: 50%;
   position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.scrollIndicator.vertical::after {
   animation: verticalScrollIndicatorAnimation 2s infinite;
+}
+
+.scrollIndicator.horizontal::after {
+  animation: horizontalScrollIndicatorAnimation 2s infinite;
 }
 
 @keyframes verticalScrollIndicatorAnimation {
@@ -548,33 +567,6 @@ section .horizontalScrollContainerShadow.right {
   100% {
     opacity: 0;
   }
-}
-
-
-.horizontalScrollIndicator {
-  display: none;
-  width: 60px;
-  height: 30px;
-  border-radius: 15px;
-  background-color: var(--tooltip-color);
-  backdrop-filter: blur(3px);
-  z-index: 100;
-  transition: all 0.15s linear;
-}
-
-.horizontalScrollIndicator::after {
-  display: flex;
-  content: '';
-  width: 10px;
-  height: 10px;
-  background-color: var(--white);
-  backdrop-filter: blur(3px);
-  border-radius: 50%;
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  animation: horizontalScrollIndicatorAnimation 2s infinite;
 }
 
 @keyframes horizontalScrollIndicatorAnimation {
