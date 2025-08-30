@@ -25,9 +25,7 @@ section.landing {
   display: flex;
   width: auto;
   height: auto;
-  -webkit-font-smoothing: antialiased;   /*Anticrénelage de la police sur Webkit*/
-  -moz-osx-font-smoothing: grayscale;   /*Anticrénelage de la police sur macOS*/
-  text-rendering: optimizeSpeed !important;
+  text-rendering: optimizeSpeed;
   white-space: pre;
   position: relative;
 }
