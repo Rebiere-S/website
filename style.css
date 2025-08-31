@@ -37,7 +37,8 @@
   --landscape-section-width: 65vw;
   --portrait-section-width: 90vw;
 
-  --desktop-button-height: 12mm;
+  --touch-devices-button-min-height: 8mm;
+  --desktop-button-height: 10mm;
   --touch-devices-button-height: 11mm;
 
   --tooltip-arrow-size: 10px;
