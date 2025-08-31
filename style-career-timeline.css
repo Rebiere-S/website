@@ -9,7 +9,8 @@
 
   --timeline-unit-width: 12px;   /* Chaque unité représente un mois (min. 10px)*/
 
-  --timeline-bar-height: 25px;
+  /*--timeline-bar-height: 25px;*/
+  --timeline-bar-height: var(--touch-devices-button-min-height);
 }
 
 section.career-timeline {
@@ -111,10 +112,6 @@ section.career-timeline .title {
   height: var(--timeline-bar-height);
   margin: 5px 0;
   position: relative;
-}
-
-section.career-timeline a {
-  background-color: red;   /*A SUPPRIMER - DEBUG*/
 }
 
 .timeline-label {
