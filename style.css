@@ -1,5 +1,4 @@
 :root {
-  /*Palette de couleurs : https://colorkit.co/palette/1abc9c-16a085-2ecc71-27ae60-3498db-2980b9-9b59b6-8e44ad-34495e-2c3e50-f1c40f-f39c12-e67e22-d35400-e74c3c-c0392b-ecf0f1-bdc3c7-95a5a6-7f8c8d/*/
   --background-color: #ecf0f1;
   --transparent-background-color: #ecf0f1cc;
   --shadow-color: #7f8c8d;
@@ -9,10 +8,11 @@
   --grey: #95a5a6;
   --dark-grey: #7f8c8d;
 
-  --light-blue: #3498db;
   --transparent-light-blue: #3498dbb3;
   --dark-blue: #2980b9;
-  --light-red: #e74c3c;
+  --transparent-light-purple: #9b59b6b3;
+  --dark-purple: #8e44ad;
+  --transparent-light-red: #e74c3cb3;
   --dark-red: #c0392b;
   --light-orange: #e67e22;
   --dark-orange: #d35400;
@@ -378,13 +378,13 @@ section .horizontalScrollContainerShadow.right {
   display: flex;
 }
 
-.sections-separator .line.inter-sections {
+.sections-separator .line.inter-categories {
   width: 90%;
   height: 2px;
   background-color: var(--dark-text-color);
 }
 
-.sections-separator .line.inter-projects {
+.sections-separator .line.inter-subcategories {
   width: 50%;
   height: 1px;
   background-color: var(--light-text-color);
