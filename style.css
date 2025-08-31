@@ -534,7 +534,6 @@ section .horizontalScrollContainerShadow.right {
   width: 10px;
   height: 10px;
   background-color: var(--white);
-  backdrop-filter: blur(3px);   /*A GARDER ???*/
   border-radius: 50%;
   position: relative;
   top: 50%;
