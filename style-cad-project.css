@@ -1,5 +1,5 @@
 :root {
-  --viewer-fade-size: 10px;
+  --cad-viewer-fade-size: 10px;
 
   --min-hotspot-opacity: 0.1;
   --max-hotspot-opacity: 1;
@@ -20,9 +20,7 @@ section.cad-project {
 }
 
 .cad-project .description-container {
-  display: flex;
-  flex-direction: column;
-  height: auto;
+  display: block;
   padding: 15px 0;
   @media only screen and (orientation: portrait), (max-width: 800px) {
 	width: 100%;
@@ -61,10 +59,10 @@ section.cad-project {
   width: 100%;
   height: 100%;
   border-radius: 15px;
-  mask-image: linear-gradient(to top,    transparent, black var(--viewer-fade-size)),
-              linear-gradient(to bottom, transparent, black var(--viewer-fade-size)),
-              linear-gradient(to left,   transparent, black var(--viewer-fade-size)),
-              linear-gradient(to right,  transparent, black var(--viewer-fade-size));
+  mask-image: linear-gradient(to top,    transparent, black var(--cad-viewer-fade-size)),
+              linear-gradient(to bottom, transparent, black var(--cad-viewer-fade-size)),
+              linear-gradient(to left,   transparent, black var(--cad-viewer-fade-size)),
+              linear-gradient(to right,  transparent, black var(--cad-viewer-fade-size));
   mask-composite: intersect;
   mask-repeat: no-repeat;
   mask-size: 100% 100%;
@@ -92,7 +90,7 @@ section.cad-project {
 }
 
 .cad-project .viewer noscript,   /*Pour les navigateurs sous Chromium*/
-.cad-project .viewer div:has(.noJS-alternate-poster) {   /*Pour Firefox*/
+.cad-project .viewer div:has(.noJS-alternate-poster) {   /*Pour certaines extensions de blocage de scripts sur Firefox*/
   display: flex;
   width: 100%;
   height: 100%;
