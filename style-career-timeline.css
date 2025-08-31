@@ -9,7 +9,6 @@
 
   --timeline-unit-width: 12px;   /* Chaque unité représente un mois (min. 10px)*/
 
-  /*--timeline-bar-height: 25px;*/
   --timeline-bar-height: var(--touch-devices-button-min-height);
 }
 
