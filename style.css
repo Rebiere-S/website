@@ -417,7 +417,7 @@ section .horizontalScrollContainerShadow.right {
 
 .project-tag p {
   color: var(--white) !important;
-  text-shadow: 0 0 0 !important;
+  text-shadow: none !important;
 }
 
 .project-tag.personal {
@@ -612,7 +612,7 @@ footer {
 footer p {
   text-align: center;
   color: var(--white);
-  text-shadow: 0 0 0;
+  text-shadow: none;
 }
 
 a {
