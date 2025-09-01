@@ -60,7 +60,7 @@ section.web-project {
   transition: all 0.5s ease;
   @media only screen and (orientation: portrait), (max-width: 800px) {
 	box-shadow: 5px 5px 5px 0px var(--shadow-color);
-	transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+	transform: none;
   }
 }
 
