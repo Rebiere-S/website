@@ -65,7 +65,7 @@ section.career-timeline .title {
 .timeline-year {
   font-weight: 400;
   color: var(--grey);
-  text-shadow: 0 0 0;
+  text-shadow: none;
 }
 
 .timeline-separator {
@@ -110,10 +110,6 @@ section.career-timeline .title {
   height: var(--timeline-bar-height);
   margin: 5px 0;
   position: relative;
-}
-
-section.career-timeline a {
-  background-color: red;   /*A SUPPRIMER - DEBUG*/
 }
 
 .timeline-label {
