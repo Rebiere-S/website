@@ -183,8 +183,8 @@ header {
   top: 3vh;
   right: 3vh;
   transform: translateY(calc(-100% - 3vh - (8px + 12px)));
-  transition: all 0.15s ease;
   animation: 1s headerShowingAnimation 0.5s forwards;
+  transition: all 0.15s ease;
   pointer-events: auto;
   @media only screen and (orientation: portrait), (max-width: 800px) {
     flex-direction: column;
@@ -192,7 +192,6 @@ header {
 	height: calc(10px + var(--touch-devices-button-height) + 10px);
 	top: 3vw;
     right: 3vw;
-	transform: translateY(calc(-100% - 3vw - (8px + 12px)));
   }
 }
 
@@ -251,7 +250,7 @@ header {
     position: relative;
 	top: unset;
 	right: unset;
-	transform: translate(0, 0);
+	transform: none;
   }
 }
 
@@ -259,15 +258,18 @@ header {
   display: none;
   @media only screen and (orientation: portrait), (max-width: 800px) {
 	display: unset;
-	width: 90%;
-    height: 1px;
-    background-color: var(--light-text-color);
   }
 }
 
 #navigation-bar:has(#navigation-bar-toggle:checked) .menu-separator {
   @media only screen and (orientation: portrait), (max-width: 800px) {
 	display: flex;
+	width: 90%;
+    height: 1px;
+    background-color: var(--light-text-color);
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
   }
 }
 
