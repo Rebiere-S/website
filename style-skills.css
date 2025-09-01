@@ -1,6 +1,8 @@
 :root {
-  --skill-bar-width: 250px;
-  --skill-bar-height: 24px;
+  --skill-bar-landscape-width: 250px;
+  --skill-bar-portrait-width: 150px;
+  --skill-bar-landscape-height: 24px;
+  --skill-bar-portrait-height: 18px;
 }
 
 section.skills {
@@ -18,10 +20,13 @@ section.skills {
 .skills .categories {
   display: flex;
   flex-wrap: wrap;
-  column-gap: calc(15px + var(--skill-bar-height) + 30px);
+  column-gap: calc(15px + var(--skill-bar-landscape-height) + 30px);
   row-gap: 30px;
   justify-content: center;
   align-items: start;
+  @media only screen and (orientation: portrait), (max-width: 800px) {
+	column-gap: calc(15px + var(--skill-bar-portrait-height) + 30px);
+  }
 }
 
 .skills .category {
@@ -64,12 +69,17 @@ section.skills {
 .skills .bar-container {
   display: flex;
   overflow: hidden;
-  width: var(--skill-bar-width);
-  height: var(--skill-bar-height);
-  border-radius: calc(var(--skill-bar-height) / 2);
+  width: var(--skill-bar-landscape-width);
+  height: var(--skill-bar-landscape-height);
+  border-radius: calc(var(--skill-bar-landscape-height) / 2);
   background-color: var(--light-grey);
   box-shadow: 1px 2px 1px 0px var(--shadow-color);
   position: relative;
+  @media only screen and (orientation: portrait), (max-width: 800px) {
+	width: var(--skill-bar-portrait-width);
+    height: var(--skill-bar-portrait-height);
+	border-radius: calc(var(--skill-bar-portrait-height) / 2);
+  }
 }
 
 /*.skills .bar-graduations-container {
@@ -128,12 +138,15 @@ section.skills {
   display: flex;
   width: calc((var(--value) / (var(--max-value) - var(--min-value))) * 100%);
   height: 100%;
-  border-radius: calc(var(--skill-bar-height) / 2);
+  border-radius: calc(var(--skill-bar-landscape-height) / 2);
   backdrop-filter: blur(1px);
   position: relative;
   top: 0;
   left: 0;
   z-index: 2;
+  @media only screen and (orientation: portrait), (max-width: 800px) {
+	border-radius: calc(var(--skill-bar-portrait-height) / 2);
+  }
 }
 
 .skills .category.domains .bar-filler {
@@ -176,8 +189,8 @@ section.skills {
 
 .skills .item .learn-more {
   display: flex;
-  width: var(--skill-bar-height);
-  height: var(--skill-bar-height);
+  width: var(--skill-bar-landscape-height);
+  height: var(--skill-bar-landscape-height);
   border-radius: 50%;
   background-color: var(--light-grey);
   box-shadow: 1px 2px 1px 0px var(--shadow-color);
@@ -185,6 +198,10 @@ section.skills {
   right: -15px;
   top: 50%;
   transform: translate(100%, -50%);
+  @media only screen and (orientation: portrait), (max-width: 800px) {
+	width: var(--skill-bar-portrait-height);
+    height: var(--skill-bar-portrait-height);
+  }
 }
 
 .skills .item .learn-more a {
@@ -202,14 +219,18 @@ section.skills {
 }
 
 .skills .item .learn-more svg {
-  width: var(--skill-bar-height);
-  height: var(--skill-bar-height);
+  width: var(--skill-bar-landscape-height);
+  height: var(--skill-bar-landscape-height);
   padding: 1px;
   color: var(--white);
   position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  @media only screen and (orientation: portrait), (max-width: 800px) {
+	width: var(--skill-bar-portrait-height);
+    height: var(--skill-bar-portrait-height);
+  }
 }
 
 .skills .legend-container {
