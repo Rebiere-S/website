@@ -87,7 +87,6 @@
   display: none;
 }
 
-
 h1, h2, h3, p, label, input, output, textarea, ::placeholder {
   line-height: var(--title-line-height);
   user-select: none;
@@ -116,7 +115,6 @@ p, label, input, textarea, ::placeholder, output {
   font-weight: var(--other-fonts-weight);
 }
 
-
 ::placeholder {
   color: var(--dark-gray);
 }
@@ -133,7 +131,6 @@ p, label, input, textarea, ::placeholder, output {
   text-decoration: underline;
   text-underline-offset: 0.2em;
 }
-
 
 a {
   cursor: url(https://raw.githubusercontent.com/Rebiere-S/website/refs/heads/main/assets/cursors/pointer.png) 6 0, pointer;
@@ -398,11 +395,9 @@ section .horizontalScrollContainerShadow.right {
 
 
 #projects-title {
-  margin: 50px 0;
+  margin-top: 50px;
+  margin-bottom: 30px;
   white-space: nowrap;
-  @media only screen and (orientation: portrait), (max-width: 800px) {
-    margin-bottom: 80px;
-  }
 }
 
 
