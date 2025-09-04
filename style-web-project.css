@@ -1,14 +1,7 @@
-:root {
-  --cad-viewer-fade-size: 10px;
-
-  --min-hotspot-opacity: 0.1;
-  --max-hotspot-opacity: 1;
-}
-
-section.cad-project {
+section.web-project {
   display: grid;
   overflow: visible;
-  grid-template-columns: 1fr 50%;
+  grid-template-columns: 1fr 60%;
   gap: 30px;
   justify-content: center;
   align-items: center;
@@ -18,7 +11,7 @@ section.cad-project {
   }
 }
 
-.cad-project .description-container {
+.web-project .description-container {
   display: block;
   padding: 15px 0;
   @media only screen and (orientation: portrait), (max-width: 800px) {
@@ -27,7 +20,7 @@ section.cad-project {
   }
 }
 
-.cad-project .description-container h2 {
+.web-project .description-container h2 {
   margin-top: calc(var(--other-fonts-size) * var(--text-line-height));
   margin-bottom: 30px;
   text-wrap: balance;
@@ -38,196 +31,129 @@ section.cad-project {
   }
 }
 
-.cad-project .description-container p {
+.web-project .description-container p {
   color: var(--light-text-color);
   @media only screen and (orientation: portrait), (max-width: 800px) {
 	hyphens: auto;
   }
 }
 
-.cad-project .viewer-container {
-  max-height: 80vh;
-  aspect-ratio: 4 / 3;
+.web-project .window-container {
+  perspective: 100vw;
+  min-height: calc(10px + 80px + 40px);
+  aspect-ratio: 16 / 9;
   @media only screen and (orientation: portrait), (max-width: 800px) {
+	perspective: none;
 	width: 100%;
-	aspect-ratio: var(--viewer-ratio);
+    aspect-ratio: 3 / 2;
   }
 }
 
-.cad-project .viewer {
+.web-project .window {
   width: 100%;
   height: 100%;
-  border-radius: 15px;
-  mask-image: linear-gradient(to top,    transparent, black var(--cad-viewer-fade-size)),
-              linear-gradient(to bottom, transparent, black var(--cad-viewer-fade-size)),
-              linear-gradient(to left,   transparent, black var(--cad-viewer-fade-size)),
-              linear-gradient(to right,  transparent, black var(--cad-viewer-fade-size));
-  mask-composite: intersect;
-  mask-repeat: no-repeat;
-  mask-size: 100% 100%;
-  position: relative;
-}
-
-.cad-project .viewer .scrolling-mask {
-  display: none;
-  width: var(--touch-devices-button-height);
-  height: 100%;
-  position: absolute;
-  top: 0;
-  z-index: 2;
+  border: solid 10px var(--light-grey);
+  border-top-width: 40px;
+  border-radius: 5px;
+  box-shadow: 10px 10px 10px 0px var(--shadow-color);
+  transform: rotateX(0deg) rotateY(-10deg) rotateZ(0deg);
+  transition: all 0.5s ease;
   @media only screen and (orientation: portrait), (max-width: 800px) {
-	display: flex;
+	box-shadow: 5px 5px 5px 0px var(--shadow-color);
+	transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
   }
 }
 
-.cad-project .viewer .scrolling-mask.left {
-  left: 0;
+.web-project .window:hover {
+  transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  transition: all 0.25s ease;
 }
 
-.cad-project .viewer .scrolling-mask.right {
-  right: 0;
-}
-
-.cad-project .viewer noscript,
-.cad-project .viewer div:has(.noJS-alternate-poster),   /*Pour certaines extentions de blocage de scripts*/
-.cad-project .viewer span:has(.noJS-alternate-poster) {   /*Pour certaines extentions de blocage de scripts*/
-  display: flex;
+.web-project .window .scroll-container {
   width: 100%;
   height: 100%;
+  object-fit: scale-down;
+}
+
+.web-project .window .scroll-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  zoom: var(--computer-viewer-zoom);
+  @media only screen and (orientation: portrait), (max-width: 800px) {
+	zoom: var(--mobile-viewer-zoom);
+  }
+}
+
+.web-project .control {
+  display: flex;
+  height: 40px;
+  width: 30px;
   justify-content: center;
+  align-items: center;
   position: absolute;
   top: 0;
-  left: 0;
-  z-index: 1;
+  right: 30px;
+  transform: translateY(-100%);
+  user-select: none;
+  cursor: default;
 }
 
-.cad-project .viewer .noJS-alternate-poster {
+.web-project .control a {
+  display: flex;
   height: 100%;
-}
-
-.cad-project .viewer model-viewer {
   width: 100%;
-  height: 100%;
-  background-color: var(--background-color);
-  z-index: 0;
+  justify-content: center;
+  align-items: center;
+  color: var(--dark-text-color);
 }
 
-.cad-project .hotspot {
-  width: 15px;
-  height: 15px;
-  padding: 8px;
-  border: 0;
-  border-radius: 50%;
-  background-color: var(--transparent-light-blue);
-  position: relative;
-  cursor: grab;
-  transition: all 0.15s;
+.web-project .control a:hover,
+.web-project .control a:focus {
+  background-color: var(--grey);
+  font-weight: bold;
+  text-shadow: 0px 0px 1px var(--light-text-color);
 }
 
-.cad-project .hotspot:not([data-visible]) {
-  background-color: var(--transparent-light-blue);
-  border: 2px solid var(--white);
+.web-project .control::before {
+  display: flex;
+  content: "‒";
+  height: 40px;
+  width: 30px;
+  justify-content: center;
+  align-items: center;
+  color: var(--dark-text-color);
+  position: absolute;
+  top: 0;
+  left: -15px;
+  transform: translateX(-50%);
   pointer-events: none;
-  transition: all 0.15s;
 }
 
-.cad-project .hotspot > * {
-  opacity: 1;
-  transform: translateY(-50%);
-  transition: all 0.15s 0.30s;
-}
-
-.cad-project .hotspot:not([data-visible]) > * {
-  opacity: 0;
-  transform: translateY(calc(-50% + 2px));
+.web-project .control::after {
+  display: flex;
+  content: "╳";
+  height: 40px;
+  width: 30px;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.7em;
+  font-weight: bold;
+  color: var(--dark-text-color);
+  position: absolute;
+  top: 0;
+  right: -15px;
+  transform: translateX(50%);
   pointer-events: none;
-  transition: all 0.15s;
 }
 
-.cad-project .hotspot-annotation {
-  display: block;
-  width: 150px;
-  padding: 10px 15px;
-  gap: 5px;
-  border-radius: 5px;
-  background-color: var(--tooltip-color);
-  /*backdrop-filter: blur(3px);*/
-  box-shadow: 3px -4px 5px -2px var(--shadow-color),
-              3px 4px 5px -2px var(--shadow-color);
+.web-project .scrollIndicator {
   position: absolute;
   top: 50%;
-  left: calc(5px + var(--tooltip-arrow-size) + 100%);
-  pointer-events: none;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.cad-project .hotspot-annotation::after {
-  content: "";
-  width: 0;
-  height: 0;
-  border-top: var(--tooltip-arrow-size) solid transparent;
-  border-bottom: var(--tooltip-arrow-size) solid transparent;
-  border-right: var(--tooltip-arrow-size) solid var(--tooltip-color);
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translate(-100%, -50%);
-}
-
-.cad-project .hotspot-annotation p {
-  line-height: 1.2;
-  font-size: var(--h3-font-size);
-  font-weight: var(--h3-font-weight);
-  color: var(--white);
-  text-shadow: none;
-}
-
-
-
-
-
-/*TESTS INTEGRATION DIMENSIONS MODELES 3D*/
-.cad-project .hotspot-annotation,
-.cad-project .dimension {
-  display: block;
-  width: 150px;
-  padding: 10px 15px;
-  gap: 5px;
-  border-radius: 5px;
-  background-color: var(--tooltip-color);
-  /*backdrop-filter: blur(3px);*/
-  box-shadow: 3px -4px 5px -2px var(--shadow-color),
-              3px 4px 5px -2px var(--shadow-color);
-  position: absolute;
-  top: 50%;
-  left: calc(5px + var(--tooltip-arrow-size) + 100%);
-  pointer-events: none;
-}
-
-.cad-project .dimension {
-  width: max-content;
-  height: max-content;
-  line-height: 1.2;
-  font-size: var(--h3-font-size);
-  font-weight: var(--h3-font-weight);
-  --min-hotspot-opacity: 0;
-  color: var(--white);
-  text-shadow: none;
-  transform: translate3d(-50%, -50%, 0);
-}
-
-.cad-project .dimensionLineContainer {
-  display: block;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-}
-
-.cad-project .dimensionLine {
-  stroke: var(--transparent-light-blue);
-  stroke-width: 2;
-  stroke-dasharray: 2;
-}
-
-.cad-project .hide {
+.web-project .window:hover .scrollIndicator {
   opacity: 0;
 }
