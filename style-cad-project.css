@@ -1,8 +1,5 @@
 :root {
   --cad-viewer-fade-size: 10px;
-
-  --min-hotspot-opacity: 0.1;
-  --max-hotspot-opacity: 1;
 }
 
 section.cad-project {
@@ -129,7 +126,7 @@ section.cad-project {
 }
 
 .cad-project .hotspot:not([data-visible]) {
-  background-color: var(--transparent-light-blue);
+  opacity: 0.25;
   border: 2px solid var(--white);
   pointer-events: none;
   transition: all 0.15s;
@@ -148,21 +145,22 @@ section.cad-project {
   transition: all 0.15s;
 }
 
-.cad-project .hotspot-annotation,
-.cad-project .dimension {
+.cad-project .hotspot-annotation/*,
+.cad-project .dimension*/ {
   display: block;
+  opacity: 0;
   width: 150px;
   padding: 10px 15px;
   gap: 5px;
   border-radius: 5px;
   background-color: var(--tooltip-color);
-  /*backdrop-filter: blur(3px);*/
   box-shadow: 3px -4px 5px -2px var(--shadow-color),
               3px 4px 5px -2px var(--shadow-color);
   position: absolute;
   top: 50%;
   left: calc(5px + var(--tooltip-arrow-size) + 100%);
   pointer-events: none;
+  transition: opacity 0.3s;
 }
 
 .cad-project .hotspot-annotation::after {
@@ -178,6 +176,10 @@ section.cad-project {
   transform: translate(-100%, -50%);
 }
 
+.cad-project .hotspot:not([data-visible]) .hotspot-annotation {
+  opacity: 0 !important;
+}
+
 .cad-project .hotspot-annotation p {
   line-height: 1.2;
   font-size: var(--h3-font-size);
@@ -186,13 +188,12 @@ section.cad-project {
   text-shadow: none;
 }
 
-.cad-project .dimension {
+/*.cad-project .dimension {
   width: max-content;
   height: max-content;
   line-height: 1.2;
   font-size: var(--h3-font-size);
   font-weight: var(--h3-font-weight);
-  --min-hotspot-opacity: 0;
   color: var(--white);
   text-shadow: none;
   transform: translate3d(-50%, -50%, 0);
@@ -209,4 +210,4 @@ section.cad-project {
   stroke: var(--transparent-light-blue);
   stroke-width: 2;
   stroke-dasharray: 2;
-}
+}*/
