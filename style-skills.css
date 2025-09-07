@@ -170,6 +170,7 @@ section.skills {
 
 .skills .bar-container .value-display-container p {
   text-wrap: nowrap;
+  font-weight: 500;
   color: var(--white) !important;
   text-shadow: none !important;
 }
