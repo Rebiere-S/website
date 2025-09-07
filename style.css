@@ -258,22 +258,23 @@ header {
   }
 }
 
-#navigation-bar:has(#navigation-bar-toggle:checked) .menu-icon path {
+#navigation-bar:has(#navigation-bar-toggle:checked) .menu-icon path:first-child {
   @media only screen and (orientation: portrait), (max-width: 800px) {
 	d: path('M 4,4 20,20');
   }
 }
 
-#navigation-bar:has(#navigation-bar-toggle:checked) .menu-icon path:nth-last-child(2) {
-  @media only screen and (orientation: portrait), (max-width: 800px) {
-	d: path('M 4,20 20,4');
-  }
-}
-
-#navigation-bar:has(#navigation-bar-toggle:checked) .menu-icon path:nth-last-child(3) {
+#navigation-bar:has(#navigation-bar-toggle:checked) .menu-icon path:nth-child(2) {
   @media only screen and (orientation: portrait), (max-width: 800px) {
     opacity: 0;
     transform: scale(0, 0);
+	transition: none;
+  }
+}
+
+#navigation-bar:has(#navigation-bar-toggle:checked) .menu-icon path:nth-child(3) {
+  @media only screen and (orientation: portrait), (max-width: 800px) {
+	d: path('M 4,20 20,4');
   }
 }
 
