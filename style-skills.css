@@ -131,9 +131,6 @@ section.skills {
   top: 0;
   left: 0;
   z-index: 2;
-  @media only screen and (orientation: portrait), (max-width: 800px) {
-	border-radius: calc(var(--skill-bar-portrait-height) / 2);
-  }
 }
 
 .skills .category.domains .bar-filler {
