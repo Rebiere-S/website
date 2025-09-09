@@ -1,4 +1,6 @@
 :root {
+  --tooltip-color: #000000;
+
   --cad-viewer-fade-size: 10px;
 }
 
@@ -154,8 +156,7 @@ section.cad-project {
   gap: 5px;
   border-radius: 5px;
   background-color: var(--tooltip-color);
-  box-shadow: 3px -4px 5px -2px var(--shadow-color),
-              3px 4px 5px -2px var(--shadow-color);
+  box-shadow: 3px 3px 3px 0 var(--shadow-color);
   position: absolute;
   top: 50%;
   left: calc(5px + var(--tooltip-arrow-size) + 100%);
