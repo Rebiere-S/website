@@ -208,9 +208,8 @@ header {
 #navigation-bar-toggle {
   display: none;
   @media only screen and (orientation: portrait), (max-width: 800px) {
-    display: unset;
+    display: flex;
     width: 100%;
-	width: auto;   /*A SUPPRIMER ???*/
     aspect-ratio: 1 / 1;
 	opacity: 0;
     position: absolute;
