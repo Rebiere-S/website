@@ -7,7 +7,7 @@ You are, of course, free to check out the code. Everything is written by hand. E
 
 
 ## LICENSE
-**Copyright © 2025 - Simon Rebière**
+**Copyright © 2025–present - Simon Rebière**
 
 This project is distributed under the **Apache-2.0 license**.
 See the [LICENSE](https://github.com/Rebiere-S/website/tree/main?tab=Apache-2.0-1-ov-file) file for details.
@@ -15,7 +15,10 @@ See the [LICENSE](https://github.com/Rebiere-S/website/tree/main?tab=Apache-2.0-
 
 ## CREDITS & THIRD-PARTY LICENSES
 This project uses and slightly modifies some SVG assets from [Lucide Icons](https://lucide.dev/).
-These icons are published under the ISC License and MIT License (for portions inherited from Feather).
+These icons are published under the **ISC License** and **MIT License** (for portions inherited from Feather).
+
+This project uses [<model-viewer>](https://modelviewer.dev/), an open-source web component developed by Google for rendering 3D models on the web.  
+It is distributed under the **Apache License 2.0**.
 
 ### ISC License (Lucide) :
 **Copyright © 2020 - Lucide Contributors**
@@ -31,7 +34,6 @@ INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
 LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
 OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
 PERFORMANCE OF THIS SOFTWARE."
-
 
 ### MIT License (Feather) :
 **Copyright © 2013-2020 - Cole Bemis**
@@ -53,3 +55,15 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE."
+
+### Apache License 2.0 (Model-viewer) :
+**Copyright © 2018–present Google LLC**
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License.  
+You may obtain a copy of the License at : [http://www.apache.org/licenses/LICENSE-2.0](http://www.apache.org/licenses/LICENSE-2.0)
+
+"Unless required by applicable law or agreed to in writing, software  
+distributed under the License is distributed on an "AS IS" BASIS,  
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  
+See the License for the specific language governing permissions and  
+limitations under the License."
