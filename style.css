@@ -166,6 +166,25 @@ header {
 }
 
 
+header #logo {
+  opacity: 0;
+  width: var(--desktop-button-height);
+  height: var(--desktop-button-height);
+  color: var(--dark-text-color);
+  filter: drop-shadow(4px 4px 4px var(--shadow-color));
+  position: absolute;
+  top: 3vmin;
+  left: 3vmin;
+  animation: 2s logoShowingAnimation 0.5s forwards;
+}
+
+@keyframes logoShowingAnimation {
+  100% {
+    opacity: 1;
+  }
+}
+
+
 #navigation-bar {
   display: flex;
   flex-direction: row;
@@ -177,22 +196,20 @@ header {
   backdrop-filter: blur(3px);
   box-shadow:  8px 8px 12px -2px var(--shadow-color);
   position: absolute;
-  top: 3vh;
-  right: 3vh;
+  top: 3vmin;
+  right: 3vmin;
   transform: translateY(calc(-100% - 3vh - (8px + 12px)));
-  animation: 1s headerShowingAnimation 0.5s forwards;
+  animation: 1s navbarShowingAnimation 0.5s forwards;
   transition: all 0.15s ease;
   pointer-events: auto;
   @media only screen and (orientation: portrait), (max-width: 800px) {
     flex-direction: column;
 	padding: 10px;
 	height: calc(10px + var(--touch-devices-button-height) + 10px);
-	top: 3vw;
-    right: 3vw;
   }
 }
 
-@keyframes headerShowingAnimation {
+@keyframes navbarShowingAnimation {
   100% {
     transform: translateY(0);
   }
