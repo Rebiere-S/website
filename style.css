@@ -41,8 +41,8 @@
   --landscape-section-width: 65vw;
   --portrait-section-width: 90vw;
 
-  --touch-devices-button-min-height: 8mm;
   --desktop-button-height: 10mm;
+  --touch-devices-button-min-height: 8mm;
   --touch-devices-button-height: 11mm;
 
   --tooltip-arrow-size: 10px;
@@ -227,6 +227,7 @@ header #logo {
   @media only screen and (orientation: portrait), (max-width: 800px) {
     display: flex;
     width: 100%;
+	min-height: calc(10px + var(--touch-devices-button-height) + 10px);   /*Pour corriger un bug de hauteur de l'élément sur Safari iOS*/
     aspect-ratio: 1 / 1;
 	opacity: 0;
     position: absolute;
