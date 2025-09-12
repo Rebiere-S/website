@@ -80,10 +80,16 @@ section.landing {
  
 .landing .traveling-text.tall div span {
   animation: horizontal-scrolling-1-tall 15s infinite linear;
+  @media only screen and (orientation: portrait), (max-width: 800px) {
+    animation: horizontal-scrolling-1-tall 25s infinite linear;
+  }
 }
 
 .landing .traveling-text.short div span {
   animation: horizontal-scrolling-1-short 15s infinite linear;
+  @media only screen and (orientation: portrait), (max-width: 800px) {
+    animation: horizontal-scrolling-1-short 25s infinite linear;
+  }
 }
 
 .landing .traveling-text.tall div:after {
@@ -91,6 +97,9 @@ section.landing {
   animation: horizontal-scrolling-2-tall 15s infinite linear;
   position: relative;
   left: 100%;
+  @media only screen and (orientation: portrait), (max-width: 800px) {
+    animation: horizontal-scrolling-2-tall 25s infinite linear;
+  }
 }
 
 .landing .traveling-text.short div:after {
@@ -98,6 +107,9 @@ section.landing {
   animation: horizontal-scrolling-2-short 15s infinite linear;
   position: relative;
   left: 100%;
+  @media only screen and (orientation: portrait), (max-width: 800px) {
+    animation: horizontal-scrolling-2-short 25s infinite linear;
+  }
 }
  
 @keyframes horizontal-scrolling-1-tall {
