@@ -110,7 +110,7 @@ section.skills {
 }
 
 .skills:hover .bar-filler-container {
-  animation: 1s skill-bar-appearing 0.5s forwards;
+  animation: 1s skill-bar-appearing 0.25s forwards;
 }
 
 @keyframes skill-bar-appearing {
