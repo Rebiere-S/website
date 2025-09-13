@@ -1,5 +1,5 @@
 :root {
-  --tooltip-color: #000000;
+  --tooltip-color-opaque: #000000;
 
   --cad-viewer-fade-size: 10px;
 }
@@ -155,7 +155,7 @@ section.cad-project {
   padding: 10px 15px;
   gap: 5px;
   border-radius: 5px;
-  background-color: var(--tooltip-color);
+  background-color: var(--tooltip-color-opaque);
   box-shadow: 3px 3px 3px 0 var(--shadow-color);
   position: absolute;
   top: 50%;
@@ -170,7 +170,7 @@ section.cad-project {
   height: 0;
   border-top: var(--tooltip-arrow-size) solid transparent;
   border-bottom: var(--tooltip-arrow-size) solid transparent;
-  border-right: var(--tooltip-arrow-size) solid var(--tooltip-color);
+  border-right: var(--tooltip-arrow-size) solid var(--tooltip-color-opaque);
   position: absolute;
   top: 50%;
   left: 0;
