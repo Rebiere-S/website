@@ -46,10 +46,6 @@
   --touch-devices-button-height: 11mm;
 
   --tooltip-arrow-size: 10px;
-  
-  --icon-size: 48px;
-  --icon-bar-size: 8px;
-  --icon-translation-size: calc((var(--icon-size) - var(--icon-bar-size)) / 2);
 }
 
 
