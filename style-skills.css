@@ -173,20 +173,28 @@ section.skills {
   text-shadow: none !important;
 }
 
-.skills .item .learn-more {
+.skills .learn-more {
   display: flex;
   width: var(--skill-bar-landscape-height);
   height: var(--skill-bar-landscape-height);
   border-radius: 50%;
   background-color: var(--tooltip-color);
-  position: absolute;
-  right: -10px;
-  top: 50%;
-  transform: translate(100%, -50%);
+  backdrop-filter: blur(3px);
   @media only screen and (orientation: portrait), (max-width: 800px) {
 	width: var(--skill-bar-portrait-height);
     height: var(--skill-bar-portrait-height);
   }
+}
+
+.skills .item .learn-more {
+  position: absolute;
+  right: -10px;
+  top: 50%;
+  transform: translate(100%, -50%);
+}
+
+.skills .legend-container .learn-more {
+  margin-right: 10px;
 }
 
 .skills .item .learn-more a {
@@ -203,7 +211,7 @@ section.skills {
   }
 }
 
-.skills .item .learn-more svg {
+.skills .learn-more svg {
   width: var(--skill-bar-landscape-height);
   height: var(--skill-bar-landscape-height);
   padding: 1px;
@@ -228,15 +236,6 @@ section.skills {
 	width: 90%;
 	margin-top: 30px;
   }
-}
-
-.skills .legend-container svg {
-  height: var(--other-fonts-size);
-  margin-right: 15px;
-  color: var(--dark-text-color);
-  position: relative;
-  top: calc((var(--other-fonts-size) * var(--text-line-height)) / 2);
-  transform: translateY(-50%);
 }
 
 .skills .legend-container p {
