@@ -64,7 +64,7 @@ section.skills {
   position: relative;
 }
 
-.skills h3 {
+.skills .item p {
   text-wrap: nowrap;
   text-align: end;
 }
