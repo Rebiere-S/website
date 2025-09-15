@@ -1,4 +1,6 @@
 :root {
+  --skill-name-width: 130px;   /*Mettre à jour à chaque ajout de compétences ou changements de noms*/
+
   --skill-bar-landscape-width: 250px;
   --skill-bar-portrait-width: 150px;
   --skill-bar-landscape-height: 24px;
@@ -64,9 +66,11 @@ section.skills {
   position: relative;
 }
 
-.skills .item p {
+.skills .item .name {
+  width: var(--skill-name-width);
   text-wrap: nowrap;
   text-align: end;
+  /*background-color: red;   /*DEBUG*/
 }
 
 .skills .bar-container {
