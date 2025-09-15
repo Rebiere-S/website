@@ -2,7 +2,7 @@
   --skill-name-width: 130px;   /*Mettre à jour à chaque ajout de compétences ou changements de noms*/
 
   --skill-bar-landscape-width: 250px;
-  --skill-bar-portrait-width: 150px;
+  --skill-bar-portrait-width: 125px;
   --skill-bar-landscape-height: 24px;
   --skill-bar-portrait-height: 20px;
   
@@ -239,3 +239,4 @@ section.skills {
 	hyphens: auto;
   }
 }
+
