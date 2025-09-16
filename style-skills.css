@@ -80,7 +80,7 @@ section.skills {
   height: var(--skill-bar-landscape-height);
   border-radius: calc(var(--skill-bar-landscape-height) / 2);
   background-color: var(--light-grey);
-  box-shadow: 1px 2px 1px 0px var(--shadow-color);
+  box-shadow: 2px 2px 1px 0px var(--shadow-color);
   position: relative;
   @media only screen and (orientation: portrait), (max-width: 800px) {
 	width: var(--skill-bar-portrait-width);
@@ -239,4 +239,3 @@ section.skills {
 	hyphens: auto;
   }
 }
-
