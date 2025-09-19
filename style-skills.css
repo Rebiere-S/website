@@ -1,5 +1,5 @@
 :root {
-  --skill-name-width: 130px;   /*Mettre à jour à chaque ajout de compétences ou changements de noms*/
+  --skill-name-width: 160px;   /*Mettre à jour à chaque ajout de compétences ou changements de noms*/
 
   --skill-bar-landscape-width: 250px;
   --skill-bar-portrait-width: 125px;
@@ -108,6 +108,7 @@ section.skills {
   display: flex;
   width: calc(((var(--value) / (var(--max-value) - var(--min-value))) * 100%) + var(--skill-bar-graduation-width));
   height: 100%;
+  background-color: var(--transparent-light-blue);
   backdrop-filter: blur(1px);
   position: absolute;
   top: 0;
