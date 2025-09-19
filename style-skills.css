@@ -1,8 +1,8 @@
 :root {
-  --skill-name-width: 160px;   /*Mettre à jour à chaque ajout de compétences ou changements de noms*/
+  --skill-name-width: 135px;   /*Mettre à jour à chaque ajout de compétences ou changements de noms*/
 
   --skill-bar-landscape-width: 250px;
-  --skill-bar-portrait-width: 125px;
+  --skill-bar-portrait-width: 135px;
   --skill-bar-landscape-height: 24px;
   --skill-bar-portrait-height: 20px;
   
@@ -76,6 +76,7 @@ section.skills {
 .skills .bar-container {
   display: flex;
   overflow: hidden;
+  min-width: max-content;
   width: var(--skill-bar-landscape-width);
   height: var(--skill-bar-landscape-height);
   border-radius: calc(var(--skill-bar-landscape-height) / 2);
@@ -83,7 +84,7 @@ section.skills {
   box-shadow: 2px 2px 1px 0px var(--shadow-color);
   position: relative;
   @media only screen and (orientation: portrait), (max-width: 800px) {
-	width: var(--skill-bar-portrait-width);
+	width: 1fr;
     height: var(--skill-bar-portrait-height);
 	border-radius: calc(var(--skill-bar-portrait-height) / 2);
   }
