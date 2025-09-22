@@ -672,3 +672,14 @@ footer a:focus {
 footer a:visited {
   color: var(--white);
 }
+
+footer p:lang(fr-FR) .present::after {
+  content: "Aujourd'hui";
+}
+
+footer p:lang(en-GB) .present::after,
+footer p:lang(en-US) .present::after,
+footer p:lang(en-AU) .present::after,
+footer p:lang(en-CA) .present::after {
+  content: "Present";
+}
