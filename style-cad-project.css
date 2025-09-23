@@ -41,6 +41,14 @@ section.cad-project {
   }
 }
 
+.cad-project .description-container .date {
+  margin-bottom: 10px;
+}
+
+.cad-project .description-container time::before {
+  content: " ͦ ";
+}
+
 .cad-project .description-container p {
   color: var(--light-text-color);
   @media only screen and (orientation: portrait), (max-width: 800px) {
