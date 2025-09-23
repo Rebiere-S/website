@@ -87,7 +87,7 @@
   display: none;
 }
 
-h1, h2, h3, p, label, input, output, textarea, ::placeholder {
+h1, h2, h3, p, time, label, input, output, textarea, ::placeholder {
   line-height: var(--title-line-height);
   user-select: none;
   color: var(--dark-text-color);
@@ -109,10 +109,15 @@ h3 {
   font-weight: var(--h3-font-weight);
 }
 
-p, label, input, textarea, ::placeholder, output {
+p, time, label, input, textarea, ::placeholder, output {
   line-height: var(--text-line-height);
   font-size: var(--other-fonts-size);
   font-weight: var(--other-fonts-weight);
+}
+
+time {
+  font-style: italic;
+  font-weight: 200;
 }
 
 ::placeholder {
