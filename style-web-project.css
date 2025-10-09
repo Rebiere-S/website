@@ -22,11 +22,10 @@ section.web-project {
 
 .web-project .description-container h2 {
   margin-top: calc(var(--other-fonts-size) * var(--text-line-height));
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   text-wrap: balance;
   text-align: center;
   @media only screen and (orientation: portrait), (max-width: 800px) {
-	margin-bottom: 15px;
 	hyphens: auto;
   }
 }
