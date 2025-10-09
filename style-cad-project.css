@@ -155,8 +155,7 @@ section.cad-project {
   transition: all 0.15s;
 }
 
-.cad-project .hotspot-annotation/*,
-.cad-project .dimension*/ {
+.cad-project .hotspot-annotation {
   display: block;
   opacity: 0;
   width: 150px;
@@ -196,3 +195,4 @@ section.cad-project {
   color: var(--white);
   text-shadow: none;
 }
+
