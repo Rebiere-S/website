@@ -115,6 +115,10 @@ p, time, label, input, textarea, ::placeholder, output {
   font-weight: var(--other-fonts-weight);
 }
 
+strong {
+  font-weight: 500;
+}
+
 time {
   font-style: italic;
   font-weight: 200;
