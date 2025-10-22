@@ -1,8 +1,8 @@
 :root {
   --timeline-total-entries: 7;   /*Mettre à jour à chaque ajout d'expérience*/
 
-  --timeline-ending-year: 2025;   /*Mettre à jour à chaque ajout d'expérience*/
-  --timeline-ending-month: 2;   /*Mettre à jour à chaque ajout d'expérience (numéro du mois*/
+  --timeline-ending-year: 2025;   /*Mettre à jour à chaque ajout d'expérience(dernière année)*/
+  --timeline-ending-month: 2;   /*Mettre à jour à chaque ajout d'expérience(numéro du dernier mois)*/
 
   --timeline-beginning-year: 2014;
   --timeline-beginning-month: 1;
