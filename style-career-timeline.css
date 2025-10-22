@@ -152,10 +152,23 @@ section.career-timeline .title {
   width: 100%;
   height: 100%;
   box-sizing: border-box;
-  background-color: var(--transparent-light-blue);
   backdrop-filter: blur(1px);
-  box-shadow: 3px 3px 3px 0 var(--dark-blue);
   z-index: 2;
+}
+
+.timeline-bar-filler.school {
+  background-color: var(--transparent-light-purple);
+  box-shadow: 3px 3px 3px 0 var(--dark-purple);
+}
+
+.timeline-bar-filler.job {
+  background-color: var(--transparent-light-blue);
+  box-shadow: 3px 3px 3px 0 var(--dark-blue);
+}
+
+.timeline-bar-filler.course {
+  background-color: var(--transparent-light-green);
+  box-shadow: 3px 3px 3px 0 var(--dark-green);
 }
 
 .tooltip.timeline {
